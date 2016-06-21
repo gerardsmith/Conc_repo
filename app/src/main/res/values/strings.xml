@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Conc</string>
+
+    <string-array name="menu_array">
+        <item>Player Profile</item>
+        <item>Side-Line Test</item>
+        <item>Baseline Test</item>
+        <item>Follow up Test</item>
+    </string-array>
+
+
+</resources>
