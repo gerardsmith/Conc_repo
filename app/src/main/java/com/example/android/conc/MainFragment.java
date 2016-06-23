@@ -73,8 +73,8 @@ public class MainFragment extends android.app.Fragment {
             public void onItemClick(AdapterView<?> adapterView,View view, int i, long l){
                 String pushed_menu = menuadapter.getItem(i);
                 //Toast.makeText(getActivity(),pushed_menu,Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), TestMenuActivity.class)
-                        .putExtra(Intent.EXTRA_TEXT, pushed_menu);
+                Intent intent = new Intent(getActivity(), TestMenuActivity.class);
+                        //.putExtra(Intent.EXTRA_TEXT, pushed_menu);
                 startActivity(intent);
             }
         });

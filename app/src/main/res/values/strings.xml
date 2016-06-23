@@ -9,5 +9,10 @@
     </string-array>
     <string name="title_activity_test_menu">TestMenuActivity</string>
 
+    <string-array name="testmenu_array">
+        <item>Head Impact Assessment 1</item>
+        <item>Head Impact Assessment 2</item>
+        <item>Head Impact Assessment 3</item>
+    </string-array>
 
 </resources>
