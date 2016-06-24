@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -24,16 +25,12 @@ public class TestMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //ActionBar ab = getSupportActionBar();
-        //ab.show();
         setContentView(R.layout.activity_test_menu);
-        //ActionBar myActionBar = getSupportActionBar();
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        //For hiding android actionbar
-        //myActionBar.hide();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //For showing android actionbar
-        //myActionBar.show();
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container, new TestMenuFragment())
@@ -73,6 +70,17 @@ public class TestMenuActivity extends AppCompatActivity {
                 ((TextView) rootView.findViewById(R.id.testmenu_text))
                         .setText(forecastStr);
             }*/
+
+            l_id.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                @Override
+                public void onItemClick(AdapterView<?> adapterView,View view, int i, long l){
+                    String pushed_menu = testmenuadapter.getItem(i);
+                    //Toast.makeText(getActivity(),pushed_menu,Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), AdministratorActivity.class);
+                    //.putExtra(Intent.EXTRA_TEXT, pushed_menu);
+                    startActivity(intent);
+                }
+            });
 
             return rootView;
         }

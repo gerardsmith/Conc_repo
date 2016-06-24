@@ -14,5 +14,6 @@
         <item>Head Impact Assessment 2</item>
         <item>Head Impact Assessment 3</item>
     </string-array>
+    <string name="title_activity_administrator">AdministratorActivity</string>
 
 </resources>

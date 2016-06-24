@@ -24,6 +24,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.conc.MainActivity" />
         </activity>
+        <activity
+            android:name=".AdministratorActivity"
+            android:label="@string/title_activity_administrator"
+            android:parentActivityName=".TestMenuActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.conc.TestMenuActivity" />
+        </activity>
     </application>
 
 </manifest>

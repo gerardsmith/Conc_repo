@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.android.conc.TestMenuActivity"
+    tools:context="com.example.android.conc.AdministratorActivity"
     android:id="@+id/container">
 
     <android.support.design.widget.AppBarLayout
@@ -22,7 +22,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_test_menu" />
+    <include layout="@layout/content_administrator" />
 
 
 </android.support.design.widget.CoordinatorLayout>
