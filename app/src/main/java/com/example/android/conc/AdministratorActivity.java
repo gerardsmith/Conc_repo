@@ -45,7 +45,7 @@ public class AdministratorActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_administrator, container, false);
-            
+
 
             return rootView;
         }

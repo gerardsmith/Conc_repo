@@ -16,4 +16,6 @@
     </string-array>
     <string name="title_activity_administrator">AdministratorActivity</string>
 
+    <string name="physician_name">Physicians Name</string>
+
 </resources>
