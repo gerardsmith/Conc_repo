@@ -16,6 +16,15 @@
     </string-array>
     <string name="title_activity_administrator">AdministratorActivity</string>
 
-    <string name="physician_name">Physicians Name</string>
+    <string name="physician_name_hint">..."Dr Gerard Smith"</string>
+    <string name="physician_name">Physicians Name:</string>
+    <string name="date">Date:</string>
+    <string name="date_hint">..."dd/mm/yyyy"</string>
+    <string name ="assessment_time">Assessment Time:</string>
+    <string name ="assessment_time_hint">..."19:00"</string>
+    <string name ="kickoff_time">Kick-Off Time:</string>
+    <string name ="kickoff_time_hint">..."19:00"</string>
+    <string name ="start_test">Start Test</string>
+
 
 </resources>
