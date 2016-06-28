@@ -41,6 +41,7 @@ public class TestMenuActivity extends AppCompatActivity {
     public static class TestMenuFragment extends Fragment {
 
         ArrayAdapter<String> testmenuadapter;
+        int testMenuButton=0;
         public TestMenuFragment() {
         }
 
@@ -78,7 +79,9 @@ public class TestMenuActivity extends AppCompatActivity {
                     //Toast.makeText(getActivity(),pushed_menu,Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(getActivity(), AdministratorActivity.class);
                     //.putExtra(Intent.EXTRA_TEXT, pushed_menu);
+                    testMenuButton=i;
                     startActivity(intent);
+
                 }
             });
 
