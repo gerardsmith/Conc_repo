@@ -33,7 +33,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.android.conc.TestMenuActivity" />
         </activity>
-        <activity android:name=".HIA1AActivity"></activity>
+        <activity android:name=".HIA1AActivity" />
+        <activity android:name=".HIA2AActivity" />
+        <activity android:name=".HIA3AActivity"></activity>
     </application>
 
 </manifest>

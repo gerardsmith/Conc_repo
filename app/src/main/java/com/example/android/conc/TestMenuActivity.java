@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,15 +72,16 @@ public class TestMenuActivity extends AppCompatActivity {
                 ((TextView) rootView.findViewById(R.id.testmenu_text))
                         .setText(forecastStr);
             }*/
-
+            final String tag = "MENU_SELECTED";
             l_id.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                 @Override
                 public void onItemClick(AdapterView<?> adapterView,View view, int i, long l){
-                    String pushed_menu = testmenuadapter.getItem(i);
+                    String test_menu_sel = String.valueOf(i);
+                    Log.v(tag,"On Click\nValue of i: " + test_menu_sel );
                     //Toast.makeText(getActivity(),pushed_menu,Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getActivity(), AdministratorActivity.class);
-                    //.putExtra(Intent.EXTRA_TEXT, pushed_menu);
-                    testMenuButton=i;
+                    Intent intent = new Intent(getActivity(), AdministratorActivity.class)
+                    .putExtra(Intent.EXTRA_TEXT, test_menu_sel);
+                    //testMenuButton=i;
                     startActivity(intent);
 
                 }
