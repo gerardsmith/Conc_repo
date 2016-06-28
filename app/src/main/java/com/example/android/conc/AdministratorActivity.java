@@ -38,17 +38,44 @@ public class AdministratorActivity extends AppCompatActivity {
     }
 
     public static class AdministratorFragment extends Fragment {
-
+        public Button startTestBut;
         ArrayAdapter<String> adminadapter;
         public AdministratorFragment() {
         }
+
+       /* public void init(){
+
+            startTestBut = (Button)getView().findViewById(R.id.start_test_button);
+
+            startTestBut.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent hiaMenu = new Intent(getActivity(),HIA1AActivity.class);
+                    startActivity(hiaMenu);
+
+
+                }
+            });
+        }*/
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
 
             View rootView = inflater.inflate(R.layout.fragment_administrator, container, false);
+            startTestBut = (Button)rootView.findViewById(R.id.start_test_button);
 
+            startTestBut.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent hiaMenu = new Intent(getActivity(),HIA1AActivity.class);
+                    startActivity(hiaMenu);
+
+
+                }
+            });
 
             return rootView;
         }
