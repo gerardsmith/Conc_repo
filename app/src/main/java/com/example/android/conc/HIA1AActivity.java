@@ -9,6 +9,12 @@ public class HIA1AActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hia1_a);
+
+        if (savedInstanceState == null) {
+            getFragmentManager().beginTransaction()
+                    .add(R.id.container, new HIA1AFragment())
+                    .commit();
+        }
     }
 
 
