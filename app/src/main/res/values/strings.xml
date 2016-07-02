@@ -50,5 +50,9 @@
     <string name="hia1a_video_header">Video Available?</string>
     <string name="vid_yes">"Yes"</string>
     <string name="vid_no">"No"</string>
+    <string name="title_activity_hia1">HIA1Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_hia">HIAActivity</string>
 
 </resources>
