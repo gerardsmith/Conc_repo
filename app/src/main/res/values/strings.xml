@@ -40,5 +40,15 @@
     <string name="symptom_behav">Definite behavioural cahnges</string>
     <string name="symptom_ident">On field identification of sign or symptom of concussion</string>
     <string name="symptom_ocu">Oculomotor signs (e.g. spontaneous nystagmus)</string>
+    <string name="hia1a_removal_header">Removal requested by:</string>
+    <string name="removal_dr">"Team doctor"</string>
+    <string name="removal_mdd">"Match day doctor"</string>
+    <string name="removal_phy">"Physiotherapist"</string>
+    <string name="removal_ref">"Referee"</string>
+    <string name="removal_tdr">"Tournament Doctor"</string>
+    <string name="removal_video">"Following in-game video review"</string>
+    <string name="hia1a_video_header">Video Available?</string>
+    <string name="vid_yes">"Yes"</string>
+    <string name="vid_no">"No"</string>
 
 </resources>

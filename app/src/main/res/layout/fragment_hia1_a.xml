@@ -190,4 +190,133 @@
             android:textSize="12sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout999"
+        android:layout_below="@id/linearLayout888"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hia1a_removal_header"
+            android:id="@+id/labelTextView333"
+            android:textSize="16sp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout999"
+        android:id="@+id/linearLayout001"
+        android:paddingTop="10dp">
+
+
+        <CheckBox
+            android:text="@string/removal_ref"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_ref"
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:text="@string/removal_tdr"
+            android:layout_width="122dp"
+            android:layout_height="42dp"
+            android:id="@+id/checkBox_tdr"
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:text="@string/removal_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_video"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout001"
+        android:id="@+id/linearLayout002"
+        android:paddingTop="10dp"
+        >
+
+
+        <CheckBox
+            android:text="@string/removal_dr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_dr"
+            android:textSize="10sp"
+            android:layout_weight="2.99" />
+
+        <CheckBox
+            android:text="@string/removal_mdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_mdd"
+            android:textSize="10sp"
+            android:layout_weight="1.60" />
+
+        <CheckBox
+            android:text="@string/removal_phy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox2"
+            android:layout_weight="1"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout003"
+        android:layout_below="@id/linearLayout002"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hia1a_video_header"
+            android:id="@+id/labelTextView444"
+            android:textSize="16sp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout004"
+        android:layout_below="@id/linearLayout003"
+
+        >
+
+        <CheckBox
+            android:text="@string/vid_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_yes"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:text="@string/vid_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox_no"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
 </RelativeLayout>
