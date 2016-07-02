@@ -36,15 +36,6 @@
         <activity android:name=".HIA1AActivity" />
         <activity android:name=".HIA2AActivity" />
         <activity android:name=".HIA3AActivity" />
-        <activity
-            android:name=".HIAActivity"
-            android:label="@string/title_activity_hia"
-            android:parentActivityName=".TestMenuActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.conc.TestMenuActivity" />
-        </activity>
     </application>
 
 </manifest>
