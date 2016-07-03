@@ -86,7 +86,9 @@ public class HIA1AActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hia1_a);
+        //setContentView(R.layout.activity_hia1_a);
+        setContentView(R.layout.viewpager_layout);
+
 
        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
        // setSupportActionBar(toolbar);
@@ -96,7 +98,8 @@ public class HIA1AActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        //mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
     }
@@ -178,7 +181,9 @@ public class HIA1AActivity extends AppCompatActivity {
                 case 0:
                     return PlaceholderFragment.newInstance(position + 1);
                 case 1:
-                    return MyFrag.newInstance();
+                    return HIA1BFragment.newInstance();
+                case 2:
+                    return HIA1CFragment.newInstance();
             }
 
             return null;
@@ -187,20 +192,23 @@ public class HIA1AActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 2;
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
+            /*switch (position) {
                 case 0:
                     return "SECTION 1";
                 case 1:
                     return "SECTION 2";
-                //case 2:
-                //return "SECTION 3";
+                case 2:
+                    return "SECTION 3";
             }
             return null;
+            */
+            return "HIA TEST " + (position + 1);
         }
+
     }
 }

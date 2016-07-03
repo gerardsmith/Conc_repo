@@ -54,5 +54,24 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_hia">HIAActivity</string>
+    <string name="hia1a_section21_header">SECTION 2: Pitch-side Head Injury Assessment</string>
+    <string name="hia1a_section22_header">Identify reason(s) for HIA below</string>
+    <string name = "reason_head">Head impact where diagnosis not immediately apparent</string>
+    <string name = "reason_behav">Possible behavioural changes</string>
+    <string name = "reason_conf">Possible confusion</string>
+    <string name = "reason_inj">Injury event witnessed with potential to result in a concussive injury</string>
+    <string name = "reason_other">Other (identify):</string>
+    <string name="hia1a_section31_header">Pitch-side Head Injury Assessment</string>
+    <string name="hia1a_section32_header">ANSWER ALL QUESTIONS - (Incorrect =1, Correct =2)</string>
+    <string name="hia1a_section33_header">Any coloumn = 1, NO return to play </string>
+    <string name="hia1a_section34_header">Maddocks Questions - Orientation </string>
+    <string name="madd1">What venue are we at today?</string>
+    <string name="madd2">Which half is it now?</string>
+    <string name="madd3">Who scored last in this match?</string>
+    <string name="madd4">What team did you play last week/game?</string>
+    <string name="madd5">Did your team win the last game?</string>
+    <string name="incorrect">Incorrect</string>
+    <string name="correct">Correct</string>
+
 
 </resources>
