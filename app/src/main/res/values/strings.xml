@@ -72,6 +72,38 @@
     <string name="madd5">Did your team win the last game?</string>
     <string name="incorrect">Incorrect</string>
     <string name="correct">Correct</string>
+    <string name="hia1a_section41_header">Symptoms checklist</string>
+    <string name="symptom2_1">Do you have a headache?</string>
+    <string name="symptom2_2">Do you have any dizziness?</string>
+    <string name="symptom2_3">Do you have any \'pressure in your head\'?</string>
+    <string name="symptom2_4">Do you feel nauseated or do you feel like vomiting?</string>
+    <string name="symptom2_5">Do you have any blurred vision?</string>
+    <string name="symptom2_6">Does the light or noise worry you?</string>
+    <string name="symptom2_7">Do you feel as though you are slowing down?</string>
+    <string name="symptom2_8">Do you feel like you are in a fog?</string>
+    <string name="symptom2_9">Do you feel unwell?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="hia1a_section51_header">Delayed Recall</string>
+    <string name="hia1a_section52_header">(ABNORMAL is a score less than 3 or less than baseline)</string>
+    <string name="recall">Test recall of immediate memory words</string>
+    <string name="abnormal">Abnormal</string>
+    <string name="normal">Normal</string>
+    <string name="hia1a_section61_header">Clinical signs</string>
+    <string name="cs1">Emotional - sad, anxious, nervous, irritable</string>
+    <string name="cs2">Drowsy/ has difficulty concentrating</string>
+    <string name="cs3">Doctor performing HIA suspects concussion despite above test being normal</string>
+    <string name="hia1a_section71_header">Requested by</string>
+    <string name="hia1a_section81_header">Completed by</string>
+    <string name="hia1a_section91_header">Player removed</string>
+    <string name="vid_influence">Did video influence the request for the HIA?</string>
+    <string name="MDD_present">Was the Match Day Doctor present during the HIA??</string>
+    <string name="vid_influence2">Did video influence the decision following the HIA?</string>
+
+
+
+
+
 
 
 </resources>

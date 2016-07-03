@@ -184,6 +184,13 @@ public class HIA1AActivity extends AppCompatActivity {
                     return HIA1BFragment.newInstance();
                 case 2:
                     return HIA1CFragment.newInstance();
+                case 3:
+                    return HIA1DFragment.newInstance();
+                case 4:
+                    return HIA1EFragment.newInstance();
+                case 5:
+                    return HIA1FFragment.newInstance();
+
             }
 
             return null;
@@ -192,7 +199,7 @@ public class HIA1AActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 6;
         }
 
         @Override
