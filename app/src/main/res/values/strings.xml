@@ -101,6 +101,69 @@
     <string name="vid_influence2">Did video influence the decision following the HIA?</string>
 
 
+    <!-- HIA2 -->
+    <string name="hia2a_section11_header">Was an HIA1 form completed, and if yes, what was the restult?</string>
+    <string name="hia2a_section12_header">Select one option:</string>
+    <string name="hia2a_section21_header">SECTION 1: Symptom Checklist</string>
+    <string name="hia2a_section22_header">Ask the player: Do you have any of the following symptoms? Ask about every symptom listed.
+    Score each symptom, based on how the player feels at the time of questioning, from 0 (no symptom at all)
+        to 6(the most severe they ave ever experienced). </string>
+    <string name= "symp2_1">Headaches</string>
+    <string name= "symp2_2">\'Dont feel right\'</string>
+    <string name= "symp2_3">\'Pressure in head\'</string>
+    <string name= "symp2_4">Difficulty Concentrating</string>
+    <string name= "symp2_5">Neck pain</string>
+    <string name= "symp2_6">Difficulty remembering</string>
+    <string name= "symp2_7">Nausea/vomiting</string>
+    <string name= "symp2_8">Fatigue/low energy</string>
+    <string name= "symp2_9">Dizziness</string>
+    <string name= "symp2_10">Confusion</string>
+    <string name= "symp2_11">Blurred vision</string>
+    <string name= "symp2_12">Drowsiness</string>
+    <string name= "symp2_13">Balance problems</string>
+    <string name= "symp2_14">Excessive tiredness</string>
+    <string name= "symp2_15">Sensitivity to light</string>
+    <string name= "symp2_16">More emotional</string>
+    <string name= "symp2_17">Sensitivity to noise</string>
+    <string name= "symp2_18">Irritability</string>
+    <string name= "symp2_19">Feeling slowed down</string>
+    <string name= "symp2_20">Sadness</string>
+    <string name= "symp2_21">Feeling like \'in a fog\'</string>
+    <string name= "symp2_22">Nervous/anxious</string>
+    <string name= "num_symp">Number of symptoms experienced (/22):</string>
+    <string name= "sev_symp">Severity of symptoms (/132):</string>
+    <string name="exp_not_conc">If the injured player has symptoms not usually experienced following
+    a Rugby match or training and your diagnosis is NOT concussion please provide an explanation
+        (below) for not confirming a diagnosis of concussion</string>
+    <string name="hia2a_section31_header">SECTION 2: Cognitive Assessment</string>
+    <string name="hia2a_section32_header">Standardised Assessment of Concussion (SAC)</string>
+    <string name="hia2a_section33_header">Orientation</string>
+    <string name="hia2a_section34_header">(1 point for each correct answer)</string>
+    <string name="orien_1">What month is it?</string>
+    <string name="orien_2">What is the date today?</string>
+    <string name="orien_3">What is the day of the week?</string>
+    <string name="orien_4">What year is it?</string>
+    <string name="orien_5">What time is it right now? (within 1 hour)?</string>
+    <string name="orien_score">Orientation score (/5):</string>
+    <string name="sac_dr">SAC - Delayed Recall</string>
+    <string name="sac_it">Number of words from Immediate test remembered? (/5)</string>
+    <string name="sac_sum">SAC - Summary and Total Score</string>
+    <string name="sac_1">Orientation (/5)</string>
+    <string name="sac_2">Immediate memory (/15)</string>
+    <string name="sac_3">Concentration (digits backwards) (/5)</string>
+    <string name="sac_4">Delayed recall (/5)</string>
+    <string name="sac_5">Total (/30)</string>
+    <string name="sac_explained">Assesssment of population of Rugby players suffering from a concussion injury will usually
+    elicit the following results:\n1. Total SAC score of 26 or below\n2. Immediate memory score of 12 or less\n
+    3. Concentration score of (digits backwards) score of 2 or below \n4. Delayed recall result of 3 words or fewer
+    \n5. Balance: tandem stance result of 3 or more errors, single leg result of 4 or more errors\n6. If the
+    player reports the presence of any symptom in the symptom list which is not usually experienced following a
+    Rugby match or training, then this is a strong indicator of concusion</string>
+
+
+
+
+
 
 
 

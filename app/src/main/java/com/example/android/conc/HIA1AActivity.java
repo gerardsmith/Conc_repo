@@ -1,53 +1,5 @@
 package com.example.android.conc;
 
-/*import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import java.util.List;
-import java.util.Vector;
-
-
-public class HIA1AActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hia1_a);
-
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new HIA1AFragment())
-                    .commit();
-        }
-    }
-
-
-}
-
-*/
-/*import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.ViewPager;
-
-public class HIA1AActivity extends FragmentActivity {
-
-    static final int NUMBER_OF_VIEWS=7;
-
-    MyAdapter mAdapter;
-    ViewPager mPager;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.viewpager_layout);
-
-        mAdapter = new MyAdapter(getSupportFragmentManager());
-        mPager=(ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(mAdapter);
-    }
-}
-*/
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -86,19 +38,11 @@ public class HIA1AActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_hia1_a);
         setContentView(R.layout.viewpager_layout);
 
-
-       // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        //mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
