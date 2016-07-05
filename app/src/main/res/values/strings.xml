@@ -164,7 +164,62 @@
     <string name="conc_conf2">HIA Form 3 must be completed as part of follow-up of a confirmed concussion</string>
     <string name="conc_n_conf">Concussion not confirmed(and must be followed up with completetion of HIA Form 3):</string>
     <string name="conc_n_conf2">HIA Form 3 must be completed to exclude a delayed concussion and as part of the ongoing monitoring in a player with a
-possible head injury</string>
+                                possible head injury</string>
+
+
+    <!-- HIA3 -->
+    <string name="Reas_HIA3">Reason for HIA3?</string>
+    <string name="hia3a_1_sectionheader">SECTION 2: Summary of HIA1 and HIA2</string>
+    <string name="hia3a_21_sectionheader">Was an HIA1 form completed, and if yes, what was the result? (Select one option):</string>
+    <string name="hia3a_22_sectionheader">Was an HIA2 form completed, and if yes, what was the clinical diagnosis at the time? (Select one option):</string>
+    <string name="sel_opt">(Select one option)</string>
+    <string name="hia3a_3_sectionheader">SECTION 3: Incident Details</string>
+    <string name="inc_d1">Game event:</string>
+    <string name="inc_d2">Collision with:</string>
+    <string name="inc_d3">Contact:</string>
+    <string name="inc_d4">Player Technique:</string>
+    <string name="if_other">If selected \"Other\":</string>
+    <string name="hia3a_4_sectionheader">SECTION 6: Cognitive Assessment</string>
+    <string name="hia3a_5_sectionheader">SECTION 7: Results of HIA3</string>
+    <string name="hia3a_6_sectionheader">SECTION 8: Overall Result</string>
+    <string name="cogAssTool">Cognitive assessment tool used:</string>
+    <string name="cogAss1">Cognitive Assessment (SAC) from SCAT</string>
+    <string name="cogAss2">CogSport</string>
+    <string name="cogAss3">Headminder</string>
+    <string name="cogAss4">Impact</string>
+    <string name="cogAss5">Other</string>
+    <string name="cogAssRes">What was the result of this cognitive assessment?</string>
+    <string name="domains">Identify the domain(s) that were abnormal in this HIA3:</string>
+    <string name="dom1">Symptom assessment</string>
+    <string name="dom2">Cognitive assessment tool</string>
+    <string name="dom3">Balance evaluation</string>
+    <string name="dom4">Clinical suspicion (over and above the other tests)</string>
+    <string name="dom5">Nill</string>
+    <string name="diag_conc">Does the HIA3 confirm a diagnosis of concussion?</string>
+    <string name="diag_conc2">If this HIA 3 has an abnormal domain result and you believe the player does not
+                                have a concussion , explain why:</string>
+    <string name="was_conc_conf">Was concussion confirmed at any point during the HIA process (from the injury to HIA3)?</string>
+    <string name="hia3a_61_sectionheader">No is indicated if ALL of the following apply:</string>
+    <string name="hia3a_61_body">- There are no immediate and permanent removal criteria identified
+        immediately following the injury\n
+        - HIA2 and neurological assessment are normal\n
+        - HIA3 and neurological assessment are normal\n
+        - No clinical suspicion</string>
+    <string name="hia3a_62_sectionheader">Yes is indicated if ANY of the following apply</string>
+    <string name="hia3a_622_sectionheader">(identify by checking the box(es), the abnormal
+                                        assessments supporting a confirmed concussion):</string>
+    <string name ="abass1">Immediate on-pitch removal</string>
+    <string name ="abass2">Abnormal HIA3 assessment</string>
+    <string name ="abass3">Abnormal HIA2 assessment</string>
+    <string name ="abass4">Clinical suspicion</string>
+
+
+
+
+
+
+
+
 
 
 
