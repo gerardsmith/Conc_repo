@@ -159,6 +159,15 @@
     \n5. Balance: tandem stance result of 3 or more errors, single leg result of 4 or more errors\n6. If the
     player reports the presence of any symptom in the symptom list which is not usually experienced following a
     Rugby match or training, then this is a strong indicator of concusion</string>
+    <string name="hia2a_section41_header">SECTION 4: Clinical diagnosis at this time</string>
+    <string name="conc_conf">Concussion confirmed:</string>
+    <string name="conc_conf2">HIA Form 3 must be completed as part of follow-up of a confirmed concussion</string>
+    <string name="conc_n_conf">Concussion not confirmed(and must be followed up with completetion of HIA Form 3):</string>
+    <string name="conc_n_conf2">HIA Form 3 must be completed to exclude a delayed concussion and as part of the ongoing monitoring in a player with a
+possible head injury</string>
+
+
+
 
 
 
