@@ -241,6 +241,11 @@
     <string name ="abass4">Clinical suspicion</string>
     <string name="hia3a_7_sectionheader">SECTION 5: Symptom Assessment</string>
     <string name="hia3a_71_sectionheader">To the player: From kick-off until now</string>
+    <string name ="symp_check">Symptoms Checklist:</string>
+    <string name ="ant_amn">Anterograde Amnesia (amnesia after injury)?</string>
+    <string name ="ret_amn">Retrograde Amnesia (amnesia before the injury)?</string>
+    <string name ="yes_dur">Yes, duration:</string>
+
 
 
 
