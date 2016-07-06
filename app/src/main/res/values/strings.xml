@@ -111,7 +111,7 @@
     <string name= "symp2_1">Headaches</string>
     <string name= "symp2_2">\'Dont feel right\'</string>
     <string name= "symp2_3">\'Pressure in head\'</string>
-    <string name= "symp2_4">Difficulty Concentrating</string>
+    <string name= "symp2_4">Difficulty concentrating</string>
     <string name= "symp2_5">Neck pain</string>
     <string name= "symp2_6">Difficulty remembering</string>
     <string name= "symp2_7">Nausea/vomiting</string>
@@ -130,6 +130,33 @@
     <string name= "symp2_20">Sadness</string>
     <string name= "symp2_21">Feeling like \'in a fog\'</string>
     <string name= "symp2_22">Nervous/anxious</string>
+    <string name= "symp2_23">Trouble falling asleep</string>
+
+    <string-array name="listDataHeader">
+        <item>Headaches</item>
+        <item>\'Pressure in head\'</item>
+        <item>Neck pain</item>
+        <item>Nausea/vomiting</item>
+        <item>Dizziness</item>
+        <item>Blurred vision</item>
+        <item>Balance problems</item>
+        <item>Sensitivity to light</item>
+        <item>Sensitivity to noise</item>
+        <item>Feeling slowed down</item>
+        <item>Feeling like \'in a fog\'</item>
+        <item>\'Dont feel right\'</item>
+        <item>Difficulty concentrating</item>
+        <item>Difficulty remembering</item>
+        <item>Fatigue/low energy</item>
+        <item>Confusion</item>
+        <item>Drowsiness</item>
+        <item>Trouble falling asleep</item>
+        <item>More emotional</item>
+        <item>Irritability</item>
+        <item>Sadness</item>
+        <item>Nervous/anxious</item>
+    </string-array>
+
     <string name= "num_symp">Number of symptoms experienced (/22):</string>
     <string name= "sev_symp">Severity of symptoms (/132):</string>
     <string name="exp_not_conc">If the injured player has symptoms not usually experienced following
@@ -212,6 +239,9 @@
     <string name ="abass2">Abnormal HIA3 assessment</string>
     <string name ="abass3">Abnormal HIA2 assessment</string>
     <string name ="abass4">Clinical suspicion</string>
+    <string name="hia3a_7_sectionheader">SECTION 5: Symptom Assessment</string>
+    <string name="hia3a_71_sectionheader">To the player: From kick-off until now</string>
+
 
 
 

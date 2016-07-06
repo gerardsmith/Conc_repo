@@ -20,11 +20,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+
+
+
 public class HIA3AActivity extends AppCompatActivity {
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
-
     private ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,10 +133,12 @@ public class HIA3AActivity extends AppCompatActivity {
                 case 1:
                     return HIA3BFragment.newInstance();
                 case 2:
-                    return HIA3CFragment.newInstance();
+                    return HIA3FFragment.newInstance();
                 case 3:
-                    return HIA3DFragment.newInstance();
+                    return HIA3CFragment.newInstance();
                 case 4:
+                    return HIA3DFragment.newInstance();
+                case 5:
                     return HIA3EFragment.newInstance();
                 /*case 5:
                     return HIA2FFragment.newInstance();
@@ -147,7 +152,7 @@ public class HIA3AActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 5;
+            return 6;
         }
 
         @Override
