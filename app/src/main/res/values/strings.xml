@@ -99,6 +99,16 @@
     <string name="vid_influence">Did video influence the request for the HIA?</string>
     <string name="MDD_present">Was the Match Day Doctor present during the HIA??</string>
     <string name="vid_influence2">Did video influence the decision following the HIA?</string>
+    <string name="hia1a_81_sectionheader">ANSWER ALL QUESTIONS</string>
+    <string name="hia1a_811_sectionheader">Any coloumn 1 answer = NO return to play</string>
+    <string name="hia1a_82_sectionheader">Immediate memory (ABNORMAL result is a score less than 12 or less than baseline)</string>
+    <string name="hia1a_83_sectionheader">Digits backwards (ABNORMAL result is a score less than 3 oe less than baseline)</string>
+    <string name="opt_1">Option 1 &#160; - &#160;&#160; </string>
+    <string name="opt_2">Option 2 &#160; - &#160;&#160; </string>
+    <string name="opt_3">Option 3 &#160; - &#160;&#160; </string>
+    <string name="opt_1_num1">Option 1 numbers: -</string>
+    <string name="opt_2_num2">Option 2 numbers (if needed): -</string>
+
 
 
     <!-- HIA2 -->
@@ -245,6 +255,34 @@
     <string name ="ant_amn">Anterograde Amnesia (amnesia after injury)?</string>
     <string name ="ret_amn">Retrograde Amnesia (amnesia before the injury)?</string>
     <string name ="yes_dur">Yes, duration:</string>
+
+    <string-array name="randomWords">
+        <item>elbow </item>
+        <item>apple </item>
+        <item>carpet </item>
+        <item>saddle </item>
+        <item>bubble </item>
+        <item>candle </item>
+        <item>paper </item>
+        <item>sugar </item>
+        <item>sandwich </item>
+        <item>wagon </item>
+        <item>baby </item>
+        <item>monkey </item>
+        <item>perfume </item>
+        <item>sunset </item>
+        <item>iron </item>
+        <item>window </item>
+        <item>door </item>
+        <item>tree </item>
+        <item>coffee </item>
+        <item>flower </item>
+        <item>whistle </item>
+        <item>defence </item>
+    </string-array>
+
+
+
 
 
 
