@@ -38,7 +38,9 @@
             android:layout_width="263dp"
             android:layout_height="40dp"
             android:id="@+id/textView002"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -68,7 +70,9 @@
             android:layout_width="263dp"
             android:layout_height="40dp"
             android:id="@+id/textView001"
-            android:layout_weight="1.14" />
+            android:layout_weight="1.14"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -98,7 +102,9 @@
             android:layout_width="263dp"
             android:layout_height="40dp"
             android:id="@+id/textView003"
-            android:layout_weight="1.14" />
+            android:layout_weight="1.14"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -127,7 +133,9 @@
             android:text="@string/symptom2_4"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView004" />
+            android:id="@+id/textView004"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -156,7 +164,9 @@
             android:text="@string/symptom2_5"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView005" />
+            android:id="@+id/textView005"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -185,7 +195,9 @@
             android:text="@string/symptom2_6"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView006" />
+            android:id="@+id/textView006"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -214,7 +226,9 @@
             android:text="@string/symptom2_7"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView007" />
+            android:id="@+id/textView007"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -243,7 +257,9 @@
             android:text="@string/symptom2_8"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView008" />
+            android:id="@+id/textView008"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -272,7 +288,9 @@
             android:text="@string/symptom2_9"
             android:layout_width="263dp"
             android:layout_height="40dp"
-            android:id="@+id/textView009" />
+            android:id="@+id/textView009"
+            android:textSize="14sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <CheckBox
             android:text="@string/yes"

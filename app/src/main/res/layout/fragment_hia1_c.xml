@@ -21,9 +21,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/hia1a_section31_header"
+            android:text="@string/hia1a_section34_header"
             android:id="@+id/labelTextView001"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout003"
         android:layout_below="@id/linearLayout002"
-        android:paddingTop="15dp">
+        android:paddingTop="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -67,27 +67,9 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout004"
-        android:layout_below="@id/linearLayout003"
-        android:paddingTop="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/hia1a_section34_header"
-            android:id="@+id/labelTextView004"
-            android:textSize="12sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/linearLayout005"
-        android:layout_below="@id/linearLayout004"
-        android:paddingTop="15dp">
+        android:layout_below="@id/linearLayout003"
+        android:paddingTop="30dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,7 +77,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/madd1"
             android:id="@+id/labelTextView005"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -105,7 +87,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout006"
         android:layout_below="@id/linearLayout005"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
 
         <CheckBox
@@ -129,7 +111,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout007"
         android:layout_below="@id/linearLayout006"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -137,7 +119,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/madd2"
             android:id="@+id/labelTextView006"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -147,7 +129,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout008"
         android:layout_below="@id/linearLayout007"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
 
         <CheckBox
@@ -171,7 +153,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout009"
         android:layout_below="@id/linearLayout008"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -179,7 +161,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/madd3"
             android:id="@+id/labelTextView007"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -189,7 +171,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout010"
         android:layout_below="@id/linearLayout009"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
 
         <CheckBox
@@ -213,7 +195,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout011"
         android:layout_below="@id/linearLayout010"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -221,7 +203,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/madd4"
             android:id="@+id/labelTextView008"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -231,7 +213,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout012"
         android:layout_below="@id/linearLayout011"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
 
         <CheckBox
@@ -255,7 +237,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout013"
         android:layout_below="@id/linearLayout012"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -263,7 +245,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/madd5"
             android:id="@+id/labelTextView009"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -273,7 +255,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout0014"
         android:layout_below="@id/linearLayout013"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
 
         <CheckBox

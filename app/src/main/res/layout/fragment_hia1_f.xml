@@ -8,6 +8,13 @@
     android:paddingTop="15dp">
 
 
+    <TextView
+        android:text="@string/hia1_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView38"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -15,7 +22,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/linearLayout001"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_below="@+id/textView38"
+        android:paddingTop="50dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,7 +48,7 @@
         android:id="@+id/linearLayout002"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout001"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
 
         <TextView
@@ -107,7 +116,7 @@
         android:id="@+id/linearLayout005"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout004"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
 
         <TextView
@@ -175,7 +184,7 @@
         android:id="@+id/linearLayout008"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout007"
-        android:paddingTop="15dp">
+        android:paddingTop="20dp">
 
 
         <TextView

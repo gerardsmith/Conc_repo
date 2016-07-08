@@ -22,7 +22,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/hia1a_section51_header"
             android:id="@+id/labelTextView001"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -32,6 +32,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout0001"
         android:layout_below="@+id/linearLayout001"
+        android:paddingTop="5dp"
         >
 
         <TextView
@@ -40,7 +41,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/hia1a_section52_header"
             android:id="@+id/labelTextView0001"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            />
 
     </LinearLayout>
 
@@ -50,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout0001"
         android:id="@+id/linearLayout002"
-        android:paddingTop="15dp"
+        android:paddingTop="25dp"
         >
 
         <TextView
@@ -59,7 +61,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/recall"
             android:id="@+id/labelTextView002"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -115,10 +117,11 @@
 
         <TextView
             android:text="@string/cs1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="256dp"
+            android:layout_height="39dp"
             android:id="@+id/textView004"
-            android:layout_weight="1" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -148,7 +151,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView005"
-            android:layout_weight="4.92" />
+            android:layout_weight="3.69"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <CheckBox
             android:text="@string/yes"
@@ -178,7 +183,9 @@
             android:layout_width="243dp"
             android:layout_height="63dp"
             android:id="@+id/textView006"
-            android:layout_weight="2.40" />
+            android:layout_weight="1.76"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <CheckBox
             android:text="@string/yes"

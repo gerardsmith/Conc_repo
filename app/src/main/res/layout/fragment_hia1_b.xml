@@ -42,7 +42,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/hia1a_section22_header"
             android:id="@+id/labelTextView002"
-            android:textSize="12sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout003"
         android:layout_below="@id/linearLayout002"
-        android:paddingTop="15dp"
+        android:paddingTop="20dp"
         >
 
         <CheckBox
