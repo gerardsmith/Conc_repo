@@ -1,4 +1,5 @@
 package com.example.android.conc;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,22 +11,23 @@ import android.widget.TextView;
 import java.util.Random;
 
 
-public class HIA1GFragment extends Fragment {
+public class HIA2GFragment extends Fragment {
 
     String[] wordArray;
 
-    public static HIA1GFragment newInstance() {
-        HIA1GFragment fragment = new HIA1GFragment();
+    public static HIA2GFragment newInstance() {
+        HIA2GFragment fragment = new HIA2GFragment();
         return fragment;
     }
 
-    public HIA1GFragment() {
+    public HIA2GFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_hia1_g, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_hia2_g, container, false);
+
         wordArray =   getResources().getStringArray(R.array.randomWords);
 
         //rand word generator

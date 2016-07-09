@@ -17,7 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView001"
-            android:text="@string/Reas_HIA3"/>
+            android:text="@string/Reas_HIA3"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp"
+            />
 
         <Spinner
             android:layout_width="match_parent"
@@ -31,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
+        android:paddingTop="25dp"
         android:id="@+id/linearLayout002"
         android:layout_below="@+id/linearLayout001">
 
@@ -39,8 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView002"
-            android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/hia3a_1_sectionheader"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp"
             />
 
     </LinearLayout>
@@ -57,7 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView003"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"
             android:text="@string/hia3a_21_sectionheader"
             />
 
@@ -90,7 +95,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView004"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"
             android:text="@string/hia3a_22_sectionheader"
             />
 

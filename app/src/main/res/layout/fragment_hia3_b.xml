@@ -18,7 +18,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView001"
         android:text="@string/hia3a_3_sectionheader"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
 
     </LinearLayout>
 
@@ -35,7 +36,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView002"
             android:text="@string/inc_d1"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -48,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
         android:id="@+id/linearLayout003"
         android:layout_below="@+id/linearLayout002">
 
@@ -57,7 +59,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView004"
             android:text="@string/if_other"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -73,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="20dp"
         android:id="@+id/linearLayout004"
         android:layout_below="@+id/linearLayout003">
 
@@ -82,7 +85,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView003"
             android:text="@string/inc_d2"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -96,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
         android:id="@+id/linearLayout005"
         android:layout_below="@+id/linearLayout004">
 
@@ -105,7 +109,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView005"
             android:text="@string/if_other"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -121,7 +126,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="20dp"
         android:id="@+id/linearLayout006"
         android:layout_below="@+id/linearLayout005">
 
@@ -130,7 +135,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView006"
             android:text="@string/inc_d3"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -144,7 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
         android:id="@+id/linearLayout007"
         android:layout_below="@+id/linearLayout006">
 
@@ -153,7 +159,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView007"
             android:text="@string/if_other"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -169,7 +176,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="20dp"
         android:id="@+id/linearLayout008"
         android:layout_below="@+id/linearLayout007">
 
@@ -178,7 +185,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView009"
             android:text="@string/inc_d4"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <Spinner
             android:layout_width="match_parent"
@@ -192,7 +200,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="0dp"
         android:id="@+id/linearLayout009"
         android:layout_below="@+id/linearLayout008">
 
@@ -201,7 +209,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView010"
             android:text="@string/if_other"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
         <EditText
             android:layout_width="wrap_content"

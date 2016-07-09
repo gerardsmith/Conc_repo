@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
             android:layout_weight="1"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="16sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -28,7 +29,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/linearLayout001"
         android:id="@+id/linearLayout002"
-        android:paddingTop="15dp">
+        android:paddingTop="25dp">
 
 
         <CheckBox
@@ -45,14 +46,16 @@
         android:orientation="horizontal"
         android:layout_below="@+id/linearLayout002"
         android:id="@+id/linearLayout003"
-        android:paddingTop="5dp">
+        android:paddingTop="10dp">
 
         <TextView
             android:text="@string/conc_conf2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView001"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -61,7 +64,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/linearLayout003"
         android:id="@+id/linearLayout004"
-        android:paddingTop="15dp">
+        android:paddingTop="35dp">
 
 
         <CheckBox
@@ -78,14 +81,16 @@
         android:orientation="horizontal"
         android:layout_below="@+id/linearLayout004"
         android:id="@+id/linearLayout005"
-        android:paddingTop="5dp">
+        android:paddingTop="10dp">
 
         <TextView
             android:text="@string/conc_n_conf2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView002"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
     </LinearLayout>
 
 </RelativeLayout>

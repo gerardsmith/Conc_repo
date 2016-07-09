@@ -35,7 +35,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView002"
             android:text="@string/cogAssTool"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -50,17 +51,16 @@
 
         <CheckBox
             android:text="@string/cogAss1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox3_CA1"
-            android:layout_weight="1" />
+            android:layout_width="207dp"
+            android:layout_height="49dp"
+            android:id="@+id/checkBox3_CA1" />
 
         <CheckBox
             android:text="@string/cogAss2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/checkBox_CA2"
-            android:layout_weight="1" />
+            android:layout_weight="32.38" />
     </LinearLayout>
 
     <LinearLayout
@@ -127,7 +127,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView003"
             android:text="@string/cogAssRes"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 

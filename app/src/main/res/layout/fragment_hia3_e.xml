@@ -36,7 +36,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView002"
             android:text="@string/was_conc_conf"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -77,7 +78,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView003"
             android:text="@string/hia3a_61_sectionheader"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -94,7 +96,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView004"
             android:text="@string/hia3a_61_body"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -111,7 +114,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView005"
             android:text="@string/hia3a_62_sectionheader"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -128,7 +132,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView006"
             android:text="@string/hia3a_622_sectionheader"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -144,16 +149,15 @@
         <CheckBox
             android:text="@string/abass1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/checkBox3_ABASS1"
             android:layout_weight="1" />
 
         <CheckBox
             android:text="@string/abass2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_ABASS2"
-            android:layout_weight="1" />
+            android:layout_width="156dp"
+            android:layout_height="41dp"
+            android:id="@+id/checkBox_ABASS2" />
     </LinearLayout>
 
     <LinearLayout

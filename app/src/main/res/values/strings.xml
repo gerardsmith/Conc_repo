@@ -192,8 +192,8 @@
     <string name="sac_4">Delayed recall (/5)</string>
     <string name="sac_5">Total (/30)</string>
     <string name="sac_explained">Assesssment of population of Rugby players suffering from a concussion injury will usually
-    elicit the following results:\n1. Total SAC score of 26 or below\n2. Immediate memory score of 12 or less\n
-    3. Concentration score of (digits backwards) score of 2 or below \n4. Delayed recall result of 3 words or fewer
+    elicit the following results:\n\n1. Total SAC score of 26 or below\n2. Immediate memory score of 12 or less\n3. Concentration
+        score of (digits backwards) score of 2 or below \n4. Delayed recall result of 3 words or fewer
     \n5. Balance: tandem stance result of 3 or more errors, single leg result of 4 or more errors\n6. If the
     player reports the presence of any symptom in the symptom list which is not usually experienced following a
     Rugby match or training, then this is a strong indicator of concusion</string>
@@ -203,6 +203,16 @@
     <string name="conc_n_conf">Concussion not confirmed(and must be followed up with completetion of HIA Form 3):</string>
     <string name="conc_n_conf2">HIA Form 3 must be completed to exclude a delayed concussion and as part of the ongoing monitoring in a player with a
                                 possible head injury</string>
+
+    <string name="immed_mem">IMMEDIATE MEMORY</string>
+    <string name="immed_mem_score">Immediate memory score (/15):</string>
+    <string name="conc_dig_score">Concentration score (/5):</string>
+    <string name="conc_dig">CONCENTRATION: DIGITS BACKWARD</string>
+    <string name="conc_month">CONCENTRATION: MONTHS IN REVERSE ORDER</string>
+    <string name="conc_month2">( 1 point for entire sequence correct)</string>
+    <string name="rev_month">Dec-Nov-Oct-Sep-Aug-Jul-Jun-May-Apr-Mar-Feb-Jan</string>
+
+
 
 
     <!-- HIA3 -->

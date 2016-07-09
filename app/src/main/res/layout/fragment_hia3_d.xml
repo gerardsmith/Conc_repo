@@ -36,7 +36,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView005"
             android:text="@string/domains"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -75,17 +76,15 @@
 
         <CheckBox
             android:text="@string/dom3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox3_DOM3"
-            android:layout_weight="1" />
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:id="@+id/checkBox3_DOM3" />
 
         <CheckBox
             android:text="@string/dom4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_DOM4"
-            android:layout_weight="1" />
+            android:layout_width="208dp"
+            android:layout_height="40dp"
+            android:id="@+id/checkBox_DOM4" />
     </LinearLayout>
 
     <LinearLayout
@@ -119,7 +118,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView006"
             android:text="@string/diag_conc"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -160,7 +160,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView007"
             android:text="@string/diag_conc2"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
     </LinearLayout>
 
