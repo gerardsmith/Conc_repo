@@ -212,7 +212,14 @@
     <string name="conc_month2">( 1 point for entire sequence correct)</string>
     <string name="rev_month">Dec-Nov-Oct-Sep-Aug-Jul-Jun-May-Apr-Mar-Feb-Jan</string>
 
-
+    <string-array name="hia2_1_spinner">
+        <item>Yes, player immediately and permanently removed</item>
+        <item>Yes, pitch-side HIA abnormal and player removed</item>
+        <item>Yes, pitch-side HIA normal and player returned to play</item>
+        <item>Yes, pitch-side HIA normal and player removed for another non-head injury</item>
+        <item>No, symptoms appeared after completion of game</item>
+        <item>No, failed to complete HIA Form 1 despite being indicated</item>
+    </string-array>
 
 
     <!-- HIA3 -->
@@ -278,6 +285,9 @@
         <item>sugar </item>
         <item>sandwich </item>
         <item>wagon </item>
+    </string-array>
+
+    <string-array name="randomWords1">
         <item>baby </item>
         <item>monkey </item>
         <item>perfume </item>
@@ -288,10 +298,76 @@
         <item>tree </item>
         <item>coffee </item>
         <item>flower </item>
-        <item>whistle </item>
-        <item>defence </item>
+
     </string-array>
 
+    <string-array name="randomWords2">
+        <item>whistle </item>
+        <item>defence </item>
+        <item>style </item>
+        <item>study </item>
+        <item>wood </item>
+        <item>scrum </item>
+        <item>ring </item>
+        <item>grass</item>
+        <item>hotel </item>
+        <item>street</item>
+
+    </string-array>
+
+    <string-array name="randomWords3">
+        <item>smoke</item>
+        <item>page </item>
+        <item>root </item>
+        <item>dress </item>
+        <item>brown</item>
+        <item>belt </item>
+        <item>action </item>
+        <item>honey</item>
+        <item>slave</item>
+        <item>nail</item>
+
+    </string-array>
+
+    <string-array name="randomWords4">
+        <item>fire</item>
+        <item>story </item>
+        <item>flat </item>
+        <item>square </item>
+        <item>listen</item>
+        <item>doctor </item>
+        <item>crash </item>
+        <item>hunt</item>
+        <item>picture</item>
+        <item>idea</item>
+
+    </string-array>
+
+
+    <string-array name="hia3_1_spinner">
+        <item>Follow up of HIA1 and/or HIA2</item>
+        <item>Player developed symptoms day(s) following game</item>
+        <item>Requested following video review</item>
+    </string-array>
+
+    <string-array name="hia3_1_spinner2">
+        <item>Yes, player immediately and permanently removed</item>
+        <item>Yes, pitch-side HIA abnormal and player removed</item>
+        <item>Yes, pitch-side HIA normal and player returned to play</item>
+        <item>Yes, pitch-side HIA normal and player removed for another non-head injury</item>
+        <item>No, symptoms appeared after completion of game</item>
+        <item>No, failed to complete HIA Form 1 despite being indicated</item>
+    </string-array>
+
+
+    <string-array name="hia3_1_spinner3">
+        <item>HIA2 completed as follow up to HIA1, concussion not confirmed</item>
+        <item>Yes, HIA2 completed as follow up to HIA1, concussion confirmed</item>
+        <item>Yes, HIA2 completed, symptoms developed post-match, same day, concussion not confirmed</item>
+        <item>Yes, HIA2 completed, symptoms developed post-match, same day, concussion confirmed</item>
+        <item>No, HIA2 not completed, symptoms developed during the day(s) following the match</item>
+        <item>No, HIA2 not completed despite being indicated</item>
+    </string-array>
 
 
 

@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class HIA2GFragment extends Fragment {
 
-    String[] wordArray;
+    String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
 
     public static HIA2GFragment newInstance() {
         HIA2GFragment fragment = new HIA2GFragment();
@@ -29,60 +29,64 @@ public class HIA2GFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_hia2_g, container, false);
 
         wordArray =   getResources().getStringArray(R.array.randomWords);
+        wordArray1 =   getResources().getStringArray(R.array.randomWords1);
+        wordArray2 =   getResources().getStringArray(R.array.randomWords2);
+        wordArray3 =   getResources().getStringArray(R.array.randomWords3);
+        wordArray4 =   getResources().getStringArray(R.array.randomWords4);
 
         //rand word generator
         Random rand = new Random();
 
-        int num11 = rand.nextInt(21);
-        int num12 = rand.nextInt(21);
-        int num13 = rand.nextInt(21);
-        int num14 = rand.nextInt(21);
-        int num15 = rand.nextInt(21);
+        int num11 = rand.nextInt(10);
+        int num12 = rand.nextInt(10);
+        int num13 = rand.nextInt(10);
+        int num14 = rand.nextInt(10);
+        int num15 = rand.nextInt(10);
 
         TextView no_11 = (TextView)rootView.findViewById(R.id.textView43);
         no_11.setText(wordArray[num11] + "  ");
         TextView no_12 = (TextView)rootView.findViewById(R.id.textView42);
-        no_12.setText(wordArray[num12] + "  ");
+        no_12.setText(wordArray1[num12] + "  ");
         TextView no_13 = (TextView)rootView.findViewById(R.id.textView41);
-        no_13.setText(wordArray[num13] + "  ");
+        no_13.setText(wordArray2[num13] + "  ");
         TextView no_14 = (TextView)rootView.findViewById(R.id.textView40);
-        no_14.setText(wordArray[num14] + "  ");
+        no_14.setText(wordArray3[num14] + "  ");
         TextView no_15 = (TextView)rootView.findViewById(R.id.textView37);
-        no_15.setText(wordArray[num15] + "  ");
+        no_15.setText(wordArray4[num15] + "  ");
 
-        int num21 = rand.nextInt(21);
-        int num22 = rand.nextInt(21);
-        int num23 = rand.nextInt(21);
-        int num24 = rand.nextInt(21);
-        int num25 = rand.nextInt(21);
+        int num21 = rand.nextInt(10);
+        int num22 = rand.nextInt(10);
+        int num23 = rand.nextInt(10);
+        int num24 = rand.nextInt(10);
+        int num25 = rand.nextInt(10);
 
         TextView no_21 = (TextView)rootView.findViewById(R.id.textView32);
         no_21.setText(wordArray[num21] + "  ");
         TextView no_22 = (TextView)rootView.findViewById(R.id.textView31);
-        no_22.setText(wordArray[num22] + "  ");
+        no_22.setText(wordArray1[num22] + "  ");
         TextView no_23 = (TextView)rootView.findViewById(R.id.textView29);
-        no_23.setText(wordArray[num23] + "  ");
+        no_23.setText(wordArray2[num23] + "  ");
         TextView no_24 = (TextView)rootView.findViewById(R.id.textView28);
-        no_24.setText(wordArray[num24] + "  ");
+        no_24.setText(wordArray3[num24] + "  ");
         TextView no_25 = (TextView)rootView.findViewById(R.id.textView27);
-        no_25.setText(wordArray[num25] + "  ");
+        no_25.setText(wordArray4[num25] + "  ");
 
-        int num31 = rand.nextInt(21);
-        int num32 = rand.nextInt(21);
-        int num33 = rand.nextInt(21);
-        int num34 = rand.nextInt(21);
-        int num35 = rand.nextInt(21);
+        int num31 = rand.nextInt(10);
+        int num32 = rand.nextInt(10);
+        int num33 = rand.nextInt(10);
+        int num34 = rand.nextInt(10);
+        int num35 = rand.nextInt(10);
 
         TextView no_31 = (TextView)rootView.findViewById(R.id.textView1);
         no_31.setText(wordArray[num31] + "  ");
         TextView no_32 = (TextView)rootView.findViewById(R.id.textView2);
-        no_32.setText(wordArray[num32] + "  ");
+        no_32.setText(wordArray1[num32] + "  ");
         TextView no_33 = (TextView)rootView.findViewById(R.id.textView3);
-        no_33.setText(wordArray[num33] + "  ");
+        no_33.setText(wordArray2[num33] + "  ");
         TextView no_34 = (TextView)rootView.findViewById(R.id.textView4);
-        no_34.setText(wordArray[num34] + "  ");
+        no_34.setText(wordArray3[num34] + "  ");
         TextView no_35 = (TextView)rootView.findViewById(R.id.textView5);
-        no_35.setText(wordArray[num35] + "  ");
+        no_35.setText(wordArray4[num35] + "  ");
 
         //Rand number generator
         Random rand2 = new Random();

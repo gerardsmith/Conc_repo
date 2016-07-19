@@ -71,6 +71,7 @@ public class HIA2AActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private ArrayAdapter<CharSequence> adapter;
 
         public PlaceholderFragment() {
         }
@@ -92,17 +93,12 @@ public class HIA2AActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_hia2_a, container, false);
 
-            String [] req_by =
-                    {"Yes, player immediately and permanently removed",
-                            "Yes, pitch-side HIA abnormal and player removed",
-                            "Yes, pitch-side HIA normal and player returned to play",
-                            "Yes, pitch-side HIA normal and player removed for another non-head injury",
-                            "No, symptoms appeared after completion of game",
-                            "No, failed to complete HIA Form 1 despite being indicated"
-                    };
             Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner4);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
-            adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+
+            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
+            //adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            this.adapter=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia2_1_spinner,android.R.layout.simple_spinner_dropdown_item);
+            this.adapter = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia2_1_spinner,R.layout.multiline_spinner_dropdown_item);
             spinner.setAdapter(adapter);
 
             return rootView;

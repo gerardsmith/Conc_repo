@@ -74,6 +74,9 @@ public class HIA3AActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private ArrayAdapter<CharSequence> adapter2;
+        private ArrayAdapter<CharSequence> adapter1;
+        private ArrayAdapter<CharSequence> adapter;
 
         public PlaceholderFragment() {
         }
@@ -95,18 +98,28 @@ public class HIA3AActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_hia3_a, container, false);
 
-            /*String [] req_by =
-                    {"Yes, player immediately and permanently removed",
-                            "Yes, pitch-side HIA abnormal and player removed",
-                            "Yes, pitch-side HIA normal and player returned to play",
-                            "Yes, pitch-side HIA normal and player removed for another non-head injury",
-                            "No, symptoms appeared after completion of game",
-                            "No, failed to complete HIA Form 1 despite being indicated"
-                    };
-            Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner4);
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
-            adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-            spinner.setAdapter(adapter);*/
+
+            Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner27);
+            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, reas_hia3);
+            //adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            this.adapter=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner,android.R.layout.simple_spinner_dropdown_item);
+            this.adapter = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner,R.layout.multiline_spinner_dropdown_item);
+            spinner.setAdapter(adapter);
+
+            Spinner spinner1 = (Spinner) rootView.findViewById(R.id.spinner29);
+            //ArrayAdapter<String> adapter1 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, comp_hia3);
+            //adapter1.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            this.adapter1=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner2,android.R.layout.simple_spinner_dropdown_item);
+            this.adapter1 = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner2,R.layout.multiline_spinner_dropdown_item);
+            spinner1.setAdapter(adapter1);
+
+
+            Spinner spinner2 = (Spinner) rootView.findViewById(R.id.spinner30);
+            //ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, diag_hia3);
+            //adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            this.adapter2=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner3,android.R.layout.simple_spinner_dropdown_item);
+            this.adapter2 = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner3,R.layout.multiline_spinner_dropdown_item);
+            spinner2.setAdapter(adapter2);
 
             return rootView;
         }
