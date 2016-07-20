@@ -50,42 +50,26 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout0001"
-        android:id="@+id/linearLayout002"
-        android:paddingTop="25dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/recall"
-            android:id="@+id/labelTextView002"
-            android:textSize="16sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout002"
+        android:layout_below="@+id/linearLayout001"
         android:id="@+id/linearLayout003"
-        android:paddingTop="10dp"
+        android:paddingTop="30dp"
         >
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="26dp"
+            android:text="@string/del_score"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"
+            />
 
-        <CheckBox
-            android:text="@string/abnormal"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_RECA"
-            android:layout_weight="1" />
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText12"
+            android:paddingLeft="5dp"/>
 
-        <CheckBox
-            android:text="@string/normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_RECN"
-            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -103,7 +87,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/hia1a_section61_header"
             android:id="@+id/labelTextView003"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            style="Bold"/>
 
     </LinearLayout>
 

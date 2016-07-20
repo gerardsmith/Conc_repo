@@ -90,19 +90,30 @@
         android:paddingTop="10dp">
 
 
-        <CheckBox
-            android:text="@string/incorrect"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD1_INC"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD1_COR"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/incorrect"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD1_INC"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD1_COR"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -132,19 +143,30 @@
         android:paddingTop="10dp">
 
 
-        <CheckBox
-            android:text="@string/incorrect"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD2_INC"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD2_COR"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/incorrect"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD2_INC"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD2_COR"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -174,19 +196,30 @@
         android:paddingTop="10dp">
 
 
-        <CheckBox
-            android:text="@string/incorrect"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD3_INC"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD3_COR"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/incorrect"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD3_INC"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD3_COR"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -216,19 +249,30 @@
         android:paddingTop="10dp">
 
 
-        <CheckBox
-            android:text="@string/incorrect"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD4_INC"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD4_COR"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/incorrect"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD4_INC"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD4_COR"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -258,19 +302,30 @@
         android:paddingTop="10dp">
 
 
-        <CheckBox
-            android:text="@string/incorrect"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD5_INC"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/correct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MADD5_COR"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/incorrect"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD5_INC"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/correct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MADD5_COR"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
 

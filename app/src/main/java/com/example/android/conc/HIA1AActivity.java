@@ -16,6 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class HIA1AActivity extends AppCompatActivity {
@@ -80,6 +83,7 @@ public class HIA1AActivity extends AppCompatActivity {
          * fragment.
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
+        private ArrayAdapter<CharSequence> adapter;
 
         public PlaceholderFragment() {
         }
@@ -102,6 +106,13 @@ public class HIA1AActivity extends AppCompatActivity {
            View rootView = inflater.inflate(R.layout.fragment_hia1_a, container, false);
             //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
            // textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner32);
+
+            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
+            //adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            this.adapter=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia1_1_spinner,android.R.layout.simple_spinner_dropdown_item);
+            this.adapter = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia1_1_spinner,R.layout.multiline_spinner_dropdown_item);
+            spinner.setAdapter(adapter);
             return rootView;
         }
     }
@@ -163,5 +174,22 @@ public class HIA1AActivity extends AppCompatActivity {
             return "HIA TEST " + (position + 1);
         }
 
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.checkBox_yes:
+                if (checked)
+                    // Pirates are the best
+                    break;
+            case R.id.checkBox_no:
+                if (checked)
+                    // Ninjas rule
+                    break;
+        }
     }
 }

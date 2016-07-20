@@ -110,7 +110,19 @@
     <string name="opt_2_num2">Option 2 numbers (if needed): -</string>
     <string name = "hia1_form">HIA1 Form</string>
 
+    <string-array name="hia1_1_spinner">
+        <item>Referee</item>
+        <item>Team doctor</item>
+        <item>Tournament doctor</item>
+        <item>Match day doctor</item>
+        <item>Following in-game video review</item>
+        <item>Physiotherapist</item>
+    </string-array>
 
+
+    <string name="imed_score">Immediate memory score (out of 15):</string>
+    <string name="digback_score">Digits backwards score (out of 4):</string>
+    <string name="del_score">Delayed memory score (out of 5):</string>
 
     <!-- HIA2 -->
     <string name="hia2a_section11_header">Was an HIA1 form completed, and if yes, what was the restult?</string>

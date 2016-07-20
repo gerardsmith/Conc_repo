@@ -60,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linearLayout222"
                 android:id="@+id/linearLayout333"
-                android:paddingTop="20dp">
+                android:paddingTop="20dp"
+                >
 
                 <CheckBox
                     android:text="@string/symptom_tp"
@@ -68,7 +69,10 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_TP"
                     android:layout_weight="1"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+
+                    />
 
                 <CheckBox
                     android:text="@string/symptom_conv"
@@ -76,7 +80,9 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_CONV"
                     android:layout_weight="1.17"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    />
 
 
             </LinearLayout>
@@ -84,32 +90,36 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:layout_below="@id/linearLayout333"
                 android:id="@+id/linearLayout444"
-                android:paddingTop="10dp">
+                android:paddingTop="10dp"
+                >
 
 
                 <CheckBox
                     android:text="@string/symptom_cconsc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_CCONSC"
-                    android:layout_weight="1"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+                    />
 
                 <CheckBox
                     android:text="@string/symptom_sconsc"
                     android:layout_width="185dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_SCONSC"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:layout_below="@id/linearLayout444"
                 android:id="@+id/linearLayout555"
                 android:paddingTop="10dp">
@@ -120,22 +130,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_BAL"
-                    android:layout_weight="1"
+                    android:layout_weight="1.11"
                     android:textSize="12sp" />
 
                 <CheckBox
                     android:text="@string/symptom_orien"
-                    android:layout_width="183dp"
+                    android:layout_width="181dp"
                     android:layout_height="42dp"
                     android:id="@+id/checkBox_ORIEN"
-                    android:textSize="12sp"
-                    android:layout_weight="0.08" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:layout_below="@id/linearLayout555"
                 android:id="@+id/linearLayout666"
                 android:paddingTop="10dp">
@@ -146,8 +155,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_DAZE"
-                    android:layout_weight="1"
-                    android:textSize="12sp" />
+                    android:textSize="12sp"
+                    android:layout_weight="1.01" />
 
                 <CheckBox
                     android:text="@string/symptom_conf"
@@ -161,7 +170,7 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="58dp"
                 android:layout_below="@id/linearLayout666"
                 android:id="@+id/linearLayout777"
                 android:paddingTop="10dp">
@@ -172,13 +181,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_BEHAV"
-                    android:layout_weight="1"
+                    android:layout_weight="98.94"
                     android:textSize="12sp" />
 
                 <CheckBox
                     android:text="@string/symptom_ident"
-                    android:layout_width="185dp"
-                    android:layout_height="38dp"
+                    android:layout_width="182dp"
+                    android:layout_height="match_parent"
                     android:id="@+id/checkBox_IDENT"
                     android:textSize="12sp" />
 
@@ -187,7 +196,7 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="52dp"
                 android:layout_below="@id/linearLayout777"
                 android:id="@+id/linearLayout888"
                 android:paddingTop="10dp">
@@ -215,7 +224,12 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="@string/hia1a_removal_header"
                     android:id="@+id/labelTextView333"
-                    android:textSize="16sp"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner32"
                     android:layout_weight="1" />
             </LinearLayout>
 
@@ -223,76 +237,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/linearLayout999"
-                android:id="@+id/linearLayout001"
-                android:paddingTop="10dp">
-
-
-                <CheckBox
-                    android:text="@string/removal_ref"
-                    android:layout_width="79dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_ref"
-                    android:textSize="10sp" />
-
-                <CheckBox
-                    android:text="@string/removal_tdr"
-                    android:layout_width="122dp"
-                    android:layout_height="42dp"
-                    android:id="@+id/checkBox_tdr"
-                    android:textSize="10sp" />
-
-                <CheckBox
-                    android:text="@string/removal_video"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_video"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/linearLayout001"
-                android:id="@+id/linearLayout002"
-                android:paddingTop="10dp"
-                >
-
-
-                <CheckBox
-                    android:text="@string/removal_dr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_dr"
-                    android:textSize="10sp"
-                    android:layout_weight="2.99" />
-
-                <CheckBox
-                    android:text="@string/removal_mdd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_mdd"
-                    android:textSize="10sp"
-                    android:layout_weight="1.60" />
-
-                <CheckBox
-                    android:text="@string/removal_phy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox2"
-                    android:layout_weight="1"
-                    android:textSize="10sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/linearLayout003"
-                android:layout_below="@id/linearLayout002"
+                android:layout_below="@id/linearLayout999"
                 android:paddingTop="20dp">
 
                 <TextView
@@ -308,31 +254,43 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/linearLayout004"
                 android:layout_below="@id/linearLayout003"
-                android:paddingTop="10dp"
-
-                >
-
-                <CheckBox
-                    android:text="@string/vid_yes"
+                android:paddingTop="20dp">
+                <RadioGroup
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_yes"
-                    android:layout_weight="1" />
+                    android:orientation="horizontal"
+                                        >
 
-                <CheckBox
-                    android:text="@string/vid_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/checkBox_no"
-                    android:layout_weight="1" />
+                    <RadioButton
+                        android:text="@string/vid_yes"
+                        android:layout_width="84dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox_yes"
+                        android:onClick="onRadioButtonClicked"
+                        style="@android:style/Widget.CompoundButton.CheckBox"
+                        />
+
+                    <RadioButton
+                        android:text="@string/vid_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox_no"
+                        android:layout_weight="1"
+                        android:onClick="onRadioButtonClicked"
+                        style="@android:style/Widget.CompoundButton.CheckBox"
+                        />
+
+                </RadioGroup>
+
             </LinearLayout>
+
 
         </LinearLayout>
 
     </ScrollView>
 
 
-</RelativeLayout>
+    </RelativeLayout>

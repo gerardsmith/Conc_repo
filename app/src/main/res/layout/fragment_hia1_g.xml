@@ -210,21 +210,25 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout008"
         android:layout_below="@+id/linearLayout003"
-        android:paddingTop="10dp">
+        android:paddingTop="20dp">
 
-        <CheckBox
-            android:text="@string/abnormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox7"
-            android:layout_weight="1" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="26dp"
+            android:text="@string/imed_score"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"
+            />
 
-        <CheckBox
-            android:text="@string/normal"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox6"
-            android:layout_weight="1" />
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText11"
+            android:paddingLeft="5dp"/>
+
+
     </LinearLayout>
 
     <TextView
@@ -233,7 +237,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView11"
         android:layout_weight="1"
-        android:paddingTop="25dp"
+        android:paddingTop="20dp"
         android:layout_below="@id/linearLayout008"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="14sp"
@@ -336,21 +340,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout010"
-        android:paddingTop="10dp">
+        android:paddingTop="20dp">
 
-        <CheckBox
-            android:text="@string/abnormal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox11"
-            android:layout_weight="1" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="26dp"
+            android:text="@string/digback_score"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"
+            />
 
-        <CheckBox
-            android:text="@string/normal"
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox10"
-            android:layout_weight="1" />
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText12"
+            android:paddingLeft="5dp"/>
     </LinearLayout>
+
+
 
 </RelativeLayout>
