@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout002"
         android:layout_below="@id/linearLayout001"
-        android:paddingTop="15dp">
+        android:paddingTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"

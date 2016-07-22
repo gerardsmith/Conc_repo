@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 public class HIA1FFragment extends Fragment {
-
+    private ArrayAdapter<CharSequence> adapter3;
     public static HIA1FFragment newInstance() {
         HIA1FFragment fragment = new HIA1FFragment();
         return fragment;
@@ -43,8 +43,10 @@ public class HIA1FFragment extends Fragment {
         spinner2.setAdapter(adapter2);
 
         Spinner spinner3 = (Spinner) rootView.findViewById(R.id.spinner3);
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, player_remove);
-        adapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        //ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, player_remove);
+        //adapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        this.adapter3=ArrayAdapter.createFromResource(this.getActivity(),R.array.player_removed_spinner,android.R.layout.simple_spinner_dropdown_item);
+        this.adapter3 = ArrayAdapter.createFromResource(this.getActivity(),R.array.player_removed_spinner,R.layout.multiline_spinner_dropdown_item);
         spinner3.setAdapter(adapter3);
 
         return rootView;

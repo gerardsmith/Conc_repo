@@ -8,33 +8,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin">
 
 
-    <TextView
-        android:text="@string/hia1a_81_sectionheader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView34"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="18sp"
-        />
-
-    <TextView
-        android:text="@string/hia1a_811_sectionheader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView30"
-        android:layout_below="@id/textView34"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="16sp"/>
-
-    <TextView
+   <TextView
         android:text="@string/hia1a_82_sectionheader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView35"
-        android:layout_below="@id/textView30"
-        android:paddingTop="15dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="14sp"/>
+        android:textSize="18sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -210,7 +190,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout008"
         android:layout_below="@+id/linearLayout003"
-        android:paddingTop="20dp">
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="250dp"
@@ -240,7 +220,7 @@
         android:paddingTop="20dp"
         android:layout_below="@id/linearLayout008"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="14sp"
+        android:textSize="18sp"
         />
 
     <TextView
@@ -249,7 +229,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView44"
         android:layout_below="@id/textView11"
-        android:paddingTop="10dp"
+        android:paddingTop="20dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="14sp"/>
 
@@ -340,7 +320,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout010"
-        android:paddingTop="20dp">
+        android:paddingTop="10dp">
 
         <TextView
             android:layout_width="250dp"

@@ -24,19 +24,18 @@
         android:id="@+id/linearLayout001"
         android:weightSum="1"
         android:layout_below="@+id/textView38"
-        android:paddingTop="50dp">
+        android:paddingTop="60dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="129dp"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/hia1a_section71_header"
             android:id="@+id/labelTextView001"
-            android:textSize="16sp"
-            android:layout_weight="1.05" />
+            android:textSize="16sp" />
 
         <Spinner
-            android:layout_width="203dp"
+            android:layout_width="245dp"
             android:layout_height="wrap_content"
             android:id="@+id/spinner" />
     </LinearLayout>
@@ -48,7 +47,7 @@
         android:id="@+id/linearLayout002"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout001"
-        android:paddingTop="20dp">
+        android:paddingTop="15dp">
 
 
         <TextView
@@ -68,21 +67,31 @@
         android:id="@+id/linearLayout003"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout002"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
-        <CheckBox
-            android:text="@string/yes"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_VI_Y"
-            android:layout_weight="0.14" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_VI_N"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_VI_Y"
+                style="@android:style/Widget.CompoundButton.CheckBox" />
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_VI_N"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -101,12 +110,13 @@
             android:text="@string/hia1a_section81_header"
             android:id="@+id/labelTextView003"
             android:textSize="16sp"
-            android:layout_weight="1.05" />
+            android:layout_weight="0.36" />
 
         <Spinner
             android:layout_width="203dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner2" />
+            android:id="@+id/spinner2"
+            android:layout_weight="0.67" />
     </LinearLayout>
 
     <LinearLayout
@@ -116,7 +126,7 @@
         android:id="@+id/linearLayout005"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout004"
-        android:paddingTop="20dp">
+        android:paddingTop="15dp">
 
 
         <TextView
@@ -136,21 +146,31 @@
         android:id="@+id/linearLayout006"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout005"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
-        <CheckBox
-            android:text="@string/yes"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MDD_Y"
-            android:layout_weight="0.14" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_MDD_N"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MDD_Y"
+                style="@android:style/Widget.CompoundButton.CheckBox" />
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_MDD_N"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -169,12 +189,14 @@
             android:text="@string/hia1a_section91_header"
             android:id="@+id/labelTextView004"
             android:textSize="16sp"
-            android:layout_weight="1.05" />
+            android:layout_weight="0.22" />
 
         <Spinner
             android:layout_width="203dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner3" />
+            android:id="@+id/spinner3"
+            android:layout_weight="0.83"
+            android:spinnerMode="dialog"/>
     </LinearLayout>
 
     <LinearLayout
@@ -184,7 +206,7 @@
         android:id="@+id/linearLayout008"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout007"
-        android:paddingTop="20dp">
+        android:paddingTop="0dp">
 
 
         <TextView
@@ -204,21 +226,31 @@
         android:id="@+id/linearLayout009"
         android:weightSum="1"
         android:layout_below="@+id/linearLayout008"
-        android:paddingTop="15dp">
+        android:paddingTop="10dp">
 
-        <CheckBox
-            android:text="@string/yes"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_VI2_Y"
-            android:layout_weight="0.14" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_VI2_N"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_VI2_Y"
+                style="@android:style/Widget.CompoundButton.CheckBox" />
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_VI2_N"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+        </RadioGroup>
     </LinearLayout>
 
 </RelativeLayout>

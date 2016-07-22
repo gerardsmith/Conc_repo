@@ -55,7 +55,7 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_hia">HIAActivity</string>
     <string name="hia1a_section21_header">SECTION 2: Pitch-side Head Injury Assessment</string>
-    <string name="hia1a_section22_header">Identify reason(s) for HIA below</string>
+    <string name="hia1a_section22_header">Identify reason(s) for HIA below:</string>
     <string name = "reason_head">Head impact where diagnosis not immediately apparent</string>
     <string name = "reason_behav">Possible behavioural changes</string>
     <string name = "reason_conf">Possible confusion</string>
@@ -93,22 +93,28 @@
     <string name="cs1">Emotional - sad, anxious, nervous, irritable</string>
     <string name="cs2">Drowsy/ has difficulty concentrating</string>
     <string name="cs3">Doctor performing HIA suspects concussion despite above test being normal</string>
-    <string name="hia1a_section71_header">Requested by</string>
-    <string name="hia1a_section81_header">Completed by</string>
-    <string name="hia1a_section91_header">Player removed</string>
+    <string name="hia1a_section71_header">Requested by:</string>
+    <string name="hia1a_section81_header">Completed by:</string>
+    <string name="hia1a_section91_header">Player removed:</string>
     <string name="vid_influence">Did video influence the request for the HIA?</string>
     <string name="MDD_present">Was the Match Day Doctor present during the HIA??</string>
     <string name="vid_influence2">Did video influence the decision following the HIA?</string>
     <string name="hia1a_81_sectionheader">ANSWER ALL QUESTIONS</string>
     <string name="hia1a_811_sectionheader">Any coloumn 1 answer = NO return to play</string>
-    <string name="hia1a_82_sectionheader">Immediate memory (ABNORMAL result is a score less than 12 or less than baseline)</string>
-    <string name="hia1a_83_sectionheader">Digits backwards (ABNORMAL result is a score less than 3 oe less than baseline)</string>
+    <string name="hia1a_82_sectionheader">Immediate memory</string>
+    <string name="hia1a_83_sectionheader">Digits backwards</string>
     <string name="opt_1">Option 1 &#160; - &#160;&#160; </string>
     <string name="opt_2">Option 2 &#160; - &#160;&#160; </string>
     <string name="opt_3">Option 3 &#160; - &#160;&#160; </string>
     <string name="opt_1_num1">Option 1 numbers: -</string>
     <string name="opt_2_num2">Option 2 numbers (if needed): -</string>
     <string name = "hia1_form">HIA1 Form</string>
+
+    <string-array name="player_removed_spinner">
+        <item>No</item>
+        <item>Yes, pitchside HIA abnormal</item>
+        <item>Yes, player removed for another injury</item>
+    </string-array>
 
     <string-array name="hia1_1_spinner">
         <item>Referee</item>

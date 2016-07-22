@@ -171,7 +171,7 @@ public class HIA1AActivity extends AppCompatActivity {
             }
             return null;
             */
-            return "HIA TEST " + (position + 1);
+            return "HIA1 TEST " + (position + 1);
         }
 
     }
