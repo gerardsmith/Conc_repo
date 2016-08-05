@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,11 +21,22 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class HIA2AActivity extends AppCompatActivity {
-
+public class HIA2AActivity extends AppCompatActivity
+        //implements HIA2DFragment.OnOrientationSelectedListener
+        {
+            private static final String TAG = "Tag Check";
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     private ViewPager mViewPager;
+
+           /* String TabFragmentB;
+            public void setTabFragmentB(String t){
+                TabFragmentB = t;
+                Log.v(TAG, "Orien Tag: " + t);
+            }
+            public String getTabFragmentB(){
+                return TabFragmentB;
+            }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +73,27 @@ public class HIA2AActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /*@Override
+    public void onArticleSelected(int position) {
+
+        HIA2EFragment articleFrag = (HIA2EFragment)
+                getSupportFragmentManager().findFragmentById(R.id.fragment2);
+
+       if (articleFrag != null) {
+            // If article frag is available, we're in two-pane layout...
+
+            // Call a method in the ArticleFragment to update its content
+            articleFrag.updateOrientationScore(position);
+       }
+    }*/
+
+    /*@Override
+    public void onOrientationSelected(String orien) {
+        HIA2EFragment f2 = (HIA2EFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_two);
+        f2.updateOrientationScore(orien);
+    }*/
+
 
     /**
      * A placeholder fragment containing a simple view.
@@ -101,9 +134,12 @@ public class HIA2AActivity extends AppCompatActivity {
             this.adapter = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia2_1_spinner,R.layout.multiline_spinner_dropdown_item);
             spinner.setAdapter(adapter);
 
+
+
             return rootView;
         }
     }
+
 
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to

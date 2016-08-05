@@ -102,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_CS1_Y"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
             <RadioButton
@@ -111,6 +112,7 @@
                 android:id="@+id/checkBox_CS1_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
         </RadioGroup>
@@ -145,6 +147,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_CS2_Y"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
             <RadioButton
@@ -154,6 +157,7 @@
                 android:id="@+id/checkBox_CS2_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
         </RadioGroup>
@@ -188,6 +192,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_CS3_Y"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
             <RadioButton
@@ -197,6 +202,7 @@
                 android:id="@+id/checkBox_CS3_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_clinical"
                 />
 
         </RadioGroup>

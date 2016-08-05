@@ -193,13 +193,13 @@
         (below) for not confirming a diagnosis of concussion</string>
     <string name="hia2a_section31_header">SECTION 2: Cognitive Assessment</string>
     <string name="hia2a_section32_header">Standardised Assessment of Concussion (SAC)</string>
-    <string name="hia2a_section33_header">Orientation</string>
+    <string name="hia2a_section33_header">ORIENTATION</string>
     <string name="hia2a_section34_header">(1 point for each correct answer)</string>
     <string name="orien_1">What month is it?</string>
     <string name="orien_2">What is the date today?</string>
     <string name="orien_3">What is the day of the week?</string>
     <string name="orien_4">What year is it?</string>
-    <string name="orien_5">What time is it right now? (within 1 hour)?</string>
+    <string name="orien_5">What time is it right now? (within 1 hour)</string>
     <string name="orien_score">Orientation score (/5):</string>
     <string name="sac_dr">SAC - Delayed Recall</string>
     <string name="sac_it">Number of words from Immediate test remembered? (/5)</string>
@@ -225,6 +225,7 @@
     <string name="immed_mem">IMMEDIATE MEMORY</string>
     <string name="immed_mem_score">Immediate memory score (/15):</string>
     <string name="conc_dig_score">Concentration score (/5):</string>
+    <string name="conc_dig_back_score">Concentration digits backwards score (/5):</string>
     <string name="conc_dig">CONCENTRATION: DIGITS BACKWARD</string>
     <string name="conc_month">CONCENTRATION: MONTHS IN REVERSE ORDER</string>
     <string name="conc_month2">( 1 point for entire sequence correct)</string>

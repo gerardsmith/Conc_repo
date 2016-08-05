@@ -66,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MADD1_INC"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
             <RadioButton
@@ -75,6 +76,7 @@
                 android:id="@+id/checkBox_MADD1_COR"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
         </RadioGroup>
@@ -119,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MADD2_INC"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
             <RadioButton
@@ -128,6 +131,7 @@
                 android:id="@+id/checkBox_MADD2_COR"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
         </RadioGroup>
@@ -172,6 +176,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MADD3_INC"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
             <RadioButton
@@ -181,6 +186,7 @@
                 android:id="@+id/checkBox_MADD3_COR"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
         </RadioGroup>
@@ -225,6 +231,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MADD4_INC"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
             <RadioButton
@@ -234,6 +241,7 @@
                 android:id="@+id/checkBox_MADD4_COR"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
                 />
 
         </RadioGroup>
@@ -278,6 +286,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MADD5_INC"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
+
                 />
 
             <RadioButton
@@ -287,6 +297,8 @@
                 android:id="@+id/checkBox_MADD5_COR"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_Mad"
+
                 />
 
         </RadioGroup>

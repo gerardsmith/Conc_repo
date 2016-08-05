@@ -71,6 +71,7 @@
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:layout_alignParentLeft="true"
+                    android:onClick="onCheckBoxSelected"
 
                     />
 
@@ -82,6 +83,8 @@
                     android:layout_weight="1.17"
                     android:textSize="14sp"
                     android:layout_alignParentRight="true"
+                    android:onClick="onCheckBoxSelected"
+
                     />
 
 
@@ -104,7 +107,8 @@
                     android:id="@+id/checkBox_CCONSC"
                     android:textSize="14sp"
                     android:layout_alignParentLeft="true"
-                    android:layout_weight="0.68" />
+                    android:layout_weight="0.68"
+                    android:onClick="onCheckBoxSelected"/>
 
                 <CheckBox
                     android:text="@string/symptom_sconsc"
@@ -113,7 +117,8 @@
                     android:id="@+id/checkBox_SCONSC"
                     android:textSize="14sp"
                     android:layout_alignParentRight="true"
-                    android:layout_weight="1.17" />
+                    android:layout_weight="1.17"
+                    android:onClick="onCheckBoxSelected"/>
             </LinearLayout>
 
             <LinearLayout
@@ -130,14 +135,16 @@
                     android:layout_width="193dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_BAL"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
 
                 <CheckBox
                     android:text="@string/symptom_orien"
                     android:layout_width="181dp"
                     android:layout_height="42dp"
                     android:id="@+id/checkBox_ORIEN"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
             </LinearLayout>
 
             <LinearLayout
@@ -155,7 +162,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_DAZE"
                     android:textSize="14sp"
-                    android:layout_weight="1.43" />
+                    android:layout_weight="1.43"
+                    android:onClick="onCheckBoxSelected"/>
 
                 <CheckBox
                     android:text="@string/symptom_conf"
@@ -163,7 +171,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_CONF"
                     android:layout_weight="0.61"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
             </LinearLayout>
 
             <LinearLayout
@@ -180,14 +189,16 @@
                     android:layout_width="194dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_BEHAV"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
 
                 <CheckBox
                     android:text="@string/symptom_ident"
                     android:layout_width="186dp"
                     android:layout_height="match_parent"
                     android:id="@+id/checkBox_IDENT"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
 
             </LinearLayout>
 
@@ -205,7 +216,8 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/checkBox_OCU"
                     android:layout_weight="1"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:onClick="onCheckBoxSelected"/>
             </LinearLayout>
 
             <LinearLayout

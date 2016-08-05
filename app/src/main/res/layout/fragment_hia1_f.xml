@@ -80,7 +80,8 @@
                 android:layout_width="71dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_VI_Y"
-                style="@android:style/Widget.CompoundButton.CheckBox" />
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"/>
 
             <RadioButton
                 android:text="@string/no"
@@ -89,6 +90,7 @@
                 android:id="@+id/checkBox_VI_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"
                 />
 
         </RadioGroup>
@@ -159,7 +161,8 @@
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_MDD_Y"
-                style="@android:style/Widget.CompoundButton.CheckBox" />
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"/>
 
             <RadioButton
                 android:text="@string/no"
@@ -168,6 +171,7 @@
                 android:id="@+id/checkBox_MDD_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"
                 />
 
         </RadioGroup>
@@ -239,7 +243,8 @@
                 android:layout_width="72dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/checkBox_VI2_Y"
-                style="@android:style/Widget.CompoundButton.CheckBox" />
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"/>
 
             <RadioButton
                 android:text="@string/no"
@@ -248,6 +253,7 @@
                 android:id="@+id/checkBox_VI2_N"
                 android:layout_weight="1"
                 style="@android:style/Widget.CompoundButton.CheckBox"
+                android:onClick="onCheckBoxSelected_HIA1form"
                 />
 
         </RadioGroup>

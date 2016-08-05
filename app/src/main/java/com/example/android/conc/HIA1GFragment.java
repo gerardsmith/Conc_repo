@@ -1,10 +1,12 @@
 package com.example.android.conc;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -13,6 +15,10 @@ import java.util.Random;
 public class HIA1GFragment extends Fragment {
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
+    private EditText memscore;
+    private EditText digback;
+    private static final String TAG = "Video Check";
+
 
     public static HIA1GFragment newInstance() {
         HIA1GFragment fragment = new HIA1GFragment();
@@ -26,6 +32,9 @@ public class HIA1GFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hia1_g, container, false);
+        memscore = (EditText) rootView.findViewById(R.id.editText11);
+        digback = (EditText) rootView.findViewById(R.id.editText12);
+
         wordArray =   getResources().getStringArray(R.array.randomWords);
         wordArray1 =   getResources().getStringArray(R.array.randomWords1);
         wordArray2 =   getResources().getStringArray(R.array.randomWords2);
@@ -164,4 +173,19 @@ public class HIA1GFragment extends Fragment {
 
         return rootView;
     }
+
+    @Override
+    public void onPause( ){
+        super.onPause();
+        if(memscore.getText() != null) {
+            String memscorestring =memscore.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + memscorestring);
+        }
+        if(digback.getText() != null) {
+            String digbackstring =digback.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + digbackstring);
+        }
+
+    }
+
 }
