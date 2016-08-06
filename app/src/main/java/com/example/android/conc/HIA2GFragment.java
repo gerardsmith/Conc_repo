@@ -2,10 +2,12 @@ package com.example.android.conc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -13,6 +15,9 @@ import java.util.Random;
 
 public class HIA2GFragment extends Fragment {
 
+    private EditText other;
+    private EditText other2;
+    private static final String TAG = "Video Check";
     public static HIA2GFragment newInstance() {
         HIA2GFragment fragment = new HIA2GFragment();
         return fragment;
@@ -25,6 +30,8 @@ public class HIA2GFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hia2_g, container, false);
+        other = (EditText) rootView.findViewById(R.id.editText16);
+        other2 = (EditText) rootView.findViewById(R.id.editText15);
 
         //Rand number generator
         Random rand2 = new Random();
@@ -103,4 +110,19 @@ public class HIA2GFragment extends Fragment {
 
         return rootView;
     }
+
+    @Override
+    public void onPause( ){
+        super.onPause();
+        if(other.getText() != null) {
+            String dig_back_score =other.getText().toString();
+            Log.v(TAG, "Digits backwards: " + dig_back_score);
+        }
+
+        if(other2.getText() != null) {
+            String conc_score =other2.getText().toString();
+            Log.v(TAG, "Concentration: " + conc_score);
+        }
+    }
+
 }

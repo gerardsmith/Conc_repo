@@ -10,20 +10,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import java.util.Random;
 
 
-public class HIA2DFragment extends Fragment {
+public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
     // android developer START
    // OnOrientationSelectedListener mCallback;
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
     int orien=0;
+    boolean or1= false;
+    boolean or2= false;
+    boolean or3= false;
+    boolean or4= false;
+    boolean or5= false;
     String string_orien;
+    private EditText other;
     private static final String TAG = "Video Check";
 
     public static HIA2DFragment newInstance() {
@@ -38,6 +47,7 @@ public class HIA2DFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hia2_d, container, false);
+        other = (EditText) rootView.findViewById(R.id.editText8);
 
 
         wordArray =   getResources().getStringArray(R.array.randomWords);
@@ -100,7 +110,29 @@ public class HIA2DFragment extends Fragment {
         TextView no_35 = (TextView)rootView.findViewById(R.id.textView05);
         no_35.setText(wordArray4[num35] + "  ");
 
-        Button mButton = (Button) rootView.findViewById(R.id.checkBox_ORIEN_1);
+        RadioButton mButton = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_1);
+        RadioButton mButton1 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_2);
+        RadioButton mButton2 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_3);
+        RadioButton mButton3 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_4);
+        RadioButton mButton4 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_5);
+        RadioButton mButton5 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_6);
+        RadioButton mButton6 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_7);
+        RadioButton mButton7 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_8);
+        RadioButton mButton8 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_9);
+        RadioButton mButton9 = (RadioButton) rootView.findViewById(R.id.checkBox_ORIEN_10);
+
+        mButton.setOnCheckedChangeListener(this);
+        mButton1.setOnCheckedChangeListener(this);
+        mButton2.setOnCheckedChangeListener(this);
+        mButton3.setOnCheckedChangeListener(this);
+        mButton4.setOnCheckedChangeListener(this);
+        mButton5.setOnCheckedChangeListener(this);
+        mButton6.setOnCheckedChangeListener(this);
+        mButton7.setOnCheckedChangeListener(this);
+        mButton8.setOnCheckedChangeListener(this);
+        mButton9.setOnCheckedChangeListener(this);
+
+       /* Button mButton = (Button) rootView.findViewById(R.id.checkBox_ORIEN_1);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -210,6 +242,8 @@ public class HIA2DFragment extends Fragment {
                // mCallback.onOrientationSelected(string_orien);
             }
         });
+
+        */
         //String O_score = String.valueOf(orien);
         /*Intent intent = new Intent(getActivity(), HIA2EFragment.class)
                 .putExtra(Intent.EXTRA_TEXT, O_score);
@@ -240,6 +274,92 @@ public class HIA2DFragment extends Fragment {
        return rootView;
     }
 
+    @Override
+    public void onPause( ){
+        super.onPause();
+        if(other.getText() != null) {
+            String mem_score =other.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + mem_score);
+        }
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            boolean checked2 = ((RadioButton) buttonView).isChecked();
+            switch (buttonView.getId())
+            {
+                case R.id.checkBox_ORIEN_1:
+                    if (checked2)
+                    {
+                        orien=orien+1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                    else
+                    {
+                        orien=orien-1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+
+                case R.id.checkBox_ORIEN_3:
+                    if (checked2)
+                    {
+                        orien=orien+1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                    else
+                    {
+                        orien=orien-1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+
+                case R.id.checkBox_ORIEN_5:
+                    if (checked2)
+                    {
+                        orien=orien+1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                    else
+                    {
+                        orien=orien-1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+
+                case R.id.checkBox_ORIEN_7:
+                    if (checked2)
+                    {
+                        orien=orien+1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                    else
+                    {
+                        orien=orien-1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+
+                case R.id.checkBox_ORIEN_9:
+                    if (checked2)
+                    {
+                        orien=orien+1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                    else
+                    {
+                        orien=orien-1;
+                        Log.v(TAG, "Purple Monkeys " + orien);
+                        break;
+                    }
+                }
+            }
+
 
     // Container Activity must implement this interface
    /* public interface OnOrientationSelectedListener {
@@ -261,4 +381,5 @@ public class HIA2DFragment extends Fragment {
     }*/
 
     // END
+
 }
