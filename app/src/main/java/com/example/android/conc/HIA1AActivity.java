@@ -54,13 +54,13 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     boolean symp8;
     boolean symp9;*/
 
-    boolean cs1;
+    /*boolean cs1;
     boolean cs2;
-    boolean cs3;
+    boolean cs3;*/
 
-    boolean HIA1form1;
+   /* boolean HIA1form1;
     boolean HIA1form2;
-    boolean HIA1form3;
+    boolean HIA1form3;*/
 
 
    /* boolean remov_1 = false;
@@ -622,7 +622,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 */
-    public void onCheckBoxSelected_clinical(View view) {
+   /* public void onCheckBoxSelected_clinical(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -658,9 +658,9 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 break;
 
         }
-    }
+    }*/
 
-    public void onCheckBoxSelected_HIA1form(View view) {
+   /* public void onCheckBoxSelected_HIA1form(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
@@ -696,5 +696,5 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 break;
 
         }
-    }
+    }*/
 }

@@ -2,17 +2,25 @@ package com.example.android.conc;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 
-public class HIA3BFragment extends Fragment {
+public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
+    private static final String TAG = "Video Check";
+    private EditText other;
+    private EditText other1;
+    private EditText other2;
+    private EditText other3;
     public static HIA3BFragment newInstance() {
         HIA3BFragment fragment = new HIA3BFragment();
         return fragment;
@@ -25,6 +33,7 @@ public class HIA3BFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hia3_b, container, false);
+
         String [] game_event =
                 {"Tackling",
                         "Being tackled",
@@ -80,6 +89,64 @@ public class HIA3BFragment extends Fragment {
         ArrayAdapter<String> adapter3 = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, player_technique);
         adapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner3.setAdapter(adapter3);
+
+        spinner.setOnItemSelectedListener(this);
+        spinner1.setOnItemSelectedListener(this);
+        spinner2.setOnItemSelectedListener(this);
+        spinner3.setOnItemSelectedListener(this);
+
+        other = (EditText) rootView.findViewById(R.id.editText2);
+        other1 = (EditText) rootView.findViewById(R.id.editText3);
+        other2 = (EditText) rootView.findViewById(R.id.editText4);
+        other3 = (EditText) rootView.findViewById(R.id.editText5);
         return rootView;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        switch(parent.getId()) {
+            case R.id.spinner28:
+                Log.v(TAG, "Video Checkbox0: " + position);
+                return;
+            case R.id.spinner29:
+                Log.v(TAG, "Video Checkbox1: " + position);
+                return;
+            case R.id.spinner30:
+                Log.v(TAG, "Video Checkbox2: " + position);
+                return;
+            case R.id.spinner31:
+                Log.v(TAG, "Video Checkbox2: " + position);
+                return;
+
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onPause( ){
+        super.onPause();
+        if(other.getText() != null) {
+            String inc_deet1 =other.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + inc_deet1);
+        }
+
+        if(other1.getText() != null) {
+            String inc_deet2 =other1.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + inc_deet2);
+        }
+
+        if(other2.getText() != null) {
+            String inc_deet3 =other2.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + inc_deet3);
+        }
+
+        if(other3.getText() != null) {
+            String inc_deet4 =other3.getText().toString();
+            Log.v(TAG, "Video Checkbox: " + inc_deet4);
+        }
     }
 }

@@ -43,20 +43,30 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="5dp">
 
-        <CheckBox
-            android:text="@string/no"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_ANT_AM_N"
-            android:layout_weight="0.01"
-            />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/yes_dur"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_ANT_AM_Y"
-            android:layout_weight="0.01" />
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_ANT_AM_N"
+                android:layout_weight="0.01"
+                style="@android:style/Widget.CompoundButton.CheckBox"
+                />
+
+            <RadioButton
+                android:text="@string/yes_dur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_ANT_AM_Y"
+                android:layout_weight="0.01"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
 
         <EditText
             android:layout_width="185dp"
@@ -83,19 +93,29 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="5dp">
 
-        <CheckBox
-            android:text="@string/no"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox_RET_AM_N"
-            android:layout_weight="0.11" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/yes_dur"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_RET_AM_Y"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_RET_AM_N"
+                android:layout_weight="0.11"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+            <RadioButton
+                android:text="@string/yes_dur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_RET_AM_Y"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
 
         <EditText
             android:layout_width="186dp"

@@ -8,13 +8,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 
-public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelectedListener, CheckBox.OnCheckedChangeListener {
     private ArrayAdapter<CharSequence> adapter3;
     private static final String TAG = "Video Check";
+    boolean HIA1form1;
+    boolean HIA1form2;
+    boolean HIA1form3;
     public static HIA1FFragment newInstance() {
         HIA1FFragment fragment = new HIA1FFragment();
         return fragment;
@@ -55,6 +61,14 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
         spinner2.setOnItemSelectedListener(this);
         spinner3.setOnItemSelectedListener(this);
 
+        RadioButton mButton = (RadioButton) rootView.findViewById(R.id.checkBox_VI_Y);
+        RadioButton mButton1 = (RadioButton) rootView.findViewById(R.id.checkBox_MDD_Y);
+        RadioButton mButton2 = (RadioButton) rootView.findViewById(R.id.checkBox_VI2_Y);
+
+        mButton.setOnCheckedChangeListener(this);
+        mButton1.setOnCheckedChangeListener(this);
+        mButton2.setOnCheckedChangeListener(this);
+
         return rootView;
     }
 
@@ -81,6 +95,53 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        boolean checked = ((RadioButton) buttonView).isChecked();
+
+        switch (buttonView.getId()) {
+            case R.id.checkBox_VI_Y:
+                if (checked){
+                    HIA1form1 = true;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form1);
+                    break;
+                }
+
+                else{
+                    HIA1form1 = false;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form1);
+                    break;
+                }
+
+            case R.id.checkBox_MDD_Y:
+                if (checked){
+                    HIA1form2 = true;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form2);
+                    break;
+                }
+
+                else{
+                    HIA1form2 = false;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form2);
+                    break;
+                }
+
+            case R.id.checkBox_VI2_Y:
+                if (checked){
+                    HIA1form3 = true;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form3);
+                    break;
+                }
+
+                else{
+                    HIA1form3 = false;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1form3);
+                    break;
+                }
+        }
 
     }
 }
