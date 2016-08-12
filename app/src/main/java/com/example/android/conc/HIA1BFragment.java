@@ -126,17 +126,23 @@ public class HIA1BFragment extends Fragment {
             }
         });
 
+        other.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String HIA_other_reason =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + HIA_other_reason);
+            }
+        });
 
         return rootView;
     }
-    @Override
+    /*@Override
     public void onPause( ){
         super.onPause();
         if(other.getText() != null) {
             String HIA_other_reason =other.getText().toString();
             Log.v(TAG, "Video Checkbox: " + HIA_other_reason);
         }
-    }
+    }*/
 
 
 }

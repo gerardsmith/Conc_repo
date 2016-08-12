@@ -6,12 +6,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -39,7 +41,7 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
     ExpandableListAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader;
-    HashMap<String, List<String>> listDataChild;
+   HashMap<String, List<String>> listDataChild;
 
     private static final String TAG = "Video Check";
     private EditText other;
@@ -63,10 +65,10 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
         //added
         // get the listview
-        expListView = (ExpandableListView) rootView.findViewById(R.id.lvExp);
+       expListView = (ExpandableListView) rootView.findViewById(R.id.lvExp);
         // preparing list data
         prepareListData();
-        listAdapter = new ExpandableListAdapter(this.getActivity(), listDataHeader, listDataChild);
+       listAdapter = new ExpandableListAdapter(this.getActivity(), listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
 
@@ -79,6 +81,21 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
         mButton.setOnCheckedChangeListener(this);
         mButton1.setOnCheckedChangeListener(this);
 
+        other.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String dur1 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + dur1);
+            }
+        });
+
+        other1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String dur2 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + dur2);
+            }
+        });
+
+
         return rootView;
     }
 
@@ -86,12 +103,12 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
   * Preparing the list data
   * added
   */
-    private void prepareListData() {
+   private void prepareListData() {
         listDataHeader = new ArrayList<String>();
         //List<String> listDataHeader = Arrays.asList(getResources().getStringArray(R.array.listDataHeader));
         listDataChild = new HashMap<String, List<String>>();
 
-        // Adding child data
+        // Adding child data (22)
         listDataHeader.add("Headaches");
         listDataHeader.add("\'Pressure in head\'");
         listDataHeader.add("Neck pain");
@@ -117,38 +134,41 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> one = new ArrayList<String>();
+        one.add("Identify the maximum intensity of the symptom");
+        one.add("Identify when you started to feel the symptom");
+        one.add("Identify how long the symptom lasted");
+        one.add("Identify the intensity of the symptom still present");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
+        listDataChild.put(listDataHeader.get(0), one); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), one);
+        listDataChild.put(listDataHeader.get(2), one);
+       listDataChild.put(listDataHeader.get(3), one);
+       listDataChild.put(listDataHeader.get(4), one);
+       listDataChild.put(listDataHeader.get(5), one);
+       listDataChild.put(listDataHeader.get(6), one);
+       listDataChild.put(listDataHeader.get(7), one);
+       listDataChild.put(listDataHeader.get(8), one);
+       listDataChild.put(listDataHeader.get(9), one);
+       listDataChild.put(listDataHeader.get(10), one);
+       listDataChild.put(listDataHeader.get(11), one);
+       listDataChild.put(listDataHeader.get(12), one);
+       listDataChild.put(listDataHeader.get(13), one);
+       listDataChild.put(listDataHeader.get(14), one);
+       listDataChild.put(listDataHeader.get(15), one);
+       listDataChild.put(listDataHeader.get(16), one);
+       listDataChild.put(listDataHeader.get(17), one);
+       listDataChild.put(listDataHeader.get(18), one);
+       listDataChild.put(listDataHeader.get(19), one);
+       listDataChild.put(listDataHeader.get(20), one);
+       listDataChild.put(listDataHeader.get(21), one);
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
 
 
     }
 
-    @Override
+    /*@Override
     public void onPause( ) {
         super.onPause();
         if (other.getText() != null) {
@@ -161,7 +181,7 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
             Log.v(TAG, "Video Checkbox: " + dur2);
         }
 
-    }
+    }*/
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

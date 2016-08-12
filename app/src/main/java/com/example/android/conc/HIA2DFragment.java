@@ -132,156 +132,25 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         mButton8.setOnCheckedChangeListener(this);
         mButton9.setOnCheckedChangeListener(this);
 
-       /* Button mButton = (Button) rootView.findViewById(R.id.checkBox_ORIEN_1);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+        other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                orien=orien+1;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-
+                String mem_score =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + mem_score);
             }
         });
-
-        Button mButton1 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_2);
-        mButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-              //  mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton2 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_3);
-        mButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien+1;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton3 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_4);
-        mButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton4 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_5);
-        mButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien+1;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton5 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_6);
-        mButton5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton6 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_7);
-        mButton6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien+1;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-                //mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton7 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_8);
-        mButton7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-                //mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton8 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_9);
-        mButton8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien+1;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        Button mButton9 = (Button) rootView.findViewById(R.id.checkBox_ORIEN_10);
-        mButton9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                orien=orien;
-                Log.v(TAG, "Orien Score: " + orien);
-                string_orien=String.valueOf(orien);
-               // mCallback.onOrientationSelected(string_orien);
-            }
-        });
-
-        */
-        //String O_score = String.valueOf(orien);
-        /*Intent intent = new Intent(getActivity(), HIA2EFragment.class)
-                .putExtra(Intent.EXTRA_TEXT, O_score);
-        startActivity(intent);*/
-
-        //android developer
-       //mCallback.onOrientationSelected(orien);
-
-
-       //String TabOfFragmentB = ((HIA2AActivity)getActivity()).getTabFragmentB();
-
-       /* String TabOfFragmentB = "android:switcher:2131558811:5";
-
-        HIA2EFragment fragmentB = (HIA2EFragment)getActivity()
-          .getSupportFragmentManager()
-          .findFragmentByTag(TabOfFragmentB);
-        Log.v(TAG, "Orien Tag: " + TabOfFragmentB);
-        String ob;
-        ob="1";
-        //fragmentB.Fucntion_FragmantB(ob);
-
-        if (fragmentB==null)
-        {
-            Log.v(TAG, "NULLLLLLLLLLL");
-        }*/
 
 
        return rootView;
     }
 
-    @Override
+/*    @Override
     public void onPause( ){
         super.onPause();
         if(other.getText() != null) {
             String mem_score =other.getText().toString();
             Log.v(TAG, "Video Checkbox: " + mem_score);
         }
-    }
+    }*/
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

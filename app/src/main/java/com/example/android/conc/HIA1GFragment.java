@@ -171,10 +171,24 @@ public class HIA1GFragment extends Fragment {
                 concat("-").concat(String.valueOf(number218));
         numero24.setText(n24);
 
+        memscore.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String memscorestring =memscore.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + memscorestring);
+            }
+        });
+
+        digback.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String digbackstring =digback.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + digbackstring);
+            }
+        });
+
         return rootView;
     }
 
-    @Override
+    /*@Override
     public void onPause( ){
         super.onPause();
         if(memscore.getText() != null) {
@@ -186,6 +200,6 @@ public class HIA1GFragment extends Fragment {
             Log.v(TAG, "Video Checkbox: " + digbackstring);
         }
 
-    }
+    }*/
 
 }

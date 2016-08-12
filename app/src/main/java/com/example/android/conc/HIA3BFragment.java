@@ -99,6 +99,35 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
         other1 = (EditText) rootView.findViewById(R.id.editText3);
         other2 = (EditText) rootView.findViewById(R.id.editText4);
         other3 = (EditText) rootView.findViewById(R.id.editText5);
+
+        other.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String inc_deet1 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + inc_deet1);
+            }
+        });
+
+        other1.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String inc_deet2 =other1.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + inc_deet2);
+            }
+        });
+
+        other2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String inc_deet3 =other2.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + inc_deet3);
+            }
+        });
+
+        other3.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String inc_deet4 =other3.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + inc_deet4);
+            }
+        });
+
         return rootView;
     }
 
@@ -126,7 +155,7 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
 
     }
 
-    @Override
+   /* @Override
     public void onPause( ){
         super.onPause();
         if(other.getText() != null) {
@@ -148,5 +177,5 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
             String inc_deet4 =other3.getText().toString();
             Log.v(TAG, "Video Checkbox: " + inc_deet4);
         }
-    }
+    }*/
 }

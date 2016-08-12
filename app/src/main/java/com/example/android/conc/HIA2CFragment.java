@@ -27,15 +27,24 @@ public class HIA2CFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_hia2_c, container, false);
         other = (EditText) rootView.findViewById(R.id.editText);
+
+        other.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String unusual_symp =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + unusual_symp);
+            }
+        });
+
         return rootView;
+
     }
 
-    @Override
+    /*@Override
     public void onPause( ){
         super.onPause();
         if(other.getText() != null) {
             String unusual_symp =other.getText().toString();
             Log.v(TAG, "Video Checkbox: " + unusual_symp);
         }
-    }
+    }*/
 }

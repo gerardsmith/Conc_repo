@@ -30,19 +30,26 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout002"
-        android:paddingTop="25dp"
-        android:layout_below="@+id/linearLayout001">
-
+        android:layout_below="@+id/linearLayout001"
+        android:id="@+id/linearLayout0033"
+        android:paddingTop="20dp"
+        >
         <TextView
-            android:text="@string/sac_it"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView2"
-            android:layout_weight="1"
+            android:layout_width="250dp"
+            android:layout_height="26dp"
+            android:text="@string/del_score"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="14sp"
             />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/editText12"
+            android:paddingLeft="5dp"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -51,7 +58,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout003"
         android:paddingTop="25dp"
-        android:layout_below="@+id/linearLayout002">
+        android:layout_below="@+id/linearLayout0033">
 
         <TextView
             android:text="@string/sac_sum"

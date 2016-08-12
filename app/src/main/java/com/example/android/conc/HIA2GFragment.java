@@ -108,10 +108,24 @@ public class HIA2GFragment extends Fragment {
                 concat("-").concat(String.valueOf(number218));
         numero24.setText(n24);
 
+        other.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String dig_back_score =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + dig_back_score);
+            }
+        });
+
+        other2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                String conc_score =other2.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + conc_score);
+            }
+        });
+
         return rootView;
     }
 
-    @Override
+    /*@Override
     public void onPause( ){
         super.onPause();
         if(other.getText() != null) {
@@ -123,6 +137,6 @@ public class HIA2GFragment extends Fragment {
             String conc_score =other2.getText().toString();
             Log.v(TAG, "Concentration: " + conc_score);
         }
-    }
+    }*/
 
 }
