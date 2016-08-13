@@ -388,6 +388,10 @@
         <item>No, HIA2 not completed despite being indicated</item>
     </string-array>
 
+    <string name="symptom_exp_view_b">Identify when you started to feel the symptom:</string>
+    <string name="symptom_exp_view_c">Identify how long the symptom lasted:</string>
+    <string name="symptom_exp_view_d">Identify how long the symptom lasted:</string>
+
 
 
 

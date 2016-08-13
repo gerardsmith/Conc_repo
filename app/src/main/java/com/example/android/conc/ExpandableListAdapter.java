@@ -23,7 +23,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     private Context _context;
     private Activity context;
-    ArrayAdapter<String> adapter1;
+    ArrayAdapter<String> adapter1,adapter2,adapter3,adapter4;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
@@ -64,13 +64,40 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
        txtListChild.setText(childText);
 
         String [] req_by =
-                {"Team Doctor","Physiotherapist","Match Day Doctor","Tournament Doctor","Referee"};
+                {"N/A","1 - Mild","2 - Mild","3 - Moderate","4 - Moderate","5 - Severe","6 - Severe"};
 
         Spinner spinner1 = (Spinner) convertView.findViewById(R.id.spinner33);
         adapter1 = new ArrayAdapter<String>(this._context,
                 android.R.layout.simple_spinner_item, req_by);
         adapter1.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner1.setAdapter(adapter1);
+
+        String [] when =
+                {"N/A","On the pitch","Post match, same-day","Post-match, days after"};
+
+        Spinner spinner2 = (Spinner) convertView.findViewById(R.id.spinner34);
+        adapter2 = new ArrayAdapter<String>(this._context,
+                android.R.layout.simple_spinner_item, when);
+        adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner2.setAdapter(adapter2);
+
+        String [] dur =
+                {"N/A","0-15 minutes","15 minutes to 1 hour","1 hour to the 1st night", "1st night to 2nd night", "Beyond the 2nd night"};
+
+        Spinner spinner3 = (Spinner) convertView.findViewById(R.id.spinner35);
+        adapter3 = new ArrayAdapter<String>(this._context,
+                android.R.layout.simple_spinner_item, dur);
+        adapter3.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner3.setAdapter(adapter3);
+
+        String [] pres =
+                {"N/A","1 - Mild","2 - Mild","3 - Moderate","4 - Moderate","5 - Severe","6 - Severe"};
+
+        Spinner spinner4 = (Spinner) convertView.findViewById(R.id.spinner36);
+        adapter4 = new ArrayAdapter<String>(this._context,
+                android.R.layout.simple_spinner_item,pres);
+        adapter4.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner4.setAdapter(adapter4);
 
         return convertView;
     }

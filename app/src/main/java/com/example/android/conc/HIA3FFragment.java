@@ -135,10 +135,10 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
         // Adding child data
         List<String> one = new ArrayList<String>();
-        one.add("Identify the maximum intensity of the symptom");
-        one.add("Identify when you started to feel the symptom");
-        one.add("Identify how long the symptom lasted");
-        one.add("Identify the intensity of the symptom still present");
+        one.add("Identify the maximum intensity of the symptom:");
+       // one.add("Identify when you started to feel the symptom:");
+       // one.add("Identify how long the symptom lasted:");
+       // one.add("Identify the intensity of the symptom still present:");
 
         listDataChild.put(listDataHeader.get(0), one); // Header, Child data
         listDataChild.put(listDataHeader.get(1), one);
