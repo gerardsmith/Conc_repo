@@ -11,11 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static com.example.android.conc.R.id.textView_orientationresult;
+
 
 public class HIA2EFragment extends Fragment {
 
+    public HIA2AActivity attempt;
     TextView o_result;
     String o_result_string;
+    TextView textView;
     int tempval;
     private EditText delmem;
     private static final String TAG = "Tag Check";
@@ -24,7 +28,7 @@ public class HIA2EFragment extends Fragment {
         return fragment;
     }
 
-    public HIA2EFragment() {
+        public HIA2EFragment() {
     }
 
     @Override
@@ -33,13 +37,9 @@ public class HIA2EFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_hia2_e, container, false);
         delmem = (EditText) rootView.findViewById(R.id.editText12);
 
-        /*Intent intent = getActivity().getIntent();
-        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)) {
-            o_result_string = intent.getStringExtra(Intent.EXTRA_TEXT);
-        }*/
-
-       // o_result = (TextView) rootView.findViewById(R.id.textView_orientationresult);
-       // o_result.setVisibility(View.GONE);
+        //o_result = (TextView) rootView.findViewById(R.id.textView_orientationresult);
+        //o_result.setVisibility(View.GONE);
+        //Log.v(TAG, "TEMPVAL: " + tempval);
         //o_result_string= String.valueOf(tempval);
        // o_result.setText(o_result_string);
 
@@ -48,6 +48,14 @@ public class HIA2EFragment extends Fragment {
 
        // ((HIA2AActivity)getActivity()).setTabFragmentB(myTag);
         //String delmemstring =delmem.getText().toString();
+        //textView = (TextView) rootView.findViewById(textView_orientationresult);
+        //Bundle bundle = getArguments();
+        //Log.v(TAG, "Got here");
+        //if (bundle!= null)
+        //{
+          //  textView.setText(bundle.getInt("pos"));
+           // Log.v(TAG, "SET FLAG");
+        //}
 
         delmem.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
@@ -58,24 +66,33 @@ public class HIA2EFragment extends Fragment {
         return rootView;
     }
 
-/*    @Override
-    public void onPause( ){
-        super.onPause();
-        if(delmem.getText() != null) {
-            String delmemstring =delmem.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + delmemstring);
-        }
-    }
-*/
-    /*public void updateOrientationScore(String O_score)
-    {
-        o_result.setText(O_score);
-        o_result.setVisibility(View.VISIBLE);
-    }*/
+    public void updateOrienScore(int position) {
 
-   /* public void Fucntion_FragmantB(String O_score)
-   {
-       o_result.setText(O_score);
-       o_result.setVisibility(View.VISIBLE);
-    }*/
+        //Log.v(TAG, "TEMPVAL: " + position);
+        //HIA2EFragment fraggy = new HIA2EFragment();
+        /*TextView textView;
+        textView = (TextView) getView().findViewById(textView_orientationresult);
+        Log.v(TAG, "TEMPVAL tview: " + textView);
+        textView.setVisibility(View.VISIBLE);
+        o_result_string= String.valueOf(position);
+        textView.setText(o_result_string);*/
+       // Bundle args = new Bundle();
+       // args.putInt("pos",position);
+        //fraggy.setArguments(args);
+        //tempval= position;
+
+
+    }
+    @Override
+    public void onResume()
+    {
+        super.onResume();
+        attempt = (HIA2AActivity) getActivity();
+        textView = (TextView) getView().findViewById(textView_orientationresult);
+        o_result_string= String.valueOf(attempt.attemp1.orientation);
+        textView.setText(o_result_string);
+
+
+    }
+
 }

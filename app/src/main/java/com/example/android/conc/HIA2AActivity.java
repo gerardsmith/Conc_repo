@@ -1,7 +1,9 @@
 package com.example.android.conc;
 
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -21,36 +23,71 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class HIA2AActivity extends AppCompatActivity
+import java.util.HashMap;
+import java.util.Map;
+
+public class HIA2AActivity extends AppCompatActivity//FragmentActivity
         implements HIA2DFragment.OnOrienSelectedListener
         {
+            testResults attemp1 = new testResults();
+            HIA2EFragment articleFrag;
             private static final String TAG = "Tag Check";
-    private SectionsPagerAdapter mSectionsPagerAdapter;
+            SectionsPagerAdapter mSectionsPagerAdapter;
 
-    private ViewPager mViewPager;
 
-           /* String TabFragmentB;
-            public void setTabFragmentB(String t){
-                TabFragmentB = t;
-                Log.v(TAG, "Orien Tag: " + t);
-            }
-            public String getTabFragmentB(){
-                return TabFragmentB;
-            }*/
+        ViewPager mViewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.viewpager_layout);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());//,this.getApplicationContext());
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        //mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+       // mSectionsPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager(),this.getApplicationContext());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        articleFrag = (HIA2EFragment)
+        getSupportFragmentManager().findFragmentById(R.id.hia2Efrag);
+
+        //new
+        //mViewPager = new ViewPager(this);
+        //mViewPager.setId(R.id.pager);
+        //setContentView(mViewPager);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());//,this.getApplicationContext());
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener(){
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position){
+                Fragment fragment = ((SectionsPagerAdapter)mViewPager.getAdapter()).getFragment(position);
+
+                if (position ==5 && fragment != null)
+                {
+                    Log.v(TAG, "On resume");
+                    fragment.onResume();
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+
+        //Log.v(TAG, "Purple Monkeys again " + articleFrag);
 
     }
-
+            //public void changeFragmentTextView(String s) {
+               // Fragment frag = getSupportFragmentManager().findFragmentById(R.id.hia2Efrag);
+               // ((TextView) frag.getView().findViewById(R.id.textView_orientationresult)).setText(s);
+            //}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,9 +112,19 @@ public class HIA2AActivity extends AppCompatActivity
     }
             @Override
             public void onOrienSelected(int position) {
-                Log.v(TAG, "Purple Monkeys " + position);
-            }
 
+               if (articleFrag != null) {
+                    // If article frag is available, we're in two-pane layout...
+
+                    // Call a method in the ArticleFragment to update its content
+                   attemp1.orientation = position;
+                   //articleFrag.updateOrienScore(position);
+                   String pos =Integer.toString(position);
+                   Log.v(TAG, "Purple Monkeys again again " + pos);
+                  // changeFragmentTextView(pos);
+
+                }
+            }
 
 
 
@@ -112,6 +159,7 @@ public class HIA2AActivity extends AppCompatActivity
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_hia2_a, container, false);
 
+
             Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner4);
 
             //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
@@ -119,7 +167,6 @@ public class HIA2AActivity extends AppCompatActivity
             this.adapter=ArrayAdapter.createFromResource(this.getActivity(),R.array.hia2_1_spinner,android.R.layout.simple_spinner_dropdown_item);
             this.adapter = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia2_1_spinner,R.layout.multiline_spinner_dropdown_item);
             spinner.setAdapter(adapter);
-
 
 
             return rootView;
@@ -132,9 +179,17 @@ public class HIA2AActivity extends AppCompatActivity
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
+        private Map<Integer, String> mFragmentTags;
+        private FragmentManager mFragmentManager;
+        private Context mContext;
 
-        public SectionsPagerAdapter(FragmentManager fm) {
+        public SectionsPagerAdapter(FragmentManager fm){//, Context context) {
+
             super(fm);
+            mFragmentManager = fm;
+            mFragmentTags = new HashMap<Integer, String>();
+           // mContext= context;
+
         }
 
         @Override
@@ -171,6 +226,7 @@ public class HIA2AActivity extends AppCompatActivity
 
         @Override
         public CharSequence getPageTitle(int position) {
+
             /*switch (position) {
                 case 0:
                     return "SECTION 1";
@@ -183,6 +239,28 @@ public class HIA2AActivity extends AppCompatActivity
             */
             return "HIA2 TEST " + (position + 1);
         }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position){
+            Object obj = super.instantiateItem(container, position);
+            if (obj instanceof Fragment)
+            {
+                //record fragment tag here
+                Fragment f = (Fragment) obj;
+                String tag = f.getTag();
+                mFragmentTags.put(position,tag);
+            }
+            return obj;
+        }
+
+        public Fragment getFragment(int position){
+            String tag = mFragmentTags.get(position);
+            if(tag==null)
+                return null;
+            return mFragmentManager.findFragmentByTag(tag);
+        }
+
+
 
     }
 }
