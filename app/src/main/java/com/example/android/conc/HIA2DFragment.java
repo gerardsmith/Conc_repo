@@ -21,8 +21,7 @@ import java.util.Random;
 
 public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
-    // android developer START
-   // OnOrientationSelectedListener mCallback;
+    OnOrienSelectedListener orienCallback;
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
     int orien=0;
@@ -35,7 +34,11 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
     private EditText other;
     private static final String TAG = "Video Check";
 
-    public static HIA2DFragment newInstance() {
+    public interface OnOrienSelectedListener {
+        public void onOrienSelected(int position);
+    }
+
+        public static HIA2DFragment newInstance() {
         HIA2DFragment fragment = new HIA2DFragment();
         return fragment;
     }
@@ -162,12 +165,15 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     {
                         orien=orien+1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
+
                     }
                     else
                     {
                         orien=orien-1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
 
@@ -176,12 +182,14 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     {
                         orien=orien+1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
                         orien=orien-1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
 
@@ -190,12 +198,14 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     {
                         orien=orien+1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
                         orien=orien-1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
 
@@ -204,12 +214,14 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     {
                         orien=orien+1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
                         orien=orien-1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
 
@@ -218,22 +230,19 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     {
                         orien=orien+1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
                         orien=orien-1;
                         Log.v(TAG, "Purple Monkeys " + orien);
+                        orienCallback.onOrienSelected(orien);
                         break;
                     }
                 }
             }
 
-
-    // Container Activity must implement this interface
-   /* public interface OnOrientationSelectedListener {
-        public void onOrientationSelected(String position);
-    }
 
     @Override
     public void onAttach(Activity activity) {
@@ -242,13 +251,11 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         // This makes sure that the container activity has implemented
         // the callback interface. If not, it throws an exception
         try {
-            mCallback = (OnOrientationSelectedListener) activity;
-        } catch (ClassCastException e) {}
-
-        //video
-
-    }*/
-
-    // END
+            orienCallback = (OnOrienSelectedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+    }
 
 }

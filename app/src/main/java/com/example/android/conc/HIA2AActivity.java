@@ -22,7 +22,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class HIA2AActivity extends AppCompatActivity
-        //implements HIA2DFragment.OnOrientationSelectedListener
+        implements HIA2DFragment.OnOrienSelectedListener
         {
             private static final String TAG = "Tag Check";
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -73,26 +73,12 @@ public class HIA2AActivity extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+            @Override
+            public void onOrienSelected(int position) {
+                Log.v(TAG, "Purple Monkeys " + position);
+            }
 
-    /*@Override
-    public void onArticleSelected(int position) {
 
-        HIA2EFragment articleFrag = (HIA2EFragment)
-                getSupportFragmentManager().findFragmentById(R.id.fragment2);
-
-       if (articleFrag != null) {
-            // If article frag is available, we're in two-pane layout...
-
-            // Call a method in the ArticleFragment to update its content
-            articleFrag.updateOrientationScore(position);
-       }
-    }*/
-
-    /*@Override
-    public void onOrientationSelected(String orien) {
-        HIA2EFragment f2 = (HIA2EFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_two);
-        f2.updateOrientationScore(orien);
-    }*/
 
 
     /**
