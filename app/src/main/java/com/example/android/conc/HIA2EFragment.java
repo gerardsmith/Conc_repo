@@ -87,9 +87,9 @@ public class HIA2EFragment extends Fragment {
     public void onResume()
     {
         super.onResume();
-        attempt = (HIA2AActivity) getActivity();
+//        attempt = (HIA2AActivity) getActivity();
         textView = (TextView) getView().findViewById(textView_orientationresult);
-        o_result_string= String.valueOf(attempt.attemp1.orientation);
+       o_result_string= String.valueOf(4);//attempt.attemp1.orientation);
         textView.setText(o_result_string);
 
 

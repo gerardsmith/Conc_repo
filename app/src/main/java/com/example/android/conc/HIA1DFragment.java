@@ -14,15 +14,15 @@ import android.widget.TextView;
 
 public class HIA1DFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
-    boolean symp1;
-    boolean symp2;
-    boolean symp3;
-    boolean symp4;
-    boolean symp5;
-    boolean symp6;
-    boolean symp7;
-    boolean symp8;
-    boolean symp9;
+    int symp1;
+    int symp2;
+    int symp3;
+    int symp4;
+    int symp5;
+    int symp6;
+    int symp7;
+    int symp8;
+    int symp9;
     private static final String TAG = "Video Check";
     int sym_tally=0;
 
@@ -87,125 +87,125 @@ public class HIA1DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         switch (buttonView.getId()) {
             case R.id.checkBox_Symp22_y:
                 if (checked) {
-                    symp1 = true;
-                    sym_tally = sym_tally + 1;
+                    symp1 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp1 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp1 = false;
-                    sym_tally = sym_tally - 1;
+                    symp1 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp1 + " tally: " + sym_tally);
                 break;
             }
             case R.id.checkBox_Symp23_y:
                 if (checked){
-                    symp2 = true;
-                    sym_tally=sym_tally+1;
+                    symp2 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp2 + " tally: " + sym_tally);
                 break;}
             else {
-                    symp2 = false;
-                    sym_tally = sym_tally - 1;
+                    symp2 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp2 + " tally: " + sym_tally);
                     break;
                 }
             case R.id.checkBox_Symp24_y:
                 if (checked) {
-                    symp3 = true;
-                    sym_tally = sym_tally + 1;
+                    symp3 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp3 + " tally: " + sym_tally);
                     break;
                 }
             else  {
-                    symp3 = false;
-                    sym_tally = sym_tally - 1;
+                    symp3 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp3 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp25_y: //+2
                 if (checked) {
-                    symp4 = true;
-                    sym_tally = sym_tally + 1;
+                    symp4 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp4 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp4 = false;
-                    sym_tally = sym_tally - 1;
+                    symp4 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp4 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp26_y:
                 if (checked){
-                    symp5 = true;
-                    sym_tally=sym_tally+1;
+                    symp5 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp5 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp5 = false;
-                    sym_tally = sym_tally - 1;
+                    symp5 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp5 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp27_y:
                 if (checked){
-                    symp6 = true;
-                    sym_tally=sym_tally+1;
+                    symp6 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp6 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp6 = false;
-                    sym_tally = sym_tally - 1;
+                    symp6 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp6 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp28_y:
                 if (checked){
-                    symp7 = true;
-                    sym_tally=sym_tally+1;
+                    symp7 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp7 + " tally: " + sym_tally);
                     break;
                 }
 
                 else{
-                    symp7 = false;
-                    sym_tally = sym_tally - 1;
+                    symp7 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp7 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp29_y:
                 if (checked){
-                    symp8 = true;
-                    sym_tally=sym_tally+1;
+                    symp8 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp8 + " tally: " + sym_tally);
                     break;
                 }
 
                 else{
-                    symp8 = false;
-                    sym_tally = sym_tally - 1;
+                    symp8 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp8 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp210_y:
                 if (checked){
-                    symp9 = true;
-                    sym_tally=sym_tally+1;
+                    symp9 = 1;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp9 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp9 = false;
-                    sym_tally = sym_tally - 1;
+                    symp9 = 0;
+                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
                     Log.v(TAG, "Mad Checkbox: " + symp9 + " tally: " + sym_tally);
                     break;
                 }

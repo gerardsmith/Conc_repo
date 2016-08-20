@@ -63,7 +63,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     boolean HIA1form3;*/
 
 
-   /* boolean remov_1 = false;
+    boolean remov_1 = false;
     boolean remov_2 = false;
     boolean remov_3 = false;
     boolean remov_4 = false;
@@ -73,7 +73,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     boolean remov_8 = false;
     boolean remov_9 = false;
     boolean remov_010 = false;
-    boolean remov_011 = false;*/
+    boolean remov_011 = false;
 
 
 /*    boolean remov_10 = false;
@@ -290,7 +290,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 
-   /* public void onCheckBoxSelected(View view) {
+   public void onCheckBoxSelected(View view) {
         boolean checked2 = ((CheckBox) view).isChecked();
         final CheckBox ch1 = (CheckBox) findViewById(R.id.checkBox_TP);
         final CheckBox ch2 = (CheckBox) findViewById(R.id.checkBox_CONV);
@@ -407,7 +407,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 }
                 break;
         }
-    }*/
+    }
 
     /*public void onCheckBoxSelected2(View view) {
         boolean checked2 = ((CheckBox) view).isChecked();
