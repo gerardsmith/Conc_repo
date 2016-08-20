@@ -172,8 +172,8 @@
         android:weightSum="1">
 
             <TextView
-                android:text="@string/conc_dig_score"
-                android:layout_width="170dp"
+                android:text="@string/conc_month_score"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView54"
                 android:textAppearance="?android:attr/textAppearanceLarge"

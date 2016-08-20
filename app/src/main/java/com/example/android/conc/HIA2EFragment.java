@@ -1,5 +1,7 @@
 package com.example.android.conc;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +17,7 @@ import static com.example.android.conc.R.id.textView_orientationresult;
 
 
 public class HIA2EFragment extends Fragment {
+
 
     public HIA2AActivity attempt;
     TextView o_result;
@@ -68,6 +71,8 @@ public class HIA2EFragment extends Fragment {
 
     public void updateOrienScore(int position) {
 
+       // attempt = (HIA2AActivity) getActivity();
+        //setText(attempt.attemp1.orientation);
         //Log.v(TAG, "TEMPVAL: " + position);
         //HIA2EFragment fraggy = new HIA2EFragment();
         /*TextView textView;
@@ -83,16 +88,29 @@ public class HIA2EFragment extends Fragment {
 
 
     }
+
     @Override
     public void onResume()
     {
         super.onResume();
-//        attempt = (HIA2AActivity) getActivity();
-        textView = (TextView) getView().findViewById(textView_orientationresult);
-       o_result_string= String.valueOf(4);//attempt.attemp1.orientation);
-        textView.setText(o_result_string);
+        //crashes app when the other activities run
+
+        Activity a = getActivity();
+       // Log.v(TAG, "Video Checkbox: " + a);
+       // attempt = (HIA2AActivity) getActivity();
+      //  Log.v(TAG, "Video Checkbox: " + a);
+
+
+        if(a instanceof HIA2AActivity)
+        {
+            attempt = (HIA2AActivity) getActivity();
+            textView = (TextView) getView().findViewById(textView_orientationresult);
+            o_result_string= String.valueOf(attempt.attemp1.orientation);
+            textView.setText(o_result_string);
+        }
 
 
     }
+
 
 }

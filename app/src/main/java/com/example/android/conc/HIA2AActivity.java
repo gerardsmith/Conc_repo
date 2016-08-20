@@ -26,7 +26,7 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HIA2AActivity extends AppCompatActivity//FragmentActivity
+public class HIA2AActivity extends AppCompatActivity
         implements HIA2DFragment.OnOrienSelectedListener
         {
             testResults attemp1 = new testResults();
@@ -72,6 +72,7 @@ public class HIA2AActivity extends AppCompatActivity//FragmentActivity
                 {
                     Log.v(TAG, "On resume");
                     fragment.onResume();
+                    //fragment.updateText();
                 }
             }
 

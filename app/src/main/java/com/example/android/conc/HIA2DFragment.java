@@ -25,11 +25,11 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
     int orien=0;
-    boolean or1= false;
-    boolean or2= false;
-    boolean or3= false;
-    boolean or4= false;
-    boolean or5= false;
+    int or1= 0;
+    int or2= 0;
+    int or3= 0;
+    int or4= 0;
+    int or5= 0;
     String string_orien;
     private EditText other;
     private static final String TAG = "Video Check";
@@ -138,7 +138,9 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String mem_score =other.getText().toString();
+                int value=Integer.parseInt(other.getText().toString());
                 Log.v(TAG, "Video Checkbox: " + mem_score);
+                orienCallback.onOrienSelected(value);
             }
         });
 
@@ -163,7 +165,8 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_1:
                     if (checked2)
                     {
-                        orien=orien+1;
+                        or1=1;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
@@ -171,7 +174,8 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     }
                     else
                     {
-                        orien=orien-1;
+                        or1=0;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
@@ -180,14 +184,16 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_3:
                     if (checked2)
                     {
-                        orien=orien+1;
+                        or2=1;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
-                        orien=orien-1;
+                        or2=0;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
@@ -196,14 +202,16 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_5:
                     if (checked2)
                     {
-                        orien=orien+1;
+                        or3=1;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
-                        orien=orien-1;
+                        or3=0;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
@@ -212,14 +220,16 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_7:
                     if (checked2)
                     {
-                        orien=orien+1;
+                        or4=1;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
-                        orien=orien-1;
+                        or4=0;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
@@ -228,14 +238,16 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_9:
                     if (checked2)
                     {
-                        orien=orien+1;
+                        or5=1;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;
                     }
                     else
                     {
-                        orien=orien-1;
+                        or5=0;
+                        orien=or1+or2+or3+or4+or5;
                         Log.v(TAG, "Purple Monkeys " + orien);
                         orienCallback.onOrienSelected(orien);
                         break;

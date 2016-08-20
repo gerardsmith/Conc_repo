@@ -225,7 +225,8 @@
     <string name="immed_mem">IMMEDIATE MEMORY</string>
     <string name="immed_mem_score">Immediate memory score (/15):</string>
     <string name="conc_dig_score">Concentration score (/5):</string>
-    <string name="conc_dig_back_score">Concentration digits backwards score (/5):</string>
+    <string name="conc_month_score">Concentration score for months in reverse (/1):</string>
+    <string name="conc_dig_back_score">Concentration digits backwards score (/4):</string>
     <string name="conc_dig">CONCENTRATION: DIGITS BACKWARD</string>
     <string name="conc_month">CONCENTRATION: MONTHS IN REVERSE ORDER</string>
     <string name="conc_month2">( 1 point for entire sequence correct)</string>
