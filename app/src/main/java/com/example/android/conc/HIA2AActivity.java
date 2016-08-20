@@ -27,7 +27,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HIA2AActivity extends AppCompatActivity
-        implements HIA2DFragment.OnOrienSelectedListener
+        implements HIA2DFragment.OnOrienSelectedListener, HIA2GFragment.OnConcSelectedListener
         {
             testResults attemp1 = new testResults();
             HIA2EFragment articleFrag;
@@ -127,9 +127,57 @@ public class HIA2AActivity extends AppCompatActivity
                 }
             }
 
+            @Override
+            public void onImedMemSelected(int position) {
+
+                if (articleFrag != null) {
+                    // If article frag is available, we're in two-pane layout...
+
+                    // Call a method in the ArticleFragment to update its content
+                    attemp1.imedmem = position;
+                    //articleFrag.updateOrienScore(position);
+                    String pos =Integer.toString(position);
+                    Log.v(TAG, "Purple Monkeys again again " + pos);
+                    // changeFragmentTextView(pos);
+
+                }
+            }
+
+            @Override
+            public void onDigitBackSelected(int position) {
+
+                if (articleFrag != null) {
+                    // If article frag is available, we're in two-pane layout...
+
+                    // Call a method in the ArticleFragment to update its content
+                    attemp1.digback = position;
+                    //articleFrag.updateOrienScore(position);
+                    String pos =Integer.toString(position);
+                    Log.v(TAG, "Purple Monkeys again again " + pos);
+                    // changeFragmentTextView(pos);
+
+                }
+            }
+
+            @Override
+            public void onMonthBackSelected(int score) {
+
+                if (articleFrag != null) {
+                    // If article frag is available, we're in two-pane layout...
+
+                    // Call a method in the ArticleFragment to update its content
+                    attemp1.monthback = score;
+                    //articleFrag.updateOrienScore(position);
+                    String pos =Integer.toString(score);
+                    Log.v(TAG, "Purple Monkeys again again " + pos);
+                    // changeFragmentTextView(pos);
+
+                }
+
+            }
 
 
-    /**
+            /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {

@@ -207,6 +207,7 @@
     <string name="sac_1">Orientation (/5)</string>
     <string name="sac_2">Immediate memory (/15)</string>
     <string name="sac_3">Concentration (digits backwards) (/5)</string>
+    <string name="conc_score">Concentration (/5)</string>
     <string name="sac_4">Delayed recall (/5)</string>
     <string name="sac_5">Total (/30)</string>
     <string name="sac_explained">Assesssment of population of Rugby players suffering from a concussion injury will usually

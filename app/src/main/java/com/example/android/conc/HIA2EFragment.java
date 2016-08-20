@@ -13,7 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static com.example.android.conc.R.id.textView_concresult;
+import static com.example.android.conc.R.id.textView_delmemresult;
+import static com.example.android.conc.R.id.textView_imedmemresult;
 import static com.example.android.conc.R.id.textView_orientationresult;
+import static com.example.android.conc.R.id.textView_totalresult;
 
 
 public class HIA2EFragment extends Fragment {
@@ -21,11 +25,14 @@ public class HIA2EFragment extends Fragment {
 
     public HIA2AActivity attempt;
     TextView o_result;
-    String o_result_string;
-    TextView textView;
-    int tempval;
+    String o_result_string, m_result_string,conc_result;
+    int conc1,conc2;
+    TextView textView, textView1, textView2,textView3;
+    int tempval,val1,val2,val3;
     private EditText delmem;
     private static final String TAG = "Tag Check";
+    String delmemstring;
+    int delmemscore;
     public static HIA2EFragment newInstance() {
         HIA2EFragment fragment = new HIA2EFragment();
         return fragment;
@@ -62,8 +69,20 @@ public class HIA2EFragment extends Fragment {
 
         delmem.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                String delmemstring =delmem.getText().toString();
+                delmemstring =delmem.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + delmemstring);
+                //delmemscore = Integer.parseInt(delmemstring);
+                textView3 = (TextView) getView().findViewById(textView_delmemresult);
+                textView3.setText(delmemstring);
+
+                val3= Integer.parseInt(delmemstring);
+                int total;
+
+                total = conc1+val1+val2+val3;
+                String totalstring;
+                totalstring = String.valueOf(total);
+                textView2 = (TextView) getView().findViewById(textView_totalresult);
+                textView2.setText(totalstring);
             }
         });
         return rootView;
@@ -107,8 +126,19 @@ public class HIA2EFragment extends Fragment {
             textView = (TextView) getView().findViewById(textView_orientationresult);
             o_result_string= String.valueOf(attempt.attemp1.orientation);
             textView.setText(o_result_string);
-        }
+            val1 = Integer.parseInt(o_result_string);
 
+            textView1 = (TextView) getView().findViewById(textView_imedmemresult);
+            m_result_string = String.valueOf(attempt.attemp1.imedmem);
+            textView1.setText(m_result_string);
+            val2 = Integer.parseInt(o_result_string);
+
+            textView2 = (TextView) getView().findViewById(textView_concresult);
+            conc1 = attempt.attemp1.digback + attempt.attemp1.monthback;
+            conc_result = String.valueOf(conc1);
+            textView2.setText(conc_result);
+
+        }
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,6 +16,8 @@ import java.util.Random;
 
 public class HIA2GFragment extends Fragment {
 
+    OnConcSelectedListener concCallback;
+
     private EditText other;
     private EditText other2;
     private static final String TAG = "Video Check";
@@ -24,6 +27,11 @@ public class HIA2GFragment extends Fragment {
     }
 
     public HIA2GFragment() {
+    }
+
+    public interface OnConcSelectedListener {
+        public void onDigitBackSelected(int position);
+        public void onMonthBackSelected(int score);
     }
 
     @Override
@@ -112,6 +120,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String dig_back_score =other.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + dig_back_score);
+                int value=Integer.parseInt(other.getText().toString());
+                concCallback.onDigitBackSelected(value);
             }
         });
 
@@ -119,6 +129,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String conc_score =other2.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + conc_score);
+                int value=Integer.parseInt(other2.getText().toString());
+                concCallback.onMonthBackSelected(value);
             }
         });
 
@@ -138,5 +150,18 @@ public class HIA2GFragment extends Fragment {
             Log.v(TAG, "Concentration: " + conc_score);
         }
     }*/
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            concCallback = (HIA2GFragment.OnConcSelectedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnHeadlineSelectedListener");
+        }
+    }
 
 }

@@ -8,14 +8,16 @@ import android.support.v4.app.FragmentActivity;
 
 public class testResults extends FragmentActivity {
     public int orientation;
-    public int b;
-    public int d;
+    public int imedmem;
+    public int digback;
+    public int monthback;
 
 
     testResults(){
         orientation=0;
-        b=0;
-        d=0;
+        imedmem=0;
+        digback=0;
+        monthback=0;
     }
 
 }

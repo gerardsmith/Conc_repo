@@ -36,6 +36,7 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
     public interface OnOrienSelectedListener {
         public void onOrienSelected(int position);
+        public void onImedMemSelected(int score);
     }
 
         public static HIA2DFragment newInstance() {
@@ -140,7 +141,7 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 String mem_score =other.getText().toString();
                 int value=Integer.parseInt(other.getText().toString());
                 Log.v(TAG, "Video Checkbox: " + mem_score);
-                orienCallback.onOrienSelected(value);
+                orienCallback.onImedMemSelected(value);
             }
         });
 
