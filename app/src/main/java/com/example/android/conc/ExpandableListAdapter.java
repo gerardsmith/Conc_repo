@@ -9,24 +9,58 @@ import android.app.ExpandableListActivity;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class ExpandableListAdapter extends BaseExpandableListAdapter implements AdapterView.OnItemSelectedListener {
 //public class ExpandableListAdapter extends ExpandableListActivity {
 
+    public int group_pos;
+   // int HIA3_Test3_Question5;
     private Context _context;
     private Activity context;
     ArrayAdapter<String> adapter1,adapter2,adapter3,adapter4;
     private List<String> _listDataHeader; // header titles
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
+    private static final String TAG = "Video Check";
+
+    //spinners for expandable view
+    int HIA3_Test3_Question5,HIA3_Test3_Question6,HIA3_Test3_Question7,HIA3_Test3_Question8,
+            HIA3_Test3_Question9, HIA3_Test3_Question10, HIA3_Test3_Question11,HIA3_Test3_Question12,
+             HIA3_Test3_Question13,HIA3_Test3_Question14,HIA3_Test3_Question15,HIA3_Test3_Question16,
+                HIA3_Test3_Question17,HIA3_Test3_Question18,HIA3_Test3_Question19,HIA3_Test3_Question20,
+                    HIA3_Test3_Question21,HIA3_Test3_Question22,HIA3_Test3_Question23,HIA3_Test3_Question24,
+                        HIA3_Test3_Question25, HIA3_Test3_Question26, HIA3_Test3_Question27;
+
+    int HIA3_Test3_Question28,HIA3_Test3_Question29,HIA3_Test3_Question30,HIA3_Test3_Question31,
+            HIA3_Test3_Question32, HIA3_Test3_Question33, HIA3_Test3_Question34,HIA3_Test3_Question35,
+            HIA3_Test3_Question36,HIA3_Test3_Question37,HIA3_Test3_Question38,HIA3_Test3_Question39,
+            HIA3_Test3_Question40,HIA3_Test3_Question41,HIA3_Test3_Question42,HIA3_Test3_Question43,
+            HIA3_Test3_Question44,HIA3_Test3_Question45,HIA3_Test3_Question46,HIA3_Test3_Question47,
+            HIA3_Test3_Question48, HIA3_Test3_Question49, HIA3_Test3_Question50;
+
+    int HIA3_Test3_Question51,HIA3_Test3_Question52,HIA3_Test3_Question53,HIA3_Test3_Question54,
+            HIA3_Test3_Question55, HIA3_Test3_Question56, HIA3_Test3_Question57,HIA3_Test3_Question58,
+            HIA3_Test3_Question59,HIA3_Test3_Question60,HIA3_Test3_Question61,HIA3_Test3_Question62,
+            HIA3_Test3_Question63,HIA3_Test3_Question64,HIA3_Test3_Question65,HIA3_Test3_Question66,
+            HIA3_Test3_Question67,HIA3_Test3_Question68,HIA3_Test3_Question69,HIA3_Test3_Question70,
+            HIA3_Test3_Question71, HIA3_Test3_Question72, HIA3_Test3_Question73;
+
+    int HIA3_Test3_Question74,HIA3_Test3_Question75,HIA3_Test3_Question76,HIA3_Test3_Question77,
+            HIA3_Test3_Question78, HIA3_Test3_Question79, HIA3_Test3_Question80,HIA3_Test3_Question81,
+            HIA3_Test3_Question82,HIA3_Test3_Question83,HIA3_Test3_Question84,HIA3_Test3_Question85,
+            HIA3_Test3_Question86,HIA3_Test3_Question87,HIA3_Test3_Question88,HIA3_Test3_Question89,
+            HIA3_Test3_Question90,HIA3_Test3_Question91,HIA3_Test3_Question92;
 
     public ExpandableListAdapter(Context context, List<String> listDataHeader,
                                  HashMap<String, List<String>> listChildData) {
@@ -99,7 +133,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         adapter4.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner4.setAdapter(adapter4);
 
-        return convertView;
+        spinner1.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        spinner2.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        spinner3.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        spinner4.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+
+            return convertView;
     }
 
     @Override
@@ -148,7 +187,468 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
+        //Log.v(TAG, "Group Pos: " + groupPosition);
+        group_pos=groupPosition;
+
         return true;
+
+    }
+
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        switch(group_pos){
+            case 0:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        HIA3_Test3_Question5 =position;
+                        Log.v(TAG, "Headaches spinner1");
+
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: ");
+                        HIA3_Test3_Question6 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question7 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question8 =position;
+                        return;
+                }
+                return;
+            case 1:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Pressure in head spinner1 ");
+                        HIA3_Test3_Question9 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question10 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question11 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question12 =position;
+                        return;
+                }
+                return;
+            case 2:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Neckpain spinner1");
+                        HIA3_Test3_Question13 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question14 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question15 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question16 =position;
+                        return;
+                }
+                return;
+            case 3:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Naus spinner1");
+                        HIA3_Test3_Question17 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question18 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question19 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question20 =position;
+                        return;
+                }
+                return;
+            case 4:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Dizziness spinner1");
+                        HIA3_Test3_Question21 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question22 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question23 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question24 =position;
+                        return;
+                }
+                return;
+            case 5:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Blurred  spinner1");
+                        HIA3_Test3_Question25 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question26 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question27 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question28 =position;
+                        return;
+                }
+                return;
+            case 6:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "balance spinner1");
+                        HIA3_Test3_Question29 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question30 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question31 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question32 =position;
+                        return;
+                }
+                return;
+            case 7:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "sense l spinner1");
+                        HIA3_Test3_Question33 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question34 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question35 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question36 =position;
+                        return;
+                }
+                return;
+            case 8:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "sense n spinner1");
+                        HIA3_Test3_Question37 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question38 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question39 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question40 =position;
+                        return;
+                }
+                return;
+            case 9:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "slow spinner1");
+                        HIA3_Test3_Question41 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question42 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question43 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question44 =position;
+                        return;
+                }
+                return;
+            case 10:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "fog spinner1");
+                        HIA3_Test3_Question45 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question46 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question47 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question48 =position;
+                        return;
+                }
+                return;
+            case 11:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "dfr spinner1");
+                        HIA3_Test3_Question49 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question50 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question51 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question52 =position;
+                        return;
+                }
+                return;
+            case 12:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "dif conc spinner1");
+                        HIA3_Test3_Question53 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question54 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question55 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question56 =position;
+                        return;
+                }
+                return;
+            case 13:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "dif rem spinner1");
+                        HIA3_Test3_Question57 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question58 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question59 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question60 =position;
+                        return;
+                }
+                return;
+            case 14:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "fat spinner1");
+                        HIA3_Test3_Question61 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question62 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question63 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question64 =position;
+                        return;
+                }
+                return;
+            case 15:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "conf spinner1");
+                        HIA3_Test3_Question65 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question66 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question67 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question68 =position;
+                        return;
+                }
+                return;
+            case 16:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Drowsi spinner1");
+                        HIA3_Test3_Question69 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question70 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question71 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question72 =position;
+                        return;
+                }
+                return;
+            case 17:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Troub spinner1");
+                        HIA3_Test3_Question73 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question74 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question75 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question76 =position;
+                        return;
+                }
+                return;
+            case 18:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "More emotion spinner1");
+                        HIA3_Test3_Question77 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question78 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question79 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question80 =position;
+                        return;
+                }
+                return;
+            case 19:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Irrit spinner1");
+                        HIA3_Test3_Question81 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question82 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question83 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question84 =position;
+                        return;
+                }
+                return;
+            case 20:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Sad spinner1 " + position);
+                        HIA3_Test3_Question85 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question86 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question87 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question88 =position;
+                        return;
+                }
+                return;
+            case 21:
+                switch(parent.getId()) {
+                    case R.id.spinner33:
+                        Log.v(TAG, "Nerv spinner1");
+                        HIA3_Test3_Question89 =position;
+                        return;
+                    case R.id.spinner34:
+                        Log.v(TAG, "Video Checkbox1: " + position);
+                        HIA3_Test3_Question90 =position;
+                        return;
+                    case R.id.spinner35:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question91 =position;
+                        return;
+                    case R.id.spinner36:
+                        Log.v(TAG, "Video Checkbox2: " + position);
+                        HIA3_Test3_Question92 =position;
+                        return;
+                }
+                return;
+
+        }
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
 

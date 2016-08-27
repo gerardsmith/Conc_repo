@@ -120,8 +120,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String dig_back_score =other.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + dig_back_score);
-                int value=Integer.parseInt(other.getText().toString());
-                concCallback.onDigitBackSelected(value);
+                int value1=Integer.parseInt(other.getText().toString());
+                concCallback.onDigitBackSelected(value1);
             }
         });
 
@@ -129,8 +129,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String conc_score =other2.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + conc_score);
-                int value=Integer.parseInt(other2.getText().toString());
-                concCallback.onMonthBackSelected(value);
+                int value2=Integer.parseInt(other2.getText().toString());
+                concCallback.onMonthBackSelected(value2);
             }
         });
 

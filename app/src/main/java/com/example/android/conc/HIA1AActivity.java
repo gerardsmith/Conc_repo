@@ -38,30 +38,6 @@ import org.w3c.dom.Text;
 
 public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     int vid;
-    boolean mad_ven;
-    boolean mad_half;
-    boolean mad_scored;
-    boolean mad_play;
-    boolean mad_win;
-
-   /* boolean symp1;
-    boolean symp2;
-    boolean symp3;
-    boolean symp4;
-    boolean symp5;
-    boolean symp6;
-    boolean symp7;
-    boolean symp8;
-    boolean symp9;*/
-
-    /*boolean cs1;
-    boolean cs2;
-    boolean cs3;*/
-
-   /* boolean HIA1form1;
-    boolean HIA1form2;
-    boolean HIA1form3;*/
-
 
     boolean remov_1 = false;
     boolean remov_2 = false;
@@ -76,33 +52,13 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     boolean remov_011 = false;
 
 
-/*    boolean remov_10 = false;
-    boolean remov_11 = false;
-    boolean remov_12 = false;
-    boolean remov_13 = false;
-    boolean remov_14 = false;
-    boolean remov_15 = false;*/
-    //private static String HIA_other_reason;
     private static final String TAG = "Video Check";
     Spinner spinner;
-    /**
-     * The {@link PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link FragmentStatePagerAdapter}.
-     */
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ViewPager mViewPager;
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+
     private GoogleApiClient client;
 
     @Override
@@ -165,8 +121,9 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         private ArrayAdapter<CharSequence> adapter;
+          private int removal_req_by;
 
-        public PlaceholderFragment() {
+          public PlaceholderFragment() {
         }
 
         /**
@@ -185,12 +142,8 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_hia1_a, container, false);
-            //TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            // textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner32);
 
-            //ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, req_by);
-            //adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
             this.adapter = ArrayAdapter.createFromResource(this.getActivity(), R.array.hia1_1_spinner, android.R.layout.simple_spinner_dropdown_item);
             this.adapter = ArrayAdapter.createFromResource(this.getActivity(), R.array.hia1_1_spinner, R.layout.multiline_spinner_dropdown_item);
             spinner.setAdapter(adapter);
@@ -201,10 +154,8 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
 
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-            //TextView myText = (TextView) view;
-            //String myTextString = myText.toString();
-            //Toast.makeText(this, "You selected " + myText, Toast.LENGTH_SHORT).show();
-            Log.v(TAG, "Video Checkbox: " + position);
+            Log.v(TAG, "Spinner pos: " + position);
+            removal_req_by = position;
 
         }
 
@@ -214,10 +165,6 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 
-    /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-     * one of the sections/tabs/pages.
-     */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -227,7 +174,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         @Override
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
+
             switch (position) {
                 case 0:
                     return PlaceholderFragment.newInstance(position + 1);
@@ -251,7 +198,6 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
             return 7;
         }
 
@@ -409,292 +355,4 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         }
     }
 
-    /*public void onCheckBoxSelected2(View view) {
-        boolean checked2 = ((CheckBox) view).isChecked();
-        final CheckBox ch11 = (CheckBox) view.findViewById(R.id.checkBox_RHEAD);
-        final CheckBox ch12 = (CheckBox) view.findViewById(R.id.checkBox_RBEHAV);
-        final CheckBox ch13 = (CheckBox) view.findViewById(R.id.checkBox_RCONF);
-        final CheckBox ch14 = (CheckBox) view.findViewById(R.id.checkBox_RINJ);
-        final CheckBox ch15 = (CheckBox) view.findViewById(R.id.checkBox_ROTHER);
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.checkBox_RHEAD:
-                if (ch11.isChecked()) {
-                    remov_11 = true;
-                    Log.v(TAG, "Test: " + remov_11);
-                } else {
-                    remov_11 = false;
-                    Log.v(TAG, "Test: " + remov_11);
-                }
-                break;
-            case R.id.checkBox_RBEHAV:
-                if (ch12.isChecked()) {
-                    remov_12 = true;
-                    Log.v(TAG, "Test: " + remov_12);
-                } else {
-                    remov_12 = false;
-                    Log.v(TAG, "Test: " + remov_12);
-                }
-                break;
-            case R.id.checkBox_RCONF:
-                if (ch13.isChecked()) {
-                    remov_13 = true;
-                    Log.v(TAG, "Test: " + remov_13);
-                } else {
-                    remov_13 = false;
-                    Log.v(TAG, "Test: " + remov_13);
-                }
-                break;
-            case R.id.checkBox_RINJ:
-                if (ch14.isChecked()) {
-                    remov_14 = true;
-                    Log.v(TAG, "Test: " + remov_14);
-                } else {
-                    remov_14 = false;
-                    Log.v(TAG, "Test: " + remov_14);
-                }
-                break;
-            case R.id.checkBox_ROTHER:
-                if (ch15.isChecked()) {
-                    remov_15 = true;
-                    Log.v(TAG, "Test: " + remov_15);
-                } else {
-                    remov_15 = false;
-                    Log.v(TAG, "Test: " + remov_15);
-                }
-                break;
-
-        }
-    }*/
-
-    /*public void onCheckBoxSelected_Mad(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.checkBox_MADD1_INC:
-                if (checked)
-                    mad_ven = false;
-                Log.v(TAG, "Mad Checkbox: " + mad_ven);
-                break;
-            case R.id.checkBox_MADD1_COR:
-                if (checked)
-                    mad_ven = true;
-                Log.v(TAG, "Mad Checkbox: " + mad_ven);
-                break;
-            case R.id.checkBox_MADD2_INC:
-                if (checked)
-                    mad_half = false;
-                Log.v(TAG, "Mad Checkbox: " + mad_half);
-                break;
-            case R.id.checkBox_MADD2_COR:
-                if (checked)
-                    mad_half = true;
-                Log.v(TAG, "Mad Checkbox: " + mad_half);
-                break;
-            case R.id.checkBox_MADD3_INC:
-                if (checked)
-                    mad_scored = false;
-                Log.v(TAG, "Mad Checkbox: " + mad_scored);
-                break;
-            case R.id.checkBox_MADD3_COR:
-                if (checked)
-                    mad_scored = true;
-                Log.v(TAG, "Mad Checkbox: " + mad_scored);
-                break;
-            case R.id.checkBox_MADD4_INC:
-                if (checked)
-                    mad_play = false;
-                Log.v(TAG, "Mad Checkbox: " + mad_play);
-                break;
-            case R.id.checkBox_MADD4_COR:
-                if (checked)
-                    mad_play = true;
-                Log.v(TAG, "Mad Checkbox: " + mad_play);
-                break;
-            case R.id.checkBox_MADD5_INC:
-                if (checked)
-                    mad_win = false;
-                Log.v(TAG, "Mad Checkbox: " + mad_win);
-                break;
-            case R.id.checkBox_MADD5_COR:
-                if (checked)
-                    mad_win = true;
-                Log.v(TAG, "Mad Checkbox: " + mad_win);
-                break;
-        }
-    }
-*/
-   /* public void onCheckBoxSelected_Symp(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.checkBox_Symp22_y:
-                if (checked)
-                    symp1 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp1);
-                break;
-            case R.id.checkBox_Symp22_n:
-                if (checked)
-                    symp1 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp1);
-                break;
-            case R.id.checkBox_Symp23_y:
-                if (checked)
-                    symp2 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp2);
-                break;
-            case R.id.checkBox_Symp23_n:
-                if (checked)
-                    symp2 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp2);
-                break;
-            case R.id.checkBox_Symp24_y:
-                if (checked)
-                    symp3 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp3);
-                break;
-            case R.id.checkBox_Symp24_n:
-                if (checked)
-                    symp3 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp3);
-                break;
-            case R.id.checkBox_Symp25_y:
-                if (checked)
-                    symp4 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp4);
-                break;
-            case R.id.checkBox_Symp25_n:
-                if (checked)
-                    symp4 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp4);
-                break;
-            case R.id.checkBox_Symp26_y:
-                if (checked)
-                    symp5 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp5);
-                break;
-            case R.id.checkBox_Symp26_n:
-                if (checked)
-                    symp5 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp5);
-                break;
-            case R.id.checkBox_Symp27_y:
-                if (checked)
-                    symp6 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp6);
-                break;
-            case R.id.checkBox_Symp27_n:
-                if (checked)
-                    symp6 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp6);
-                break;
-            case R.id.checkBox_Symp28_y:
-                if (checked)
-                    symp7 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp7);
-                break;
-            case R.id.checkBox_Symp28_n:
-                if (checked)
-                    symp7 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp7);
-                break;
-            case R.id.checkBox_Symp29_y:
-                if (checked)
-                    symp8 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp8);
-                break;
-            case R.id.checkBox_Symp29_n:
-                if (checked)
-                    symp8 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp9);
-                break;
-            case R.id.checkBox_Symp210_y:
-                if (checked)
-                    symp9 = true;
-                Log.v(TAG, "Mad Checkbox: " + symp9);
-                break;
-            case R.id.checkBox_Symp210_n:
-                if (checked)
-                    symp9 = false;
-                Log.v(TAG, "Mad Checkbox: " + symp9);
-                break;
-        }
-    }
-*/
-   /* public void onCheckBoxSelected_clinical(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.checkBox_CS1_Y:
-                if (checked)
-                    cs1 = true;
-                Log.v(TAG, "Mad Checkbox: " + cs1);
-                break;
-            case R.id.checkBox_CS1_N:
-                if (checked)
-                    cs1 = false;
-                Log.v(TAG, "Mad Checkbox: " + cs1);
-                break;
-            case R.id.checkBox_CS2_Y:
-                if (checked)
-                    cs2 = true;
-                Log.v(TAG, "Mad Checkbox: " + cs2);
-                break;
-            case R.id.checkBox_CS2_N:
-                if (checked)
-                    cs2 = false;
-                Log.v(TAG, "Mad Checkbox: " + cs2);
-                break;
-            case R.id.checkBox_CS3_Y:
-                if (checked)
-                    cs3 = true;
-                Log.v(TAG, "Mad Checkbox: " + cs3);
-                break;
-            case R.id.checkBox_CS3_N:
-                if (checked)
-                    cs3 = false;
-                Log.v(TAG, "Mad Checkbox: " + cs3);
-                break;
-
-        }
-    }*/
-
-   /* public void onCheckBoxSelected_HIA1form(View view) {
-        boolean checked = ((RadioButton) view).isChecked();
-
-        switch (view.getId()) {
-            case R.id.checkBox_VI_Y:
-                if (checked)
-                    HIA1form1 = true;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form1);
-                break;
-            case R.id.checkBox_VI_N:
-                if (checked)
-                    HIA1form1 = false;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form1);
-                break;
-            case R.id.checkBox_MDD_Y:
-                if (checked)
-                    HIA1form2 = true;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form2);
-                break;
-            case R.id.checkBox_MDD_N:
-                if (checked)
-                    HIA1form2 = false;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form2);
-                break;
-            case R.id.checkBox_VI2_Y:
-                if (checked)
-                    HIA1form3 = true;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form3);
-                break;
-            case R.id.checkBox_VI2_N:
-                if (checked)
-                    HIA1form3 = false;
-                Log.v(TAG, "Mad Checkbox: " + HIA1form3);
-                break;
-
-        }
-    }*/
 }

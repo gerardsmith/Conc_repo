@@ -17,9 +17,9 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
     private static final String TAG = "Video Check";
     private EditText delmem;
-    boolean cs1;
-    boolean cs2;
-    boolean cs3;
+    int cs1=0;
+    int cs2=0;
+    int cs3=0;
     int cs=0;
 
     public static HIA1EFragment newInstance() {
@@ -70,43 +70,43 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
         switch (buttonView.getId()) {
             case R.id.checkBox_CS1_Y:
                 if (checked){
-                    cs1 = true;
-                    cs=cs+1;
+                    cs1 = 1;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }
                 else{
-                    cs1 = false;
-                    cs=cs-1;
+                    cs1 = 0;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }
 
             case R.id.checkBox_CS2_Y:
                 if (checked){
-                    cs2 = true;
-                    cs=cs+1;
+                    cs2 = 1;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }
 
                 else{
-                    cs2 = false;
-                    cs=cs-1;
+                    cs2 = 0;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }
 
             case R.id.checkBox_CS3_Y:
                 if (checked){
-                    cs3 = true;
-                    cs=cs+1;
+                    cs3 = 1;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }
                 else{
-                    cs3 = false;
-                    cs=cs-1;
+                    cs3 = 0;
+                    cs=cs1 +cs2+cs3;
                     Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
                     break;
                 }

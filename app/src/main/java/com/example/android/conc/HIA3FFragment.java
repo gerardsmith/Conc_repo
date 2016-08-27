@@ -1,11 +1,13 @@
 package com.example.android.conc;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -33,9 +35,11 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import android.widget.Toast;
 
 import static android.content.ContentValues.TAG;
+import static com.example.android.conc.R.id.spinner33;
 
 
 public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
+
 
     //adding
     ExpandableListAdapter listAdapter;
@@ -47,8 +51,15 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
     private EditText other;
     private EditText other1;
 
-    boolean antam = false;
-    boolean retam= false;
+    //boolean antam = false;
+    //boolean retam= false;
+    boolean HIA3_Test3_Question1 = false;
+    String HIA3_Test3_Question2;
+    boolean HIA3_Test3_Question3 = false;
+    String HIA3_Test3_Question4;
+    int HIA3_Test3_Question5;
+
+
 
     public static HIA3FFragment newInstance() {
         HIA3FFragment fragment = new HIA3FFragment();
@@ -71,6 +82,21 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
        listAdapter = new ExpandableListAdapter(this.getActivity(), listDataHeader, listDataChild);
         // setting list adapter
         expListView.setAdapter(listAdapter);
+        //expListView.setSaveEnabled(true);
+
+        expListView.setOnGroupClickListener(new OnGroupClickListener() {
+
+
+           @Override
+           public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+             // Log.v(TAG, "Test group " + groupPosition);
+
+
+               //listAdapter.group_pos = groupPosition;
+               return false;
+           }
+
+       });
 
         other = (EditText) rootView.findViewById(R.id.editText9);
         other1 = (EditText) rootView.findViewById(R.id.editText10);
@@ -83,15 +109,15 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
         other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                String dur1 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + dur1);
+                HIA3_Test3_Question2 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question2);
             }
         });
 
         other1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                String dur2 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + dur2);
+                HIA3_Test3_Question4 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question4);
             }
         });
 
@@ -168,20 +194,6 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
     }
 
-    /*@Override
-    public void onPause( ) {
-        super.onPause();
-        if (other.getText() != null) {
-            String dur1 = other.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + dur1);
-        }
-
-        if (other1.getText() != null) {
-            String dur2 = other1.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + dur2);
-        }
-
-    }*/
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -191,30 +203,31 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_ANT_AM_Y:
                 if (checked2)
                 {
-                    antam = true;
-                    Log.v(TAG, "Purple Monkeys " + antam);
+                    HIA3_Test3_Question1 = true;
+                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
                     break;
                 }
                 else
                 {
-                    antam = false;
-                    Log.v(TAG, "Purple Monkeys " + antam);
+                    HIA3_Test3_Question1 = false;
+                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
                     break;
                 }
 
             case R.id.checkBox_RET_AM_Y:
                 if (checked2)
                 {
-                    retam = true;
-                    Log.v(TAG, "Purple Monkeys " + retam);
+                    HIA3_Test3_Question3 = true;
+                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
                     break;
                 }
                 else
                 {
-                    retam = false;
-                    Log.v(TAG, "Purple Monkeys " + retam);
+                    HIA3_Test3_Question3 = false;
+                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
                     break;
                 }
         }
     }
+
 }

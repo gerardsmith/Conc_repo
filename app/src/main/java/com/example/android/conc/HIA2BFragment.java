@@ -64,6 +64,30 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
     int prev21=0;
     int prev22=0;
 
+    int val1 =0;
+    int val2 =0;
+    int val3 =0;
+    int val4 =0;
+    int val5 =0;
+    int val6 =0;
+    int val7 =0;
+    int val8 =0;
+    int val9 =0;
+    int val10 =0;
+    int val11 =0;
+    int val12 =0;
+    int val13 =0;
+    int val14 =0;
+    int val15 =0;
+    int val16 =0;
+    int val17 =0;
+    int val18 =0;
+    int val19 =0;
+    int val20 =0;
+    int val21 =0;
+    int val22 =0;
+
+
 
 
     public static HIA2BFragment newInstance() {
@@ -229,18 +253,21 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
 
         switch(parent.getId()) {
             case R.id.spinner5:
+                val1=position;
                 if(position>0){
                     s1=true;
                     symp_score=symp_score+position - prev1;
                     prev1=position;
+
                 }
                 else{
                     s1=false;
                     symp_score=symp_score - prev1;
                 }
-                Log.v(TAG, "Video Checkbox0: " + symp_score + "state: " + s1);
+                Log.v(TAG, "Video Checkbox0: " + symp_score + "state: " + s1 + "symp value: " + val1);
                 return;
             case R.id.spinner6:
+                val2=position;
                 if(position>0){
                     s2=true;
                     symp_score=symp_score+position - prev2;
@@ -250,9 +277,10 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                     s2=false;
                     symp_score=symp_score - prev2;
                 }
-                Log.v(TAG, "Video Checkbox1: " + position);
+                Log.v(TAG, "Video Checkbox0: " + symp_score + "state: " + s2);
                 return;
             case R.id.spinner7:
+                val3=position;
                 if(position>0){
                     s3=true;
                     symp_score=symp_score+position - prev3;
@@ -265,6 +293,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner8:
+                val4=position;
                 if(position>0){
                     s4=true;
                     symp_score=symp_score+position - prev4;
@@ -277,6 +306,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner9:
+                val5=position;
                 if(position>0){
                     s5=true;
                     symp_score=symp_score+position - prev5;
@@ -289,6 +319,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner10:
+                val6=position;
                 if(position>0){
                     s6=true;
                     symp_score=symp_score+position - prev6;
@@ -301,6 +332,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner11:
+                val7=position;
                 if(position>0){
                     s7=true;
                     symp_score=symp_score+position - prev7;
@@ -313,6 +345,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner12:
+                val8=position;
                 if(position>0){
                     s8=true;
                     symp_score=symp_score+position - prev8;
@@ -325,6 +358,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner13:
+                val9=position;
                 if(position>0){
                     s9=true;
                     symp_score=symp_score+position - prev9;
@@ -337,6 +371,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner14:
+                val10=position;
                 if(position>0){
                     s10=true;
                     symp_score=symp_score+position - prev10;
@@ -349,6 +384,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner15:
+                val11=position;
                 if(position>0){
                     s11=true;
                     symp_score=symp_score+position - prev11;
@@ -361,6 +397,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner16:
+                val12=position;
                 if(position>0){
                     s12=true;
                     symp_score=symp_score+position - prev12;
@@ -373,6 +410,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner17:
+                val13=position;
                 if(position>0){
                     s13=true;
                     symp_score=symp_score+position - prev13;
@@ -385,6 +423,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner18:
+                val14=position;
                 if(position>0){
                     s14=true;
                     symp_score=symp_score+position - prev14;
@@ -397,6 +436,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner19:
+                val15=position;
                 if(position>0){
                     s15=true;
                     symp_score=symp_score+position - prev15;
@@ -409,6 +449,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner20:
+                val16=position;
                 if(position>0){
                     s16=true;
                     symp_score=symp_score+position - prev16;
@@ -421,6 +462,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner21:
+                val17=position;
                 if(position>0){
                     s17=true;
                     symp_score=symp_score+position - prev17;
@@ -433,6 +475,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner22:
+                val18=position;
                 if(position>0){
                     s18=true;
                     symp_score=symp_score+position - prev18;
@@ -445,6 +488,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner23:
+                val19=position;
                 if(position>0){
                     s19=true;
                     symp_score=symp_score+position - prev19;
@@ -457,6 +501,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox0: " + position);
                 return;
             case R.id.spinner24:
+                val20=position;
                 if(position>0){
                     s20=true;
                     symp_score=symp_score+position - prev20;
@@ -469,6 +514,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox1: " + position);
                 return;
             case R.id.spinner25:
+                val21=position;
                 if(position>0){
                     s21=true;
                     symp_score=symp_score+position - prev21;
@@ -481,6 +527,7 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
                 Log.v(TAG, "Video Checkbox2: " + position);
                 return;
             case R.id.spinner26:
+                val22=position;
                 if(position>0){
                     s22=true;
                     symp_score=symp_score+position - prev22;

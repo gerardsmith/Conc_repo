@@ -188,18 +188,5 @@ public class HIA1GFragment extends Fragment {
         return rootView;
     }
 
-    /*@Override
-    public void onPause( ){
-        super.onPause();
-        if(memscore.getText() != null) {
-            String memscorestring =memscore.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + memscorestring);
-        }
-        if(digback.getText() != null) {
-            String digbackstring =digback.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + digbackstring);
-        }
-
-    }*/
 
 }

@@ -21,6 +21,7 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
     boolean HIA1form1;
     boolean HIA1form2;
     boolean HIA1form3;
+    int spin,spin1,spin2;
     public static HIA1FFragment newInstance() {
         HIA1FFragment fragment = new HIA1FFragment();
         return fragment;
@@ -80,12 +81,15 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
         switch(parent.getId()) {
             case R.id.spinner:
                 Log.v(TAG, "Video Checkbox0: " + position);
+                spin=position;
                 return;
             case R.id.spinner2:
                 Log.v(TAG, "Video Checkbox1: " + position);
+                spin1=position;
                 return;
             case R.id.spinner3:
                 Log.v(TAG, "Video Checkbox2: " + position);
+                spin2=position;
                 return;
 
         }
