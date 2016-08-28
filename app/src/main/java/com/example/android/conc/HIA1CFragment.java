@@ -15,12 +15,11 @@ import android.widget.TextView;
 
 public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
     private static final String TAG = "Video Check";
-    int mad_score=0;
-    int mad1=0;
-    int mad2 = 0;
-    int mad3=0;
-    int mad4=0;
-    int mad5=0;
+    int HIA1_Test3_Question1=0;
+    int HIA1_Test3_Question2 = 0;
+    int HIA1_Test3_Question3=0;
+    int HIA1_Test3_Question4=0;
+    int HIA1_Test3_Question5=0;
     int madTot=0;
     public static HIA1CFragment newInstance() {
         HIA1CFragment fragment = new HIA1CFragment();
@@ -69,8 +68,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_MADD1_COR:
                 if (checked2)
                 {
-                    mad1=1;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question1=1;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score+1;
                    // Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -78,8 +77,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 }
                 else
                 {
-                    mad1=0;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question1=0;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score-1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -89,8 +88,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_MADD2_COR:
                 if (checked2)
                 {
-                    mad2=1;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question2=1;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score+1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -98,8 +97,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 }
                 else
                 {
-                    mad2=0;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question2=0;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score-1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -109,8 +108,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_MADD3_COR:
                 if (checked2)
                 {
-                    mad3=1;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question3=1;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score+1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -118,8 +117,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 }
                 else
                 {
-                    mad3=0;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question3=0;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score-1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -129,8 +128,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_MADD4_COR:
                 if (checked2)
                 {
-                    mad4=1;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question4=1;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score+1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -138,8 +137,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 }
                 else
                 {
-                    mad4=0;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question4=0;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score-1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -149,8 +148,8 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
             case R.id.checkBox_MADD5_COR:
                 if (checked2)
                 {
-                    mad5=1;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question5=1;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score+1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
@@ -158,18 +157,14 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 }
                 else
                 {
-                    mad5=0;
-                    madTot = mad1+mad4+mad2 +mad3 +mad5;
+                    HIA1_Test3_Question5=0;
+                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
                     Log.v(TAG, "Purple Monkeys " + madTot);
                     //mad_score=mad_score-1;
                     //Log.v(TAG, "Purple Monkeys " + mad_score);
                     break;
                 }
 
-            //default:
-                    //madTot = mad1+mad4+mad2 +mad3 +mad5;
-                   // Log.v(TAG, "Purple Monkeys " + madTot);
-                    //break;
         }
 
     }

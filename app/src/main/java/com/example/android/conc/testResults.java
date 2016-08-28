@@ -11,6 +11,9 @@ public class testResults extends FragmentActivity {
     public int imedmem;
     public int digback;
     public int monthback;
+    public int sacTotal;
+    public int delayedRecall;
+    public int symFlag;
 
 
     testResults(){
@@ -18,6 +21,9 @@ public class testResults extends FragmentActivity {
         imedmem=0;
         digback=0;
         monthback=0;
+        sacTotal=0;
+        delayedRecall=0;
+        symFlag=0;
     }
 
 }

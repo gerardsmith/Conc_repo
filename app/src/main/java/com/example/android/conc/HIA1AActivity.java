@@ -37,19 +37,19 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import org.w3c.dom.Text;
 
 public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    int vid;
+    boolean HIA1_Test1_Question13;
 
-    boolean remov_1 = false;
-    boolean remov_2 = false;
-    boolean remov_3 = false;
-    boolean remov_4 = false;
-    boolean remov_5 = false;
-    boolean remov_6 = false;
-    boolean remov_7 = false;
-    boolean remov_8 = false;
-    boolean remov_9 = false;
-    boolean remov_010 = false;
-    boolean remov_011 = false;
+    boolean HIA1_Test1_Question1 = false;
+    boolean HIA1_Test1_Question2 = false;
+    boolean HIA1_Test1_Question3 = false;
+    boolean HIA1_Test1_Question4 = false;
+    boolean HIA1_Test1_Question5 = false;
+    boolean HIA1_Test1_Question6 = false;
+    boolean HIA1_Test1_Question7 = false;
+    boolean HIA1_Test1_Question8 = false;
+    boolean HIA1_Test1_Question9 = false;
+    boolean HIA1_Test1_Question10 = false;
+    boolean HIA1_Test1_Question11 = false;
 
 
     private static final String TAG = "Video Check";
@@ -121,7 +121,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
          */
         private static final String ARG_SECTION_NUMBER = "section_number";
         private ArrayAdapter<CharSequence> adapter;
-          private int removal_req_by;
+          private int HIA1_Test1_Question12;
 
           public PlaceholderFragment() {
         }
@@ -155,7 +155,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             Log.v(TAG, "Spinner pos: " + position);
-            removal_req_by = position;
+            HIA1_Test1_Question12 = position;
 
         }
 
@@ -225,13 +225,13 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         switch (view.getId()) {
             case R.id.checkBox_yes:
                 if (checked)
-                    vid = 1;
-                Log.v(TAG, "Video Checkbox: " + vid);
+                    HIA1_Test1_Question13 = true;
+                Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
                 break;
             case R.id.checkBox_no:
                 if (checked)
-                    vid = 0;
-                Log.v(TAG, "Video Checkbox: " + vid);
+                    HIA1_Test1_Question13 = false;
+                Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
                 break;
         }
     }
@@ -255,101 +255,101 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         switch (view.getId()) {
             case R.id.checkBox_TP:
                 if (ch1.isChecked()) {
-                    remov_1 = true;
-                    Log.v(TAG, "Test: " + remov_1);
+                    HIA1_Test1_Question1 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question1);
                 } else {
-                    remov_1 = false;
-                    Log.v(TAG, "Test: " + remov_1);
+                    HIA1_Test1_Question1 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question1);
                 }
                 break;
             case R.id.checkBox_CONV:
                 if (ch2.isChecked()) {
-                    remov_2 = true;
-                    Log.v(TAG, "Test: " + remov_2);
+                    HIA1_Test1_Question2 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question2);
                 } else {
-                    remov_2 = false;
-                    Log.v(TAG, "Test: " + remov_2);
+                    HIA1_Test1_Question2 = false;
+                    Log.v(TAG, "Test: " +HIA1_Test1_Question2);
                 }
                 break;
             case R.id.checkBox_CCONSC:
                 if (ch3.isChecked()) {
-                    remov_3 = true;
-                    Log.v(TAG, "Test: " + remov_3);
+                    HIA1_Test1_Question3 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question3);
                 } else {
-                    remov_3 = false;
-                    Log.v(TAG, "Test: " + remov_3);
+                    HIA1_Test1_Question3 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question3);
                 }
                 break;
             case R.id.checkBox_SCONSC:
                 if (ch4.isChecked()) {
-                    remov_4 = true;
-                    Log.v(TAG, "Test: " + remov_4);
+                    HIA1_Test1_Question4 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question4);
                 } else {
-                    remov_4 = false;
-                    Log.v(TAG, "Test: " + remov_4);
+                    HIA1_Test1_Question4 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question4);
                 }
                 break;
             case R.id.checkBox_BAL:
                 if (ch5.isChecked()) {
-                    remov_5 = true;
-                    Log.v(TAG, "Test: " + remov_5);
+                    HIA1_Test1_Question5 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question5);
                 } else {
-                    remov_5 = false;
-                    Log.v(TAG, "Test: " + remov_5);
+                    HIA1_Test1_Question5 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question5);
                 }
                 break;
             case R.id.checkBox_ORIEN:
                 if (ch6.isChecked()) {
-                    remov_6 = true;
-                    Log.v(TAG, "Test: " + remov_6);
+                    HIA1_Test1_Question6 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question6);
                 } else {
-                    remov_6 = false;
-                    Log.v(TAG, "Test: " + remov_6);
+                    HIA1_Test1_Question6 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question6);
                 }
                 break;
             case R.id.checkBox_DAZE:
                 if (ch7.isChecked()) {
-                    remov_7 = true;
-                    Log.v(TAG, "Test: " + remov_7);
+                    HIA1_Test1_Question7 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question7);
                 } else {
-                    remov_7 = false;
-                    Log.v(TAG, "Test: " + remov_7);
+                    HIA1_Test1_Question7 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question7);
                 }
                 break;
             case R.id.checkBox_CONF:
                 if (ch8.isChecked()) {
-                    remov_8 = true;
-                    Log.v(TAG, "Test: " + remov_8);
+                    HIA1_Test1_Question8 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question8);
                 } else {
-                    remov_8 = false;
-                    Log.v(TAG, "Test: " + remov_8);
+                    HIA1_Test1_Question8 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question8);
                 }
                 break;
             case R.id.checkBox_BEHAV:
                 if (ch9.isChecked()) {
-                    remov_9 = true;
-                    Log.v(TAG, "Test: " + remov_9);
+                    HIA1_Test1_Question9 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question9);
                 } else {
-                    remov_9 = false;
-                    Log.v(TAG, "Test: " + remov_9);
+                    HIA1_Test1_Question9 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question9);
                 }
                 break;
             case R.id.checkBox_IDENT:
                 if (ch10.isChecked()) {
-                    remov_010 = true;
-                    Log.v(TAG, "Test: " + remov_010);
+                    HIA1_Test1_Question10 = true;
+                    Log.v(TAG, "Test: " +HIA1_Test1_Question10);
                 } else {
-                    remov_010 = false;
-                    Log.v(TAG, "Test: " + remov_010);
+                    HIA1_Test1_Question10 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question10);
                 }
                 break;
             case R.id.checkBox_OCU:
                 if (ch11.isChecked()) {
-                    remov_011 = true;
-                    Log.v(TAG, "Test: " + remov_011);
+                    HIA1_Test1_Question11 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question11);
                 } else {
-                    remov_011 = false;
-                    Log.v(TAG, "Test: " + remov_011);
+                    HIA1_Test1_Question11 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test1_Question11);
                 }
                 break;
         }

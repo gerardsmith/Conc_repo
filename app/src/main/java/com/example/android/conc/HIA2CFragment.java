@@ -14,6 +14,7 @@ import android.widget.TextView;
 public class HIA2CFragment extends Fragment {
     private EditText other;
     private static final String TAG = "Video Check";
+    String HIA2_Test3_Question1;
     public static HIA2CFragment newInstance() {
         HIA2CFragment fragment = new HIA2CFragment();
         return fragment;
@@ -30,8 +31,8 @@ public class HIA2CFragment extends Fragment {
 
         other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                String unusual_symp =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + unusual_symp);
+                HIA2_Test3_Question1 =other.getText().toString();
+                Log.v(TAG, "Video Checkbox: " + HIA2_Test3_Question1);
             }
         });
 

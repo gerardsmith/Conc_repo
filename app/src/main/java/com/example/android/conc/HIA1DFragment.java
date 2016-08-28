@@ -14,15 +14,15 @@ import android.widget.TextView;
 
 public class HIA1DFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
-    int symp1;
-    int symp2;
-    int symp3;
-    int symp4;
-    int symp5;
-    int symp6;
-    int symp7;
-    int symp8;
-    int symp9;
+    int HIA1_Test5_Question1;
+    int HIA1_Test5_Question2;
+    int HIA1_Test5_Question3;
+    int HIA1_Test5_Question4;
+    int HIA1_Test5_Question5;
+    int HIA1_Test5_Question6;
+    int HIA1_Test5_Question7;
+    int HIA1_Test5_Question8;
+    int HIA1_Test5_Question9;
     private static final String TAG = "Video Check";
     int sym_tally=0;
 
@@ -87,126 +87,162 @@ public class HIA1DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         switch (buttonView.getId()) {
             case R.id.checkBox_Symp22_y:
                 if (checked) {
-                    symp1 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp1 + " tally: " + sym_tally);
+                    HIA1_Test5_Question1 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question1 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp1 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp1 + " tally: " + sym_tally);
+                    HIA1_Test5_Question1 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question1 + " tally: " + sym_tally);
                 break;
             }
             case R.id.checkBox_Symp23_y:
                 if (checked){
-                    symp2 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp2 + " tally: " + sym_tally);
+                    HIA1_Test5_Question2 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question2 + " tally: " + sym_tally);
                 break;}
             else {
-                    symp2 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp2 + " tally: " + sym_tally);
+                    HIA1_Test5_Question2 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question2 + " tally: " + sym_tally);
                     break;
                 }
             case R.id.checkBox_Symp24_y:
                 if (checked) {
-                    symp3 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp3 + " tally: " + sym_tally);
+                    HIA1_Test5_Question3 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question3 + " tally: " + sym_tally);
                     break;
                 }
             else  {
-                    symp3 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp3 + " tally: " + sym_tally);
+                    HIA1_Test5_Question3 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question3 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp25_y: //+2
                 if (checked) {
-                    symp4 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp4 + " tally: " + sym_tally);
+                    HIA1_Test5_Question4 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question4 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp4 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp4 + " tally: " + sym_tally);
+                    HIA1_Test5_Question4 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question4 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp26_y:
                 if (checked){
-                    symp5 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp5 + " tally: " + sym_tally);
+                    HIA1_Test5_Question5 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question5 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp5 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp5 + " tally: " + sym_tally);
+                    HIA1_Test5_Question5 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question5 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp27_y:
                 if (checked){
-                    symp6 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp6 + " tally: " + sym_tally);
+                    HIA1_Test5_Question6 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question6 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp6 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp6 + " tally: " + sym_tally);
+                    HIA1_Test5_Question6 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question6 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp28_y:
                 if (checked){
-                    symp7 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp7 + " tally: " + sym_tally);
+                    HIA1_Test5_Question7 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question7 + " tally: " + sym_tally);
                     break;
                 }
 
                 else{
-                    symp7 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp7 + " tally: " + sym_tally);
+                    HIA1_Test5_Question7 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question7 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp29_y:
                 if (checked){
-                    symp8 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp8 + " tally: " + sym_tally);
+                    HIA1_Test5_Question8 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question8 + " tally: " + sym_tally);
                     break;
                 }
 
                 else{
-                    symp8 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp8 + " tally: " + sym_tally);
+                    HIA1_Test5_Question8 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question8 + " tally: " + sym_tally);
                     break;
                 }
 
             case R.id.checkBox_Symp210_y:
                 if (checked){
-                    symp9 = 1;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp9 + " tally: " + sym_tally);
+                    HIA1_Test5_Question9 = 1;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question9 + " tally: " + sym_tally);
                     break;
                 }
                 else{
-                    symp9 = 0;
-                    sym_tally = symp1+symp2 +symp3+ symp4+symp5 +symp6+symp7+symp8 +symp9;
-                    Log.v(TAG, "Mad Checkbox: " + symp9 + " tally: " + sym_tally);
+                    HIA1_Test5_Question9 = 0;
+                    sym_tally = HIA1_Test5_Question1+HIA1_Test5_Question2 +HIA1_Test5_Question3+
+                            HIA1_Test5_Question4+HIA1_Test5_Question5 +HIA1_Test5_Question6+
+                            HIA1_Test5_Question7+HIA1_Test5_Question8 +HIA1_Test5_Question9;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test5_Question9 + " tally: " + sym_tally);
                     break;
                 }
 

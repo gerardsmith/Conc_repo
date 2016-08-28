@@ -23,12 +23,13 @@ import static com.example.android.conc.R.id.textView_totalresult;
 public class HIA2EFragment extends Fragment {
 
 
+    int total;
     public HIA2AActivity attempt;
     TextView o_result;
     String o_result_string, m_result_string,conc_result;
     int conc1,conc2;
     TextView textView, textView1, textView2,textView3;
-    int tempval,val1,val2,val3;
+    int tempval,val1,val2,HIA2_Test6_Question1;
     private EditText delmem;
     private static final String TAG = "Tag Check";
     String delmemstring;
@@ -75,10 +76,10 @@ public class HIA2EFragment extends Fragment {
                 textView3 = (TextView) getView().findViewById(textView_delmemresult);
                 textView3.setText(delmemstring);
 
-                val3= Integer.parseInt(delmemstring);
-                int total;
+                HIA2_Test6_Question1 = Integer.parseInt(delmemstring);
 
-                total = conc1+val1+val2+val3;
+
+                total = conc1+val1+val2+HIA2_Test6_Question1;
                 String totalstring;
                 totalstring = String.valueOf(total);
                 textView2 = (TextView) getView().findViewById(textView_totalresult);
@@ -137,6 +138,10 @@ public class HIA2EFragment extends Fragment {
             conc1 = attempt.attemp1.digback + attempt.attemp1.monthback;
             conc_result = String.valueOf(conc1);
             textView2.setText(conc_result);
+
+            attempt.attemp1.delayedRecall= HIA2_Test6_Question1;
+
+            attempt.attemp1.sacTotal = total;
 
         }
 

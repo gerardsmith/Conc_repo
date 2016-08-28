@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -18,29 +19,29 @@ import android.widget.Spinner;
 public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = "Video Check";
-    boolean s1= false;
-    boolean s2= false;
-    boolean s3= false;
-    boolean s4= false;
-    boolean s5= false;
-    boolean s6= false;
-    boolean s7= false;
-    boolean s8= false;
-    boolean s9= false;
-    boolean s10= false;
-    boolean s11= false;
-    boolean s12= false;
-    boolean s13= false;
-    boolean s14= false;
-    boolean s15= false;
-    boolean s16= false;
-    boolean s17= false;
-    boolean s18= false;
-    boolean s19= false;
-    boolean s20= false;
-    boolean s21= false;
-    boolean s22= false;
-    int symp_score=0;
+    boolean HIA2_Test2_Question1= false;
+    boolean HIA2_Test2_Question2= false;
+    boolean HIA2_Test2_Question3= false;
+    boolean HIA2_Test2_Question4= false;
+    boolean HIA2_Test2_Question5= false;
+    boolean HIA2_Test2_Question6= false;
+    boolean HIA2_Test2_Question7= false;
+    boolean HIA2_Test2_Question8= false;
+    boolean HIA2_Test2_Question9= false;
+    boolean HIA2_Test2_Question10= false;
+    boolean HIA2_Test2_Question11= false;
+    boolean HIA2_Test2_Question12= false;
+    boolean HIA2_Test2_Question13= false;
+    boolean HIA2_Test2_Question14= false;
+    boolean HIA2_Test2_Question15= false;
+    boolean HIA2_Test2_Question16= false;
+    boolean HIA2_Test2_Question17= false;
+    boolean HIA2_Test2_Question18= false;
+    boolean HIA2_Test2_Question19= false;
+    boolean HIA2_Test2_Question20= false;
+    boolean HIA2_Test2_Question21= false;
+    boolean HIA2_Test2_Question22= false;
+    int HIA2_Test2_Question45=0;
     int prev1=0;
     int prev2=0;
     int prev3=0;
@@ -64,30 +65,57 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
     int prev21=0;
     int prev22=0;
 
-    int val1 =0;
-    int val2 =0;
-    int val3 =0;
-    int val4 =0;
-    int val5 =0;
-    int val6 =0;
-    int val7 =0;
-    int val8 =0;
-    int val9 =0;
-    int val10 =0;
-    int val11 =0;
-    int val12 =0;
-    int val13 =0;
-    int val14 =0;
-    int val15 =0;
-    int val16 =0;
-    int val17 =0;
-    int val18 =0;
-    int val19 =0;
-    int val20 =0;
-    int val21 =0;
-    int val22 =0;
+    int HIA2_Test2_Question23 =0;
+    int HIA2_Test2_Question24 =0;
+    int HIA2_Test2_Question25 =0;
+    int HIA2_Test2_Question26 =0;
+    int HIA2_Test2_Question27 =0;
+    int HIA2_Test2_Question28 =0;
+    int HIA2_Test2_Question29 =0;
+    int HIA2_Test2_Question30 =0;
+    int HIA2_Test2_Question31 =0;
+    int HIA2_Test2_Question32 =0;
+    int HIA2_Test2_Question33 =0;
+    int HIA2_Test2_Question34 =0;
+    int HIA2_Test2_Question35 =0;
+    int HIA2_Test2_Question36 =0;
+    int HIA2_Test2_Question37 =0;
+    int HIA2_Test2_Question38 =0;
+    int HIA2_Test2_Question39 =0;
+    int HIA2_Test2_Question40 =0;
+    int HIA2_Test2_Question41 =0;
+    int HIA2_Test2_Question42 =0;
+    int HIA2_Test2_Question43 =0;
+    int HIA2_Test2_Question44 =0;
+    public HIA2AActivity attempt2;
 
+    public void setFlag(){
+        Log.v(TAG, "Flag attempt 1 ");
+        if((HIA2_Test2_Question1||HIA2_Test2_Question2||HIA2_Test2_Question3 || HIA2_Test2_Question4
+                || HIA2_Test2_Question5 ||HIA2_Test2_Question6 ||HIA2_Test2_Question7 || HIA2_Test2_Question8
+                ||HIA2_Test2_Question9|| HIA2_Test2_Question10|| HIA2_Test2_Question11||HIA2_Test2_Question12
+                ||HIA2_Test2_Question13||HIA2_Test2_Question14||HIA2_Test2_Question15||HIA2_Test2_Question16
+                ||HIA2_Test2_Question17||HIA2_Test2_Question18||HIA2_Test2_Question19||HIA2_Test2_Question20
+                ||HIA2_Test2_Question21||HIA2_Test2_Question22)==true)
+        {
+            Log.v(TAG, "Flag attempt ");
+            Activity a = getActivity();
+            if(a instanceof HIA2AActivity){
+                attempt2 = (HIA2AActivity) getActivity();
+                attempt2.attemp1.symFlag = 1;
+                Log.v(TAG, "Flag set ");
+            }
+        }
+        else{
+            Activity a = getActivity();
+            if(a instanceof HIA2AActivity) {
+                attempt2 = (HIA2AActivity) getActivity();
+                attempt2.attemp1.symFlag = 0;
+                Log.v(TAG, "Flag reset ");
+            }
 
+        }
+    }
 
 
     public static HIA2BFragment newInstance() {
@@ -253,294 +281,319 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
 
         switch(parent.getId()) {
             case R.id.spinner5:
-                val1=position;
+                HIA2_Test2_Question23=position;
                 if(position>0){
-                    s1=true;
-                    symp_score=symp_score+position - prev1;
+                    HIA2_Test2_Question1=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev1;
                     prev1=position;
+
 
                 }
                 else{
-                    s1=false;
-                    symp_score=symp_score - prev1;
+                    HIA2_Test2_Question1=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev1;
+
                 }
-                Log.v(TAG, "Video Checkbox0: " + symp_score + "state: " + s1 + "symp value: " + val1);
+                Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question1 + "symp value: " + HIA2_Test2_Question23);
+                setFlag();
                 return;
             case R.id.spinner6:
-                val2=position;
+                HIA2_Test2_Question24=position;
                 if(position>0){
-                    s2=true;
-                    symp_score=symp_score+position - prev2;
+                    HIA2_Test2_Question2=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev2;
                     prev2=position;
                 }
                 else{
-                    s2=false;
-                    symp_score=symp_score - prev2;
+                    HIA2_Test2_Question2=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev2;
                 }
-                Log.v(TAG, "Video Checkbox0: " + symp_score + "state: " + s2);
+                Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question2);
+                setFlag();
                 return;
             case R.id.spinner7:
-                val3=position;
+                HIA2_Test2_Question25=position;
                 if(position>0){
-                    s3=true;
-                    symp_score=symp_score+position - prev3;
+                    HIA2_Test2_Question3=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev3;
                     prev3=position;
                 }
                 else{
-                    s3=false;
-                    symp_score=symp_score - prev3;
+                    HIA2_Test2_Question3=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev3;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner8:
-                val4=position;
+                HIA2_Test2_Question26=position;
                 if(position>0){
-                    s4=true;
-                    symp_score=symp_score+position - prev4;
+                    HIA2_Test2_Question4=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev4;
                     prev4=position;
                 }
                 else{
-                    s4=false;
-                    symp_score=symp_score - prev4;
+                    HIA2_Test2_Question4=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev4;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner9:
-                val5=position;
+                HIA2_Test2_Question27=position;
                 if(position>0){
-                    s5=true;
-                    symp_score=symp_score+position - prev5;
+                    HIA2_Test2_Question5=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev5;
                     prev5=position;
                 }
                 else{
-                    s5=false;
-                    symp_score=symp_score - prev5;
+                    HIA2_Test2_Question5=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev5;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner10:
-                val6=position;
+                HIA2_Test2_Question28=position;
                 if(position>0){
-                    s6=true;
-                    symp_score=symp_score+position - prev6;
+                    HIA2_Test2_Question6=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev6;
                     prev6=position;
                 }
                 else{
-                    s6=false;
-                    symp_score=symp_score - prev6;
+                    HIA2_Test2_Question6=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev6;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner11:
-                val7=position;
+                HIA2_Test2_Question29=position;
                 if(position>0){
-                    s7=true;
-                    symp_score=symp_score+position - prev7;
+                    HIA2_Test2_Question7=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev7;
                     prev7=position;
                 }
                 else{
-                    s7=false;
-                    symp_score=symp_score - prev7;
+                    HIA2_Test2_Question7=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev7;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner12:
-                val8=position;
+                HIA2_Test2_Question30=position;
                 if(position>0){
-                    s8=true;
-                    symp_score=symp_score+position - prev8;
+                    HIA2_Test2_Question8=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev8;
                     prev8=position;
                 }
                 else{
-                    s8=false;
-                    symp_score=symp_score - prev8;
+                    HIA2_Test2_Question8=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev8;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner13:
-                val9=position;
+                HIA2_Test2_Question31=position;
                 if(position>0){
-                    s9=true;
-                    symp_score=symp_score+position - prev9;
+                    HIA2_Test2_Question9=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev9;
                     prev9=position;
                 }
                 else{
-                    s9=false;
-                    symp_score=symp_score - prev9;
+                    HIA2_Test2_Question9=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev9;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner14:
-                val10=position;
+                HIA2_Test2_Question32=position;
                 if(position>0){
-                    s10=true;
-                    symp_score=symp_score+position - prev10;
+                    HIA2_Test2_Question10=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev10;
                     prev10=position;
                 }
                 else{
-                    s10=false;
-                    symp_score=symp_score - prev10;
+                    HIA2_Test2_Question10=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev10;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner15:
-                val11=position;
+                HIA2_Test2_Question33=position;
                 if(position>0){
-                    s11=true;
-                    symp_score=symp_score+position - prev11;
+                    HIA2_Test2_Question11=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev11;
                     prev11=position;
                 }
                 else{
-                    s11=false;
-                    symp_score=symp_score - prev11;
+                    HIA2_Test2_Question11=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev11;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner16:
-                val12=position;
+                HIA2_Test2_Question34=position;
                 if(position>0){
-                    s12=true;
-                    symp_score=symp_score+position - prev12;
+                    HIA2_Test2_Question12=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev12;
                     prev12=position;
                 }
                 else{
-                    s12=false;
-                    symp_score=symp_score - prev12;
+                    HIA2_Test2_Question12=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev12;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner17:
-                val13=position;
+                HIA2_Test2_Question35=position;
                 if(position>0){
-                    s13=true;
-                    symp_score=symp_score+position - prev13;
+                    HIA2_Test2_Question13=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev13;
                     prev13=position;
                 }
                 else{
-                    s13=false;
-                    symp_score=symp_score - prev13;
+                    HIA2_Test2_Question13=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev13;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner18:
-                val14=position;
+                HIA2_Test2_Question36=position;
                 if(position>0){
-                    s14=true;
-                    symp_score=symp_score+position - prev14;
+                    HIA2_Test2_Question14=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev14;
                     prev14=position;
                 }
                 else{
-                    s14=false;
-                    symp_score=symp_score - prev14;
+                    HIA2_Test2_Question14=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev14;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner19:
-                val15=position;
+                HIA2_Test2_Question37=position;
                 if(position>0){
-                    s15=true;
-                    symp_score=symp_score+position - prev15;
+                    HIA2_Test2_Question15=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev15;
                     prev15=position;
                 }
                 else{
-                    s15=false;
-                    symp_score=symp_score - prev15;
+                    HIA2_Test2_Question15=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev15;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner20:
-                val16=position;
+                HIA2_Test2_Question38=position;
                 if(position>0){
-                    s16=true;
-                    symp_score=symp_score+position - prev16;
+                    HIA2_Test2_Question16=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev16;
                     prev16=position;
                 }
                 else{
-                    s16=false;
-                    symp_score=symp_score - prev16;
+                    HIA2_Test2_Question16=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev16;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner21:
-                val17=position;
+                HIA2_Test2_Question39=position;
                 if(position>0){
-                    s17=true;
-                    symp_score=symp_score+position - prev17;
+                    HIA2_Test2_Question17=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev17;
                     prev17=position;
                 }
                 else{
-                    s17=false;
-                    symp_score=symp_score - prev17;
+                    HIA2_Test2_Question17=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev17;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner22:
-                val18=position;
+                HIA2_Test2_Question40=position;
                 if(position>0){
-                    s18=true;
-                    symp_score=symp_score+position - prev18;
+                    HIA2_Test2_Question18=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev18;
                     prev18=position;
                 }
                 else{
-                    s18=false;
-                    symp_score=symp_score - prev18;
+                    HIA2_Test2_Question18=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev18;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner23:
-                val19=position;
+                HIA2_Test2_Question41=position;
                 if(position>0){
-                    s19=true;
-                    symp_score=symp_score+position - prev19;
+                    HIA2_Test2_Question19=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev19;
                     prev19=position;
                 }
                 else{
-                    s19=false;
-                    symp_score=symp_score - prev19;
+                    HIA2_Test2_Question19=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev19;
                 }
                 Log.v(TAG, "Video Checkbox0: " + position);
+                setFlag();
                 return;
             case R.id.spinner24:
-                val20=position;
+                HIA2_Test2_Question42=position;
                 if(position>0){
-                    s20=true;
-                    symp_score=symp_score+position - prev20;
+                    HIA2_Test2_Question20=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev20;
                     prev20=position;
                 }
                 else{
-                    s20=false;
-                    symp_score=symp_score - prev20;
+                    HIA2_Test2_Question20=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev20;
                 }
                 Log.v(TAG, "Video Checkbox1: " + position);
+                setFlag();
                 return;
             case R.id.spinner25:
-                val21=position;
+                HIA2_Test2_Question43=position;
                 if(position>0){
-                    s21=true;
-                    symp_score=symp_score+position - prev21;
+                    HIA2_Test2_Question21=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev21;
                     prev21=position;
                 }
                 else{
-                    s21=false;
-                    symp_score=symp_score - prev21;
+                    HIA2_Test2_Question21=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev21;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
             case R.id.spinner26:
-                val22=position;
+                HIA2_Test2_Question44=position;
                 if(position>0){
-                    s22=true;
-                    symp_score=symp_score+position - prev22;
+                    HIA2_Test2_Question22=true;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev22;
                     prev22=position;
                 }
                 else{
-                    s22=false;
-                    symp_score=symp_score - prev22;
+                    HIA2_Test2_Question22=false;
+                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev22;
                 }
                 Log.v(TAG, "Video Checkbox2: " + position);
+                setFlag();
                 return;
 
         }
+
     }
 
     @Override

@@ -17,10 +17,11 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
     private static final String TAG = "Video Check";
     private EditText delmem;
-    int cs1=0;
-    int cs2=0;
-    int cs3=0;
+    int HIA1_Test6_Question2=0;
+    int HIA1_Test6_Question3=0;
+    int HIA1_Test6_Question4=0;
     int cs=0;
+    int HIA1_Test6_Question1;
 
     public static HIA1EFragment newInstance() {
         HIA1EFragment fragment = new HIA1EFragment();
@@ -48,6 +49,7 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
             public void onClick(View v) {
                 String delmemstring =delmem.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + delmemstring);
+                HIA1_Test6_Question1 = Integer.parseInt(delmemstring);
             }
         });
 
@@ -70,44 +72,44 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
         switch (buttonView.getId()) {
             case R.id.checkBox_CS1_Y:
                 if (checked){
-                    cs1 = 1;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question2 = 1;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
                     break;
                 }
                 else{
-                    cs1 = 0;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question2 = 0;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
                     break;
                 }
 
             case R.id.checkBox_CS2_Y:
                 if (checked){
-                    cs2 = 1;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question3 = 1;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
                     break;
                 }
 
                 else{
-                    cs2 = 0;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question3 = 0;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
                     break;
                 }
 
             case R.id.checkBox_CS3_Y:
                 if (checked){
-                    cs3 = 1;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question4 = 1;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
                     break;
                 }
                 else{
-                    cs3 = 0;
-                    cs=cs1 +cs2+cs3;
-                    Log.v(TAG, "Mad Checkbox: " + cs1 + "tally: " + cs);
+                    HIA1_Test6_Question4 = 0;
+                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
+                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
                     break;
                 }
         }

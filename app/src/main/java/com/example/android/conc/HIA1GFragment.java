@@ -16,7 +16,9 @@ public class HIA1GFragment extends Fragment {
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
     private EditText memscore;
+    int HIA1_Test4_Question1;
     private EditText digback;
+    int HIA1_Test4_Question2;
     private static final String TAG = "Video Check";
 
 
@@ -175,6 +177,7 @@ public class HIA1GFragment extends Fragment {
             public void onClick(View v) {
                 String memscorestring =memscore.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + memscorestring);
+                HIA1_Test4_Question1 = Integer.parseInt(memscorestring);
             }
         });
 
@@ -182,6 +185,7 @@ public class HIA1GFragment extends Fragment {
             public void onClick(View v) {
                 String digbackstring =digback.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + digbackstring);
+                HIA1_Test4_Question2 = Integer.parseInt(digbackstring);
             }
         });
 

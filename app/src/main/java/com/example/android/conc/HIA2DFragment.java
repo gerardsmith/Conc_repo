@@ -24,12 +24,13 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
     OnOrienSelectedListener orienCallback;
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
-    int orien=0;
-    int or1= 0;
-    int or2= 0;
-    int or3= 0;
-    int or4= 0;
-    int or5= 0;
+    int HIA2_Test4_Question6=0;
+    int HIA2_Test4_Question1= 0;
+    int HIA2_Test4_Question2= 0;
+    int HIA2_Test4_Question3= 0;
+    int HIA2_Test4_Question4= 0;
+    int HIA2_Test4_Question5= 0;
+    int HIA2_Test4_Question7;
     String string_orien;
     private EditText other;
     private static final String TAG = "Video Check";
@@ -139,9 +140,9 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 String mem_score =other.getText().toString();
-                int value=Integer.parseInt(other.getText().toString());
+                HIA2_Test4_Question7 =Integer.parseInt(other.getText().toString());
                 Log.v(TAG, "Video Checkbox: " + mem_score);
-                orienCallback.onImedMemSelected(value);
+                orienCallback.onImedMemSelected(HIA2_Test4_Question7);
             }
         });
 
@@ -166,91 +167,91 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                 case R.id.checkBox_ORIEN_1:
                     if (checked2)
                     {
-                        or1=1;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question1=1;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
 
                     }
                     else
                     {
-                        or1=0;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question1=0;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_3:
                     if (checked2)
                     {
-                        or2=1;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question2=1;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
                     else
                     {
-                        or2=0;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question2=0;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_5:
                     if (checked2)
                     {
-                        or3=1;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question3=1;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
                     else
                     {
-                        or3=0;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question3=0;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_7:
                     if (checked2)
                     {
-                        or4=1;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question4=1;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
                     else
                     {
-                        or4=0;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question4=0;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_9:
                     if (checked2)
                     {
-                        or5=1;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question5=1;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
                     else
                     {
-                        or5=0;
-                        orien=or1+or2+or3+or4+or5;
-                        Log.v(TAG, "Purple Monkeys " + orien);
-                        orienCallback.onOrienSelected(orien);
+                        HIA2_Test4_Question5=0;
+                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
                 }

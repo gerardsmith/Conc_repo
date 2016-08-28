@@ -15,11 +15,12 @@ import android.widget.TextView;
 
 public class HIA1BFragment extends Fragment {
 
-    boolean remov_1 = false;
-    boolean remov_2 = false;
-    boolean remov_3 = false;
-    boolean remov_4 = false;
-    boolean remov_5 = false;
+    boolean HIA1_Test2_Question1 = false;
+    boolean HIA1_Test2_Question2 = false;
+    boolean HIA1_Test2_Question3 = false;
+    boolean HIA1_Test2_Question4 = false;
+    boolean HIA1_Test2_Question5 = false;
+    String HIA1_Test2_Question6;
 
     private static final String TAG = "Video Check";
     private EditText other;
@@ -50,11 +51,11 @@ public class HIA1BFragment extends Fragment {
             public void onClick(View v) {
                 final boolean checked2 = mButton.isChecked();
                 if (checked2) {
-                    remov_1 = true;
-                    Log.v(TAG, "Test: " + remov_1);
+                    HIA1_Test2_Question1 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question1);
                 } else {
-                    remov_1 = false;
-                    Log.v(TAG, "Test: " + remov_1);
+                    HIA1_Test2_Question1 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question1);
                 }
             }
         });
@@ -64,11 +65,11 @@ public class HIA1BFragment extends Fragment {
             public void onClick(View v) {
                 final boolean checked2 = mButton1.isChecked();
                 if (checked2) {
-                    remov_2 = true;
-                    Log.v(TAG, "Test: " + remov_2);
+                    HIA1_Test2_Question2 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question2);
                 } else {
-                    remov_2 = false;
-                    Log.v(TAG, "Test: " + remov_2);
+                    HIA1_Test2_Question2 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question2);
                 }
             }
         });
@@ -78,11 +79,11 @@ public class HIA1BFragment extends Fragment {
             public void onClick(View v) {
                 final boolean checked2 = mButton2.isChecked();
                 if (checked2) {
-                    remov_3 = true;
-                    Log.v(TAG, "Test: " + remov_3);
+                    HIA1_Test2_Question3 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question3);
                 } else {
-                    remov_3 = false;
-                    Log.v(TAG, "Test: " + remov_3);
+                    HIA1_Test2_Question3 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question3);
                 }
             }
         });
@@ -92,11 +93,11 @@ public class HIA1BFragment extends Fragment {
             public void onClick(View v) {
                 final boolean checked2 = mButton3.isChecked();
                 if (checked2) {
-                    remov_4 = true;
-                    Log.v(TAG, "Test: " + remov_4);
+                    HIA1_Test2_Question4 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question4);
                 } else {
-                    remov_4 = false;
-                    Log.v(TAG, "Test: " + remov_4);
+                    HIA1_Test2_Question4 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question4);
                 }
             }
         });
@@ -106,19 +107,19 @@ public class HIA1BFragment extends Fragment {
             public void onClick(View v) {
                 final boolean checked2 = mButton4.isChecked();
                 if (checked2) {
-                    remov_5 = true;
-                    Log.v(TAG, "Test: " + remov_5);
+                    HIA1_Test2_Question5 = true;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question5);
                 } else {
-                    remov_5 = false;
-                    Log.v(TAG, "Test: " + remov_5);
+                    HIA1_Test2_Question5 = false;
+                    Log.v(TAG, "Test: " + HIA1_Test2_Question5);
                 }
             }
         });
 
         other.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
-                String HIA_other_reason =other.getText().toString();
-                Log.v(TAG, "Other textbox string: " + HIA_other_reason);
+                HIA1_Test2_Question6 =other.getText().toString();
+                Log.v(TAG, "Other textbox string: " + HIA1_Test2_Question6);
             }
         });
 

@@ -41,8 +41,23 @@ public class HIA2FFragment extends Fragment {
         {
             concresult = (HIA2AActivity) getActivity();
             if(concresult.attemp1.imedmem<=12){
-                chk1.setChecked(true);
+               chk1.setChecked(true);
 
+            }
+            else if (concresult.attemp1.sacTotal<=26)
+            {
+                chk1.setChecked(true);
+            }
+            else if (concresult.attemp1.digback<=2)
+            {
+                chk1.setChecked(true);
+            }
+             else if (concresult.attemp1.delayedRecall<=3)
+            {
+                chk1.setChecked(true);
+            }
+             else if (concresult.attemp1.symFlag==1){
+                chk1.setChecked(true);
             }
         }
     }

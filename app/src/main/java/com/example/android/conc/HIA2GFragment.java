@@ -20,6 +20,8 @@ public class HIA2GFragment extends Fragment {
 
     private EditText other;
     private EditText other2;
+    int HIA2_Test5_Question1;
+    int HIA2_Test5_Question2;
     private static final String TAG = "Video Check";
     public static HIA2GFragment newInstance() {
         HIA2GFragment fragment = new HIA2GFragment();
@@ -120,8 +122,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String dig_back_score =other.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + dig_back_score);
-                int value1=Integer.parseInt(other.getText().toString());
-                concCallback.onDigitBackSelected(value1);
+                HIA2_Test5_Question1=Integer.parseInt(other.getText().toString());
+                concCallback.onDigitBackSelected(HIA2_Test5_Question1);
             }
         });
 
@@ -129,8 +131,8 @@ public class HIA2GFragment extends Fragment {
             public void onClick(View v) {
                 String conc_score =other2.getText().toString();
                 Log.v(TAG, "Video Checkbox: " + conc_score);
-                int value2=Integer.parseInt(other2.getText().toString());
-                concCallback.onMonthBackSelected(value2);
+                HIA2_Test5_Question2=Integer.parseInt(other2.getText().toString());
+                concCallback.onMonthBackSelected(HIA2_Test5_Question2);
             }
         });
 
