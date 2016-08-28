@@ -33,6 +33,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
     // child data in format of header title, child title
     private HashMap<String, List<String>> _listDataChild;
     private static final String TAG = "Video Check";
+    int[] posArray = new int[88];
 
     //spinners for expandable view
     int HIA3_Test3_Question5,HIA3_Test3_Question6,HIA3_Test3_Question7,HIA3_Test3_Question8,
@@ -85,6 +86,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
         final String childText = (String) getChild(groupPosition, childPosition);
+        group_pos=groupPosition;
+        Log.v(TAG, "Group Pos: " + groupPosition);
 
         if (convertView == null) {
             LayoutInflater infalInflater = (LayoutInflater) this._context
@@ -138,6 +141,141 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
         spinner3.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
         spinner4.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
 
+        switch (group_pos){
+            case 0:
+                spinner1.setSelection(posArray[0]);
+                spinner2.setSelection(posArray[1]);
+                spinner3.setSelection(posArray[2]);
+                spinner4.setSelection(posArray[3]);
+                break;
+            case 1:
+                spinner1.setSelection(posArray[4]);
+                spinner2.setSelection(posArray[5]);
+                spinner3.setSelection(posArray[6]);
+                spinner4.setSelection(posArray[7]);
+                break;
+            case 2:
+                spinner1.setSelection(posArray[8]);
+                spinner2.setSelection(posArray[9]);
+                spinner3.setSelection(posArray[10]);
+                spinner4.setSelection(posArray[11]);
+                break;
+            case 3:
+                spinner1.setSelection(posArray[12]);
+                spinner2.setSelection(posArray[13]);
+                spinner3.setSelection(posArray[14]);
+                spinner4.setSelection(posArray[15]);
+                break;
+            case 4:
+                spinner1.setSelection(posArray[16]);
+                spinner2.setSelection(posArray[17]);
+                spinner3.setSelection(posArray[18]);
+                spinner4.setSelection(posArray[19]);
+                break;
+            case 5:
+                spinner1.setSelection(posArray[20]);
+                spinner2.setSelection(posArray[21]);
+                spinner3.setSelection(posArray[22]);
+                spinner4.setSelection(posArray[23]);
+                break;
+            case 6:
+                spinner1.setSelection(posArray[24]);
+                spinner2.setSelection(posArray[25]);
+                spinner3.setSelection(posArray[26]);
+                spinner4.setSelection(posArray[27]);
+                break;
+            case 7:
+                spinner1.setSelection(posArray[28]);
+                spinner2.setSelection(posArray[29]);
+                spinner3.setSelection(posArray[30]);
+                spinner4.setSelection(posArray[31]);
+                break;
+            case 8:
+                spinner1.setSelection(posArray[32]);
+                spinner2.setSelection(posArray[33]);
+                spinner3.setSelection(posArray[34]);
+                spinner4.setSelection(posArray[35]);
+                break;
+            case 9:
+                spinner1.setSelection(posArray[36]);
+                spinner2.setSelection(posArray[37]);
+                spinner3.setSelection(posArray[38]);
+                spinner4.setSelection(posArray[39]);
+                break;
+            case 10:
+                spinner1.setSelection(posArray[40]);
+                spinner2.setSelection(posArray[41]);
+                spinner3.setSelection(posArray[42]);
+                spinner4.setSelection(posArray[43]);
+                break;
+            case 11:
+                spinner1.setSelection(posArray[44]);
+                spinner2.setSelection(posArray[45]);
+                spinner3.setSelection(posArray[46]);
+                spinner4.setSelection(posArray[47]);
+                break;
+            case 12:
+                spinner1.setSelection(posArray[48]);
+                spinner2.setSelection(posArray[49]);
+                spinner3.setSelection(posArray[50]);
+                spinner4.setSelection(posArray[51]);
+                break;
+            case 13:
+                spinner1.setSelection(posArray[52]);
+                spinner2.setSelection(posArray[53]);
+                spinner3.setSelection(posArray[54]);
+                spinner4.setSelection(posArray[55]);
+                break;
+            case 14:
+                spinner1.setSelection(posArray[56]);
+                spinner2.setSelection(posArray[57]);
+                spinner3.setSelection(posArray[58]);
+                spinner4.setSelection(posArray[59]);
+                break;
+            case 15:
+                spinner1.setSelection(posArray[60]);
+                spinner2.setSelection(posArray[61]);
+                spinner3.setSelection(posArray[62]);
+                spinner4.setSelection(posArray[63]);
+                break;
+            case 16:
+                spinner1.setSelection(posArray[64]);
+                spinner2.setSelection(posArray[65]);
+                spinner3.setSelection(posArray[66]);
+                spinner4.setSelection(posArray[67]);
+                break;
+            case 17:
+                spinner1.setSelection(posArray[68]);
+                spinner2.setSelection(posArray[69]);
+                spinner3.setSelection(posArray[70]);
+                spinner4.setSelection(posArray[71]);
+                break;
+            case 18:
+                spinner1.setSelection(posArray[72]);
+                spinner2.setSelection(posArray[73]);
+                spinner3.setSelection(posArray[74]);
+                spinner4.setSelection(posArray[75]);
+                break;
+            case 19:
+                spinner1.setSelection(posArray[76]);
+                spinner2.setSelection(posArray[77]);
+                spinner3.setSelection(posArray[78]);
+                spinner4.setSelection(posArray[79]);
+                break;
+            case 20:
+                spinner1.setSelection(posArray[80]);
+                spinner2.setSelection(posArray[81]);
+                spinner3.setSelection(posArray[82]);
+                spinner4.setSelection(posArray[83]);
+                break;
+            case 21:
+                spinner1.setSelection(posArray[84]);
+                spinner2.setSelection(posArray[85]);
+                spinner3.setSelection(posArray[86]);
+                spinner4.setSelection(posArray[87]);
+                break;
+        }
+
             return convertView;
     }
 
@@ -186,15 +324,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
     }
 
     @Override
-    public boolean isChildSelectable(int groupPosition, int childPosition) {
-        //Log.v(TAG, "Group Pos: " + groupPosition);
-        group_pos=groupPosition;
-
-        return true;
-
-    }
-
-
+    public boolean isChildSelectable(int groupPosition, int childPosition) { return true;}
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -204,19 +334,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         HIA3_Test3_Question5 =position;
                         Log.v(TAG, "Headaches spinner1");
-
+                        posArray[0]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: ");
                         HIA3_Test3_Question6 =position;
+                        posArray[1]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question7 =position;
+                        posArray[2]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question8 =position;
+                        posArray[3]= position;
                         return;
                 }
                 return;
@@ -225,18 +358,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Pressure in head spinner1 ");
                         HIA3_Test3_Question9 =position;
+                        posArray[4]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question10 =position;
+                        posArray[5]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question11 =position;
+                        posArray[6]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question12 =position;
+                        posArray[7]= position;
                         return;
                 }
                 return;
@@ -245,18 +382,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Neckpain spinner1");
                         HIA3_Test3_Question13 =position;
+                        posArray[8]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question14 =position;
+                        posArray[9]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question15 =position;
+                        posArray[10]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question16 =position;
+                        posArray[11]= position;
                         return;
                 }
                 return;
@@ -265,18 +406,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Naus spinner1");
                         HIA3_Test3_Question17 =position;
+                        posArray[12]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question18 =position;
+                        posArray[13]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question19 =position;
+                        posArray[14]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question20 =position;
+                        posArray[15]= position;
                         return;
                 }
                 return;
@@ -285,18 +430,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Dizziness spinner1");
                         HIA3_Test3_Question21 =position;
+                        posArray[16]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question22 =position;
+                        posArray[17]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question23 =position;
+                        posArray[18]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question24 =position;
+                        posArray[19]= position;
                         return;
                 }
                 return;
@@ -305,18 +454,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Blurred  spinner1");
                         HIA3_Test3_Question25 =position;
+                        posArray[20]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question26 =position;
+                        posArray[21]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question27 =position;
+                        posArray[22]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question28 =position;
+                        posArray[23]= position;
                         return;
                 }
                 return;
@@ -325,18 +478,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "balance spinner1");
                         HIA3_Test3_Question29 =position;
+                        posArray[24]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question30 =position;
+                        posArray[25]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question31 =position;
+                        posArray[26]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question32 =position;
+                        posArray[27]= position;
                         return;
                 }
                 return;
@@ -345,18 +502,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "sense l spinner1");
                         HIA3_Test3_Question33 =position;
+                        posArray[28]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question34 =position;
+                        posArray[29]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question35 =position;
+                        posArray[30]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question36 =position;
+                        posArray[31]= position;
                         return;
                 }
                 return;
@@ -365,18 +526,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "sense n spinner1");
                         HIA3_Test3_Question37 =position;
+                        posArray[32]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question38 =position;
+                        posArray[33]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question39 =position;
+                        posArray[34]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question40 =position;
+                        posArray[35]= position;
                         return;
                 }
                 return;
@@ -385,18 +550,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "slow spinner1");
                         HIA3_Test3_Question41 =position;
+                        posArray[36]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question42 =position;
+                        posArray[37]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question43 =position;
+                        posArray[38]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question44 =position;
+                        posArray[39]= position;
                         return;
                 }
                 return;
@@ -405,18 +574,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "fog spinner1");
                         HIA3_Test3_Question45 =position;
+                        posArray[40]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question46 =position;
+                        posArray[41]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question47 =position;
+                        posArray[42]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question48 =position;
+                        posArray[43]= position;
                         return;
                 }
                 return;
@@ -425,18 +598,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "dfr spinner1");
                         HIA3_Test3_Question49 =position;
+                        posArray[44]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question50 =position;
+                        posArray[45]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question51 =position;
+                        posArray[46]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question52 =position;
+                        posArray[47]= position;
                         return;
                 }
                 return;
@@ -445,18 +622,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "dif conc spinner1");
                         HIA3_Test3_Question53 =position;
+                        posArray[48]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question54 =position;
+                        posArray[49]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question55 =position;
+                        posArray[50]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question56 =position;
+                        posArray[51]= position;
                         return;
                 }
                 return;
@@ -465,18 +646,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "dif rem spinner1");
                         HIA3_Test3_Question57 =position;
+                        posArray[52]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question58 =position;
+                        posArray[53]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question59 =position;
+                        posArray[54]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question60 =position;
+                        posArray[55]= position;
                         return;
                 }
                 return;
@@ -485,18 +670,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "fat spinner1");
                         HIA3_Test3_Question61 =position;
+                        posArray[56]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question62 =position;
+                        posArray[57]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question63 =position;
+                        posArray[58]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question64 =position;
+                        posArray[59]= position;
                         return;
                 }
                 return;
@@ -505,18 +694,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "conf spinner1");
                         HIA3_Test3_Question65 =position;
+                        posArray[60]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question66 =position;
+                        posArray[61]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question67 =position;
+                        posArray[62]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question68 =position;
+                        posArray[63]= position;
                         return;
                 }
                 return;
@@ -525,18 +718,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Drowsi spinner1");
                         HIA3_Test3_Question69 =position;
+                        posArray[64]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question70 =position;
+                        posArray[65]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question71 =position;
+                        posArray[66]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question72 =position;
+                        posArray[67]= position;
                         return;
                 }
                 return;
@@ -545,18 +742,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Troub spinner1");
                         HIA3_Test3_Question73 =position;
+                        posArray[68]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question74 =position;
+                        posArray[69]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question75 =position;
+                        posArray[70]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question76 =position;
+                        posArray[71]= position;
                         return;
                 }
                 return;
@@ -565,18 +766,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "More emotion spinner1");
                         HIA3_Test3_Question77 =position;
+                        posArray[72]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question78 =position;
+                        posArray[73]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question79 =position;
+                        posArray[74]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question80 =position;
+                        posArray[75]= position;
                         return;
                 }
                 return;
@@ -585,18 +790,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Irrit spinner1");
                         HIA3_Test3_Question81 =position;
+                        posArray[76]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question82 =position;
+                        posArray[77]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question83 =position;
+                        posArray[78]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question84 =position;
+                        posArray[79]= position;
                         return;
                 }
                 return;
@@ -605,18 +814,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Sad spinner1 " + position);
                         HIA3_Test3_Question85 =position;
+                        posArray[80]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question86 =position;
+                        posArray[81]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question87 =position;
+                        posArray[82]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question88 =position;
+                        posArray[83]= position;
                         return;
                 }
                 return;
@@ -625,18 +838,22 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
                     case R.id.spinner33:
                         Log.v(TAG, "Nerv spinner1");
                         HIA3_Test3_Question89 =position;
+                        posArray[84]= position;
                         return;
                     case R.id.spinner34:
                         Log.v(TAG, "Video Checkbox1: " + position);
                         HIA3_Test3_Question90 =position;
+                        posArray[85]= position;
                         return;
                     case R.id.spinner35:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question91 =position;
+                        posArray[86]= position;
                         return;
                     case R.id.spinner36:
                         Log.v(TAG, "Video Checkbox2: " + position);
                         HIA3_Test3_Question92 =position;
+                        posArray[87]= position;
                         return;
                 }
                 return;
@@ -650,113 +867,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter implements 
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }
-
-// Second attempt
-
-    // Create ArrayList to hold parent Items and Child Items
-    /*private ArrayList<String> parentItems = new ArrayList<String>();
-    private ArrayList<Object> childItems = new ArrayList<Object>();
-
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-
-        // Create Expandable List and set it's properties
-        ExpandableListView expandableList = getExpandableListView();
-        expandableList.setDividerHeight(2);
-        expandableList.setGroupIndicator(null);
-        expandableList.setClickable(true);
-
-        // Set the Items of Parent
-        setGroupParents();
-        // Set The Child Data
-        setChildData();
-
-        // Create the Adapter
-        MyExpandableAdapter adapter = new MyExpandableAdapter(parentItems, childItems);
-
-        adapter.setInflater((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE), this);
-
-        // Set the Adapter to expandableList
-        expandableList.setAdapter(adapter);
-        expandableList.setOnChildClickListener(this);
-    }
-
-    // method to add parent Items
-    public void setGroupParents()
-    {
-       // parentItems.add("Fruits");
-       // parentItems.add("Flowers");
-       // parentItems.add("Animals");
-       // parentItems.add("Birds");
-
-        // Adding child data
-        parentItems.add("Headaches");
-        parentItems.add("\'Pressure in head\'");
-        parentItems.add("Neck pain");
-        parentItems.add("Nausea/vomiting");
-        parentItems.add("Dizziness");
-        parentItems.add("Blurred vision");
-        parentItems.add("Balance problems");
-        parentItems.add("Sensitivity to light");
-        parentItems.add("Sensitivity to noise");
-        parentItems.add("Feeling slowed down");
-        parentItems.add("Feeling like \'in a fog\'");
-        parentItems.add("\'Dont feel right\'");
-        parentItems.add("Difficulty concentrating");
-        parentItems.add("Difficulty remembering");
-        parentItems.add("Fatigue/low energy");
-        parentItems.add("Confusion");
-        parentItems.add("Drowsiness");
-        parentItems.add("Trouble falling asleep");
-        parentItems.add("More emotional");
-        parentItems.add("Irritability");
-        parentItems.add("Sadness");
-        parentItems.add("Nervous/anxious");
-    }
-
-    // method to set child data of each parent
-    public void setChildData()
-    {
-
-        // Add Child Items for Fruits
-        ArrayList<String> child = new ArrayList<String>();
-        child.add("A");
-        child.add("B");
-        child.add("C");
-        child.add("D");
-
-        childItems.add(child);
-
-        // Add Child Items for Flowers
-        child = new ArrayList<String>();
-        child.add("Rose");
-        child.add("Lotus");
-        child.add("Jasmine");
-        child.add("Lily");
-
-        childItems.add(child);
-
-        // Add Child Items for Animals
-        child = new ArrayList<String>();
-        child.add("Lion");
-        child.add("Tiger");
-        child.add("Horse");
-        child.add("Elephant");
-
-        childItems.add(child);
-
-        // Add Child Items for Birds
-        child = new ArrayList<String>();
-        child.add("Parrot");
-        child.add("Sparrow");
-        child.add("Peacock");
-        child.add("Pigeon");
-
-        childItems.add(child);
-    }
-
-}*/
 
