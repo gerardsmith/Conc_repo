@@ -152,6 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:id="@+id/Radio_checkBoxAA"
             >
 
             <RadioButton
@@ -250,5 +251,14 @@
 
         </RadioGroup>
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:id="@+id/btn_finish"
+        android:onClick="submitHIA1"
+        android:layout_below="@+id/linearLayout009"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="45dp" />
 
 </RelativeLayout>

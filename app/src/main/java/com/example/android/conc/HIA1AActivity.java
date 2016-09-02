@@ -1,6 +1,8 @@
 package com.example.android.conc;
 
+import android.app.ProgressDialog;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -25,6 +27,7 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,7 +37,11 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.w3c.dom.Text;
+
+import java.util.HashMap;
 
 public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     boolean HIA1_Test1_Question13;
@@ -60,6 +67,180 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     private ViewPager mViewPager;
 
     private GoogleApiClient client;
+
+    //Raf
+    private RadioGroup radioGroup;
+    private RadioButton radioButton;
+
+    //This function calls AsyncTask [insertHIA1], which submit the HIA1 data to insertHIA1.php file.
+    public void submitHIA1(View view) {
+        HIA1 objHIA1=new HIA1();
+        int param; // Used to convert YES ->1 and NO ->0. Should change the value of radio groups to integers.
+        //Find radio group
+        radioGroup = (RadioGroup) findViewById(R.id.Radio_checkBoxAA);
+        // get selected radio button from radioGroup
+        int selectedId = radioGroup.getCheckedRadioButtonId();
+
+        // find the radiobutton by returned id
+        radioButton = (RadioButton) findViewById(selectedId);
+        if(radioButton.getText()=="Yes"){
+            param=1;
+        }else{
+            param=0;
+        }
+        objHIA1.setHIA1_Test1_Question1(param);
+        Toast.makeText(getApplicationContext(), "You selected :"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
+        new HIA1insertAsync(objHIA1).execute(); //Call async Task
+    }
+    //---------------------------------------------
+    //------------JSON ----------------------------
+
+    private class HIA1insertAsync extends AsyncTask<Void, Void, JSONArray> {
+
+        HIA1 objectHIA1=new HIA1();
+        // Alert Dialog Manager
+        AlertDialogManager alert = new AlertDialogManager();
+
+        private static final String URL = "http://10.0.2.2/ConcApp/insertHIA1.php"; // Needs to be changed when using different php files.
+        private static final String TAG_SUCCESS = "success";
+        private static final String TAG_MESSAGE = "message";
+
+
+        JSONParser jsonParser = new JSONParser();
+
+        private ProgressDialog pDialog;
+
+        public HIA1insertAsync(HIA1 objectHIA1Param){
+            Log.d("JSONCONSTRUCTOR", "Start");
+            Toast.makeText(getApplicationContext(), "Starting JSON", Toast.LENGTH_SHORT).show();
+            this.objectHIA1=objectHIA1Param;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            Log.d("JSonInsTeam", "Start");
+            pDialog = new ProgressDialog(HIA1AActivity.this);
+            pDialog.setMessage("Attempting register...");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
+        @Override
+        protected JSONArray doInBackground(Void... params) {
+
+            Log.d("JSonInsTeam", "Background");
+            try {
+                //    Log.d("JSON REQUEST", "Start ...");
+
+                // PREPARING PARAMETERS..
+                Log.d("JSON REQUEST", "Preparing Params ...");
+                HashMap<String, String> args = new HashMap<>();
+                args.put("HIA1_Test1_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question7", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question8", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question9", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question10", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question11", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question12", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question13", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+
+                args.put("HIA1_Test2_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question6", "test");
+
+                args.put("HIA1_Test3_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test3_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test3_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test3_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test3_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+
+                args.put("HIA1_Test4_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test4_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+
+                args.put("HIA1_Test5_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question7", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question8", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question9", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+
+                args.put("HIA1_Test6_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test6_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test6_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test6_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+
+                args.put("HIA1_Test7_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                // all args needs to convert to string because the hash map is string, string types.
+
+                //   Log.d("JSON REQUEST", args.toString());
+                Log.d("JSON REQUEST", "Firing Json ...");
+                JSONArray json = jsonParser.makeHttpRequest(
+                        URL, "POST", args);
+
+                if (json != null) {
+                    Log.d("JSON REQUEST", params.toString());
+                    Log.d("JSON result", json.toString());
+
+                    return json;
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+        @Override
+        protected void onPostExecute(JSONArray json) {
+            Log.d("JSonInsTeam", "Finish");
+            if (pDialog != null && pDialog.isShowing()) {
+                pDialog.dismiss();
+            }
+            int success = 0;
+            String message = "";
+
+            if (json != null) {
+                Toast.makeText(HIA1AActivity.this, json.toString(), Toast.LENGTH_LONG).show();
+
+                try {
+                    success = json.getJSONObject(0).getInt(TAG_SUCCESS);
+                    message = json.getJSONObject(0).getString(TAG_MESSAGE);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (success == 1) {
+                Log.d("Success!", message);
+
+                finish();
+            } else {
+                // Problems SQL
+                alert.showAlertDialog(HIA1AActivity.this, "Insert failed..", "Something went wrong, see Failure Log", false);
+                Log.d("Failure", message);
+                finish();
+            }
+        }
+
+
+    }
+    //-------END JSON----------------
+    //-------------------------------
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
