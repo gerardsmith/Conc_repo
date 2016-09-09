@@ -83,7 +83,8 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
 
         // find the radiobutton by returned id
         radioButton = (RadioButton) findViewById(selectedId);
-        if(radioButton.getText()=="Yes"){
+        //if(radioButton.getText()=="Yes"){
+        if(radioButton.getText().equals("Yes")){
             param=1;
         }else{
             param=0;
@@ -192,8 +193,10 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 Log.d("JSON REQUEST", "Firing Json ...");
                 JSONArray json = jsonParser.makeHttpRequest(
                         URL, "POST", args);
+                Log.d("json", "0bject = " + json);
 
                 if (json != null) {
+                    Log.d("I got", "in here?");
                     Log.d("JSON REQUEST", params.toString());
                     Log.d("JSON result", json.toString());
 

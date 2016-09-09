@@ -128,6 +128,7 @@ public class JSONParser {
         // try parse the string to a JSON object
         try {
             jObj = new JSONArray(result.toString());
+            Log.d("JSON check", "object value " + jObj);
         } catch (JSONException e) {
             Log.e("JSON Parser", "Error parsing data " + e.toString() +result);
         }
