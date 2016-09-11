@@ -1,4 +1,5 @@
 package com.example.android.conc;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -22,6 +23,8 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
     int HIA1_Test6_Question4=0;
     int cs=0;
     int HIA1_Test6_Question1;
+    //database
+    public HIA1AActivity hia1test;
 
     public static HIA1EFragment newInstance() {
         HIA1EFragment fragment = new HIA1EFragment();
@@ -45,13 +48,21 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
         mButton1.setOnCheckedChangeListener(this);
         mButton2.setOnCheckedChangeListener(this);
 
-        delmem.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String delmemstring =delmem.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + delmemstring);
-                HIA1_Test6_Question1 = Integer.parseInt(delmemstring);
-            }
-        });
+        Activity a = getActivity();
+
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
+
+            delmem.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String delmemstring = delmem.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + delmemstring);
+                    HIA1_Test6_Question1 = Integer.parseInt(delmemstring);
+                    hia1test.objHIA1.setHIA1_Test6_Question1(HIA1_Test6_Question1);
+                }
+            });
+
+        }
 
         return rootView;
     }
@@ -69,50 +80,58 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         boolean checked = ((RadioButton) buttonView).isChecked();
 
-        switch (buttonView.getId()) {
-            case R.id.checkBox_CS1_Y:
-                if (checked){
-                    HIA1_Test6_Question2 = 1;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
-                    break;
-                }
-                else{
-                    HIA1_Test6_Question2 = 0;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
-                    break;
-                }
 
-            case R.id.checkBox_CS2_Y:
-                if (checked){
-                    HIA1_Test6_Question3 = 1;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
-                    break;
-                }
+        Activity a = getActivity();
 
-                else{
-                    HIA1_Test6_Question3 = 0;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
-                    break;
-                }
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
 
-            case R.id.checkBox_CS3_Y:
-                if (checked){
-                    HIA1_Test6_Question4 = 1;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
-                    break;
-                }
-                else{
-                    HIA1_Test6_Question4 = 0;
-                    cs=HIA1_Test6_Question2 +HIA1_Test6_Question3+HIA1_Test6_Question4;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
-                    break;
-                }
+            switch (buttonView.getId()) {
+                case R.id.checkBox_CS1_Y:
+                    if (checked) {
+                        HIA1_Test6_Question2 = 1;
+                        hia1test.objHIA1.setHIA1_Test6_Question2(1);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
+                        break;
+                    } else {
+                        HIA1_Test6_Question2 = 0;
+                        hia1test.objHIA1.setHIA1_Test6_Question2(0);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question2 + "tally: " + cs);
+                        break;
+                    }
+
+                case R.id.checkBox_CS2_Y:
+                    if (checked) {
+                        HIA1_Test6_Question3 = 1;
+                        hia1test.objHIA1.setHIA1_Test6_Question3(1);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
+                        break;
+                    } else {
+                        HIA1_Test6_Question3 = 0;
+                        hia1test.objHIA1.setHIA1_Test6_Question3(0);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question3 + "tally: " + cs);
+                        break;
+                    }
+
+                case R.id.checkBox_CS3_Y:
+                    if (checked) {
+                        HIA1_Test6_Question4 = 1;
+                        hia1test.objHIA1.setHIA1_Test6_Question4(1);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
+                        break;
+                    } else {
+                        HIA1_Test6_Question4 = 0;
+                        hia1test.objHIA1.setHIA1_Test6_Question4(0);
+                        cs = HIA1_Test6_Question2 + HIA1_Test6_Question3 + HIA1_Test6_Question4;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test6_Question4 + "tally: " + cs);
+                        break;
+                    }
+            }
         }
-
     }
 }
