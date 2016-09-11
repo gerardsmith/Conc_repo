@@ -1,4 +1,5 @@
 package com.example.android.conc;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -13,6 +14,9 @@ import java.util.Random;
 
 
 public class HIA1GFragment extends Fragment {
+
+    //database
+    public HIA1AActivity hia1test;
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
     private EditText memscore;
@@ -173,21 +177,30 @@ public class HIA1GFragment extends Fragment {
                 concat("-").concat(String.valueOf(number218));
         numero24.setText(n24);
 
-        memscore.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String memscorestring =memscore.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + memscorestring);
-                HIA1_Test4_Question1 = Integer.parseInt(memscorestring);
-            }
-        });
+        Activity a = getActivity();
 
-        digback.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String digbackstring =digback.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + digbackstring);
-                HIA1_Test4_Question2 = Integer.parseInt(digbackstring);
-            }
-        });
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
+
+            memscore.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String memscorestring = memscore.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + memscorestring);
+                    HIA1_Test4_Question1 = Integer.parseInt(memscorestring);
+                    hia1test.objHIA1.setHIA1_Test4_Question1(HIA1_Test4_Question1);
+                }
+            });
+
+            digback.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String digbackstring = digback.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + digbackstring);
+                    HIA1_Test4_Question2 = Integer.parseInt(digbackstring);
+                    hia1test.objHIA1.setHIA1_Test4_Question2(HIA1_Test4_Question2);
+                }
+            });
+
+        }
 
         return rootView;
     }
