@@ -87,19 +87,29 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
         //TextView myText = (TextView) view;
         //String myTextString = myText.toString();
         //Toast.makeText(this, "You selected " + myText, Toast.LENGTH_SHORT).show();
-        switch(parent.getId()) {
-            case R.id.spinner:
-                Log.v(TAG, "Video Checkbox0: " + position);
-                HIA1_Test7_Question1=position;
-                return;
-            case R.id.spinner2:
-                Log.v(TAG, "Video Checkbox1: " + position);
-                HIA1_Test7_Question3=position;
-                return;
-            case R.id.spinner3:
-                Log.v(TAG, "Video Checkbox2: " + position);
-                HIA1_Test7_Question5=position;
-                return;
+
+        Activity a = getActivity();
+
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
+            switch (parent.getId()) {
+                case R.id.spinner:
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    HIA1_Test7_Question1 = position;
+                    hia1test.objHIA1.setHIA1_Test7_Question1(position);
+                    return;
+                case R.id.spinner2:
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    HIA1_Test7_Question3 = position;
+                    hia1test.objHIA1.setHIA1_Test7_Question3(position);
+                    return;
+                case R.id.spinner3:
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    HIA1_Test7_Question5 = position;
+                    hia1test.objHIA1.setHIA1_Test7_Question5(position);
+                    return;
+
+            }
 
         }
         //Log.v(TAG, "Video Checkbox: " + position);
@@ -123,12 +133,13 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
                 case R.id.checkBox_VI_Y:
                     if (checked) {
                         HIA1_Test7_Question2 = true;
-                        //hia1test.objHIA1.setHIA1_Test1_Question1(1);
+                        hia1test.objHIA1.setHIA1_Test7_Question2(1);
                         //objHIA1.HIA1_Test1_Question1 = 1;
                         Log.v(TAG, "Check Check Ckeck: " + hia1test.objHIA1.HIA1_Test1_Question1);
                         break;
                     } else {
                         HIA1_Test7_Question2 = false;
+                        hia1test.objHIA1.setHIA1_Test7_Question2(0);
                         Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question2);
                         break;
                     }
@@ -136,10 +147,12 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
                 case R.id.checkBox_MDD_Y:
                     if (checked) {
                         HIA1_Test7_Question4 = true;
+                        hia1test.objHIA1.setHIA1_Test7_Question4(1);
                         Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
                         break;
                     } else {
                         HIA1_Test7_Question4 = false;
+                        hia1test.objHIA1.setHIA1_Test7_Question4(0);
                         Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
                         break;
                     }
@@ -147,10 +160,12 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
                 case R.id.checkBox_VI2_Y:
                     if (checked) {
                         HIA1_Test7_Question6 = true;
+                        hia1test.objHIA1.setHIA1_Test7_Question6(1);
                         Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
                         break;
                     } else {
                         HIA1_Test7_Question6 = false;
+                        hia1test.objHIA1.setHIA1_Test7_Question6(0);
                         Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
                         break;
                     }
