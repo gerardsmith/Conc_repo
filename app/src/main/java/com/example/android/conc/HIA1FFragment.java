@@ -26,9 +26,6 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
     //database
     public HIA1AActivity hia1test;
 
-
-
-
     int HIA1_Test7_Question1,HIA1_Test7_Question3,HIA1_Test7_Question5;
     public HIA1 databasetest;
 

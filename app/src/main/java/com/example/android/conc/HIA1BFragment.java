@@ -1,4 +1,5 @@
 package com.example.android.conc;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -21,6 +22,9 @@ public class HIA1BFragment extends Fragment {
     boolean HIA1_Test2_Question4 = false;
     boolean HIA1_Test2_Question5 = false;
     String HIA1_Test2_Question6;
+
+    //database
+    public HIA1AActivity hia1test;
 
     private static final String TAG = "Video Check";
     private EditText other;
@@ -46,82 +50,99 @@ public class HIA1BFragment extends Fragment {
         final CheckBox mButton4 = (CheckBox) rootView.findViewById(R.id.checkBox_ROTHER);
 
 
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final boolean checked2 = mButton.isChecked();
-                if (checked2) {
-                    HIA1_Test2_Question1 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question1);
-                } else {
-                    HIA1_Test2_Question1 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question1);
-                }
-            }
-        });
+        Activity a = getActivity();
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
 
-        mButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final boolean checked2 = mButton1.isChecked();
-                if (checked2) {
-                    HIA1_Test2_Question2 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question2);
-                } else {
-                    HIA1_Test2_Question2 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question2);
+            mButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked2 = mButton.isChecked();
+                    if (checked2) {
+                        HIA1_Test2_Question1 = true;
+                        hia1test.objHIA1.setHIA1_Test2_Question1(1);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question1);
+                    } else {
+                        HIA1_Test2_Question1 = false;
+                        hia1test.objHIA1.setHIA1_Test2_Question1(0);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question1);
+                    }
                 }
-            }
-        });
+            });
 
-        mButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final boolean checked2 = mButton2.isChecked();
-                if (checked2) {
-                    HIA1_Test2_Question3 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question3);
-                } else {
-                    HIA1_Test2_Question3 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question3);
+            mButton1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked2 = mButton1.isChecked();
+                    if (checked2) {
+                        HIA1_Test2_Question2 = true;
+                        hia1test.objHIA1.setHIA1_Test2_Question2(1);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question2);
+                    } else {
+                        HIA1_Test2_Question2 = false;
+                        hia1test.objHIA1.setHIA1_Test2_Question2(0);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question2);
+                    }
                 }
-            }
-        });
+            });
 
-        mButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final boolean checked2 = mButton3.isChecked();
-                if (checked2) {
-                    HIA1_Test2_Question4 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question4);
-                } else {
-                    HIA1_Test2_Question4 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question4);
+            mButton2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked2 = mButton2.isChecked();
+                    if (checked2) {
+                        HIA1_Test2_Question3 = true;
+                        hia1test.objHIA1.setHIA1_Test2_Question3(1);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question3);
+                    } else {
+                        HIA1_Test2_Question3 = false;
+                        hia1test.objHIA1.setHIA1_Test2_Question3(0);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question3);
+                    }
                 }
-            }
-        });
+            });
 
-        mButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final boolean checked2 = mButton4.isChecked();
-                if (checked2) {
-                    HIA1_Test2_Question5 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question5);
-                } else {
-                    HIA1_Test2_Question5 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test2_Question5);
+            mButton3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked2 = mButton3.isChecked();
+                    if (checked2) {
+                        HIA1_Test2_Question4 = true;
+                        hia1test.objHIA1.setHIA1_Test2_Question4(1);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question4);
+                    } else {
+                        HIA1_Test2_Question4 = false;
+                        hia1test.objHIA1.setHIA1_Test2_Question4(0);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question4);
+                    }
                 }
-            }
-        });
+            });
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA1_Test2_Question6 =other.getText().toString();
-                Log.v(TAG, "Other textbox string: " + HIA1_Test2_Question6);
-            }
-        });
+            mButton4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final boolean checked2 = mButton4.isChecked();
+                    if (checked2) {
+                        HIA1_Test2_Question5 = true;
+                        hia1test.objHIA1.setHIA1_Test2_Question5(1);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question5);
+                    } else {
+                        HIA1_Test2_Question5 = false;
+                        hia1test.objHIA1.setHIA1_Test2_Question5(0);
+                        Log.v(TAG, "Test: " + HIA1_Test2_Question5);
+                    }
+                }
+            });
+
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA1_Test2_Question6 = other.getText().toString();
+                    //hia1test.objHIA1.setHIA1_Test2_Question6(HIA1_Test2_Question6);
+                    Log.v(TAG, "Other textbox string: " + HIA1_Test2_Question6);
+                }
+            });
+
+        }
 
         return rootView;
     }
