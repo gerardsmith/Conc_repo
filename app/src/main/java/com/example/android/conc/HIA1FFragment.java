@@ -1,4 +1,5 @@
 package com.example.android.conc;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -21,7 +22,16 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
     boolean HIA1_Test7_Question2;
     boolean HIA1_Test7_Question4;
     boolean HIA1_Test7_Question6;
+
+    //database
+    public HIA1AActivity hia1test;
+
+
+
+
     int HIA1_Test7_Question1,HIA1_Test7_Question3,HIA1_Test7_Question5;
+    public HIA1 databasetest;
+
     public static HIA1FFragment newInstance() {
         HIA1FFragment fragment = new HIA1FFragment();
         return fragment;
@@ -70,6 +80,8 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
         mButton1.setOnCheckedChangeListener(this);
         mButton2.setOnCheckedChangeListener(this);
 
+
+
         return rootView;
     }
 
@@ -105,47 +117,47 @@ public class HIA1FFragment extends Fragment implements AdapterView.OnItemSelecte
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         boolean checked = ((RadioButton) buttonView).isChecked();
+       Activity a = getActivity();
 
-        switch (buttonView.getId()) {
-            case R.id.checkBox_VI_Y:
-                if (checked){
-                    HIA1_Test7_Question2 = true;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question2);
-                    break;
-                }
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
 
-                else{
-                    HIA1_Test7_Question2 = false;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question2);
-                    break;
-                }
+            switch (buttonView.getId()) {
+                case R.id.checkBox_VI_Y:
+                    if (checked) {
+                        HIA1_Test7_Question2 = true;
+                        //hia1test.objHIA1.setHIA1_Test1_Question1(1);
+                        //objHIA1.HIA1_Test1_Question1 = 1;
+                        Log.v(TAG, "Check Check Ckeck: " + hia1test.objHIA1.HIA1_Test1_Question1);
+                        break;
+                    } else {
+                        HIA1_Test7_Question2 = false;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question2);
+                        break;
+                    }
 
-            case R.id.checkBox_MDD_Y:
-                if (checked){
-                    HIA1_Test7_Question4 = true;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
-                    break;
-                }
+                case R.id.checkBox_MDD_Y:
+                    if (checked) {
+                        HIA1_Test7_Question4 = true;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
+                        break;
+                    } else {
+                        HIA1_Test7_Question4 = false;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
+                        break;
+                    }
 
-                else{
-                    HIA1_Test7_Question4 = false;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question4);
-                    break;
-                }
-
-            case R.id.checkBox_VI2_Y:
-                if (checked){
-                    HIA1_Test7_Question6 = true;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
-                    break;
-                }
-
-                else{
-                    HIA1_Test7_Question6 = false;
-                    Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
-                    break;
-                }
+                case R.id.checkBox_VI2_Y:
+                    if (checked) {
+                        HIA1_Test7_Question6 = true;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
+                        break;
+                    } else {
+                        HIA1_Test7_Question6 = false;
+                        Log.v(TAG, "Mad Checkbox: " + HIA1_Test7_Question6);
+                        break;
+                    }
+            }
         }
-
     }
 }

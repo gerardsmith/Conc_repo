@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -45,7 +46,11 @@ import java.util.HashMap;
 
 public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     boolean HIA1_Test1_Question13;
+    public HIA1AActivity hia1test;
 
+    //testResults attemp1 = new testResults();
+    HIA1 objHIA1=new HIA1();
+    HIA1FFragment fragObjHia1 = new HIA1FFragment();
     boolean HIA1_Test1_Question1 = false;
     boolean HIA1_Test1_Question2 = false;
     boolean HIA1_Test1_Question3 = false;
@@ -58,6 +63,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     boolean HIA1_Test1_Question10 = false;
     boolean HIA1_Test1_Question11 = false;
 
+    public HIA1 databasetest;
 
     private static final String TAG = "Video Check";
     Spinner spinner;
@@ -72,9 +78,10 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
     private RadioGroup radioGroup;
     private RadioButton radioButton;
 
+
     //This function calls AsyncTask [insertHIA1], which submit the HIA1 data to insertHIA1.php file.
     public void submitHIA1(View view) {
-        HIA1 objHIA1=new HIA1();
+        //HIA1 objHIA1=new HIA1();
         int param; // Used to convert YES ->1 and NO ->0. Should change the value of radio groups to integers.
         //Find radio group
         radioGroup = (RadioGroup) findViewById(R.id.Radio_checkBoxAA);
@@ -82,15 +89,18 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         int selectedId = radioGroup.getCheckedRadioButtonId();
 
         // find the radiobutton by returned id
-        radioButton = (RadioButton) findViewById(selectedId);
+       /* radioButton = (RadioButton) findViewById(selectedId);
         //if(radioButton.getText()=="Yes"){
         if(radioButton.getText().equals("Yes")){
             param=1;
         }else{
             param=0;
         }
-        objHIA1.setHIA1_Test1_Question1(param);
-        Toast.makeText(getApplicationContext(), "You selected :"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
+        */
+        //objHIA1.setHIA1_Test1_Question1(databasetest.HIA1_Test1_Question1);
+        //Toast.makeText(getApplicationContext(), "You selected :"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
+        //Log.v("AGAIN:", "Check Check Ckeck: " + fragObjHia1.objHIA1.HIA1_Test1_Question1);
+        //objHIA1.setHIA1_Test1_Question1(param);
         new HIA1insertAsync(objHIA1).execute(); //Call async Task
     }
     //---------------------------------------------
@@ -137,56 +147,56 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 Log.d("JSON REQUEST", "Preparing Params ...");
                 HashMap<String, String> args = new HashMap<>();
                 args.put("HIA1_Test1_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question7", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question8", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question9", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question10", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question11", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question12", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test1_Question13", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test1_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question2()));
+                args.put("HIA1_Test1_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question3()));
+                args.put("HIA1_Test1_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question4()));
+                args.put("HIA1_Test1_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question5()));
+                args.put("HIA1_Test1_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question6()));
+                args.put("HIA1_Test1_Question7", Integer.toString(this.objectHIA1.getHIA1_Test1_Question7()));
+                args.put("HIA1_Test1_Question8", Integer.toString(this.objectHIA1.getHIA1_Test1_Question8()));
+                args.put("HIA1_Test1_Question9", Integer.toString(this.objectHIA1.getHIA1_Test1_Question9()));
+                args.put("HIA1_Test1_Question10", Integer.toString(this.objectHIA1.getHIA1_Test1_Question10()));
+                args.put("HIA1_Test1_Question11", Integer.toString(this.objectHIA1.getHIA1_Test1_Question11()));
+                args.put("HIA1_Test1_Question12", Integer.toString(this.objectHIA1.getHIA1_Test1_Question12()));
+                args.put("HIA1_Test1_Question13", Integer.toString(this.objectHIA1.getHIA1_Test1_Question13()));
 
-                args.put("HIA1_Test2_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test2_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test2_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test2_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test2_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test2_Question1", Integer.toString(this.objectHIA1.getHIA1_Test2_Question1()));
+                args.put("HIA1_Test2_Question2", Integer.toString(this.objectHIA1.getHIA1_Test2_Question2()));
+                args.put("HIA1_Test2_Question3", Integer.toString(this.objectHIA1.getHIA1_Test2_Question3()));
+                args.put("HIA1_Test2_Question4", Integer.toString(this.objectHIA1.getHIA1_Test2_Question4()));
+                args.put("HIA1_Test2_Question5", Integer.toString(this.objectHIA1.getHIA1_Test2_Question5()));
                 args.put("HIA1_Test2_Question6", "test");
 
-                args.put("HIA1_Test3_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test3_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test3_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test3_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test3_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test3_Question1", Integer.toString(this.objectHIA1.getHIA1_Test3_Question1()));
+                args.put("HIA1_Test3_Question2", Integer.toString(this.objectHIA1.getHIA1_Test3_Question2()));
+                args.put("HIA1_Test3_Question3", Integer.toString(this.objectHIA1.getHIA1_Test3_Question3()));
+                args.put("HIA1_Test3_Question4", Integer.toString(this.objectHIA1.getHIA1_Test3_Question4()));
+                args.put("HIA1_Test3_Question5", Integer.toString(this.objectHIA1.getHIA1_Test3_Question5()));
 
-                args.put("HIA1_Test4_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test4_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test4_Question1", Integer.toString(this.objectHIA1.getHIA1_Test4_Question1()));
+                args.put("HIA1_Test4_Question2", Integer.toString(this.objectHIA1.getHIA1_Test4_Question2()));
 
-                args.put("HIA1_Test5_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question7", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question8", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test5_Question9", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test5_Question1", Integer.toString(this.objectHIA1.getHIA1_Test5_Question1()));
+                args.put("HIA1_Test5_Question2", Integer.toString(this.objectHIA1.getHIA1_Test5_Question2()));
+                args.put("HIA1_Test5_Question3", Integer.toString(this.objectHIA1.getHIA1_Test5_Question3()));
+                args.put("HIA1_Test5_Question4", Integer.toString(this.objectHIA1.getHIA1_Test5_Question4()));
+                args.put("HIA1_Test5_Question5", Integer.toString(this.objectHIA1.getHIA1_Test5_Question5()));
+                args.put("HIA1_Test5_Question6", Integer.toString(this.objectHIA1.getHIA1_Test5_Question6()));
+                args.put("HIA1_Test5_Question7", Integer.toString(this.objectHIA1.getHIA1_Test5_Question7()));
+                args.put("HIA1_Test5_Question8", Integer.toString(this.objectHIA1.getHIA1_Test5_Question8()));
+                args.put("HIA1_Test5_Question9", Integer.toString(this.objectHIA1.getHIA1_Test5_Question9()));
 
-                args.put("HIA1_Test6_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test6_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test6_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test6_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test6_Question1", Integer.toString(this.objectHIA1.getHIA1_Test6_Question1()));
+                args.put("HIA1_Test6_Question2", Integer.toString(this.objectHIA1.getHIA1_Test6_Question2()));
+                args.put("HIA1_Test6_Question3", Integer.toString(this.objectHIA1.getHIA1_Test6_Question3()));
+                args.put("HIA1_Test6_Question4", Integer.toString(this.objectHIA1.getHIA1_Test6_Question4()));
 
-                args.put("HIA1_Test7_Question1", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test7_Question2", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test7_Question3", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test7_Question4", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test7_Question5", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
-                args.put("HIA1_Test7_Question6", Integer.toString(this.objectHIA1.getHIA1_Test1_Question1()));
+                args.put("HIA1_Test7_Question1", Integer.toString(this.objectHIA1.getHIA1_Test7_Question1()));
+                args.put("HIA1_Test7_Question2", Integer.toString(this.objectHIA1.getHIA1_Test7_Question2()));
+                args.put("HIA1_Test7_Question3", Integer.toString(this.objectHIA1.getHIA1_Test7_Question3()));
+                args.put("HIA1_Test7_Question4", Integer.toString(this.objectHIA1.getHIA1_Test7_Question4()));
+                args.put("HIA1_Test7_Question5", Integer.toString(this.objectHIA1.getHIA1_Test7_Question5()));
+                args.put("HIA1_Test7_Question6", Integer.toString(this.objectHIA1.getHIA1_Test7_Question6()));
                 // all args needs to convert to string because the hash map is string, string types.
 
                 //   Log.d("JSON REQUEST", args.toString());
@@ -306,6 +316,9 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         private static final String ARG_SECTION_NUMBER = "section_number";
         private ArrayAdapter<CharSequence> adapter;
           private int HIA1_Test1_Question12;
+          //database
+          public HIA1AActivity hia1test;
+
 
           public PlaceholderFragment() {
         }
@@ -340,6 +353,13 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             Log.v(TAG, "Spinner pos: " + position);
             HIA1_Test1_Question12 = position;
+
+            Activity a = getActivity();
+            if(a instanceof HIA1AActivity) {
+                hia1test = (HIA1AActivity) getActivity();
+                hia1test.objHIA1.setHIA1_Test1_Question12(position);
+            }
+
 
         }
 
@@ -397,7 +417,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
             }
             return null;
             */
-            return "HIA1 TEST " + (position + 1);
+            return "HIA1 (" + (position + 1) + "/7)";
         }
 
     }
@@ -406,17 +426,24 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
         // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.checkBox_yes:
-                if (checked)
-                    HIA1_Test1_Question13 = true;
-                Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
-                break;
-            case R.id.checkBox_no:
-                if (checked)
-                    HIA1_Test1_Question13 = false;
-                Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
-                break;
+        Activity a = this;
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) this;
+
+            switch (view.getId()) {
+                case R.id.checkBox_yes:
+                    if (checked)
+                        HIA1_Test1_Question13 = true;
+                    hia1test.objHIA1.setHIA1_Test1_Question13(1);
+                    Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
+                    break;
+                case R.id.checkBox_no:
+                    if (checked)
+                        HIA1_Test1_Question13 = false;
+                    hia1test.objHIA1.setHIA1_Test1_Question13(0);
+                    Log.v(TAG, "Video Checkbox: " + HIA1_Test1_Question13);
+                    break;
+            }
         }
     }
 
@@ -434,109 +461,136 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
         final CheckBox ch10 = (CheckBox) findViewById(R.id.checkBox_IDENT);
         final CheckBox ch11 = (CheckBox) findViewById(R.id.checkBox_OCU);
 
+       Activity a = this;
+       if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) this;
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.checkBox_TP:
-                if (ch1.isChecked()) {
-                    HIA1_Test1_Question1 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question1);
-                } else {
-                    HIA1_Test1_Question1 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question1);
-                }
-                break;
-            case R.id.checkBox_CONV:
-                if (ch2.isChecked()) {
-                    HIA1_Test1_Question2 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question2);
-                } else {
-                    HIA1_Test1_Question2 = false;
-                    Log.v(TAG, "Test: " +HIA1_Test1_Question2);
-                }
-                break;
-            case R.id.checkBox_CCONSC:
-                if (ch3.isChecked()) {
-                    HIA1_Test1_Question3 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question3);
-                } else {
-                    HIA1_Test1_Question3 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question3);
-                }
-                break;
-            case R.id.checkBox_SCONSC:
-                if (ch4.isChecked()) {
-                    HIA1_Test1_Question4 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question4);
-                } else {
-                    HIA1_Test1_Question4 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question4);
-                }
-                break;
-            case R.id.checkBox_BAL:
-                if (ch5.isChecked()) {
-                    HIA1_Test1_Question5 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question5);
-                } else {
-                    HIA1_Test1_Question5 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question5);
-                }
-                break;
-            case R.id.checkBox_ORIEN:
-                if (ch6.isChecked()) {
-                    HIA1_Test1_Question6 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question6);
-                } else {
-                    HIA1_Test1_Question6 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question6);
-                }
-                break;
-            case R.id.checkBox_DAZE:
-                if (ch7.isChecked()) {
-                    HIA1_Test1_Question7 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question7);
-                } else {
-                    HIA1_Test1_Question7 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question7);
-                }
-                break;
-            case R.id.checkBox_CONF:
-                if (ch8.isChecked()) {
-                    HIA1_Test1_Question8 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question8);
-                } else {
-                    HIA1_Test1_Question8 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question8);
-                }
-                break;
-            case R.id.checkBox_BEHAV:
-                if (ch9.isChecked()) {
-                    HIA1_Test1_Question9 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question9);
-                } else {
-                    HIA1_Test1_Question9 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question9);
-                }
-                break;
-            case R.id.checkBox_IDENT:
-                if (ch10.isChecked()) {
-                    HIA1_Test1_Question10 = true;
-                    Log.v(TAG, "Test: " +HIA1_Test1_Question10);
-                } else {
-                    HIA1_Test1_Question10 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question10);
-                }
-                break;
-            case R.id.checkBox_OCU:
-                if (ch11.isChecked()) {
-                    HIA1_Test1_Question11 = true;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question11);
-                } else {
-                    HIA1_Test1_Question11 = false;
-                    Log.v(TAG, "Test: " + HIA1_Test1_Question11);
-                }
-                break;
-        }
+           // Check which radio button was clicked
+           switch (view.getId()) {
+               case R.id.checkBox_TP:
+                   if (ch1.isChecked()) {
+                       HIA1_Test1_Question1 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question1(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question1);
+                   } else {
+                       HIA1_Test1_Question1 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question1(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question1);
+                   }
+                   break;
+               case R.id.checkBox_CONV:
+                   if (ch2.isChecked()) {
+                       HIA1_Test1_Question2 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question2(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question2);
+                   } else {
+                       HIA1_Test1_Question2 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question2(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question2);
+                   }
+                   break;
+               case R.id.checkBox_CCONSC:
+                   if (ch3.isChecked()) {
+                       HIA1_Test1_Question3 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question3(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question3);
+                   } else {
+                       HIA1_Test1_Question3 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question3(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question3);
+                   }
+                   break;
+               case R.id.checkBox_SCONSC:
+                   if (ch4.isChecked()) {
+                       HIA1_Test1_Question4 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question4(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question4);
+                   } else {
+                       HIA1_Test1_Question4 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question4(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question4);
+                   }
+                   break;
+               case R.id.checkBox_BAL:
+                   if (ch5.isChecked()) {
+                       HIA1_Test1_Question5 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question5(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question5);
+                   } else {
+                       HIA1_Test1_Question5 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question5(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question5);
+                   }
+                   break;
+               case R.id.checkBox_ORIEN:
+                   if (ch6.isChecked()) {
+                       HIA1_Test1_Question6 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question6(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question6);
+                   } else {
+                       HIA1_Test1_Question6 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question6(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question6);
+                   }
+                   break;
+               case R.id.checkBox_DAZE:
+                   if (ch7.isChecked()) {
+                       HIA1_Test1_Question7 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question7(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question7);
+                   } else {
+                       HIA1_Test1_Question7 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question7(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question7);
+                   }
+                   break;
+               case R.id.checkBox_CONF:
+                   if (ch8.isChecked()) {
+                       HIA1_Test1_Question8 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question8(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question8);
+                   } else {
+                       HIA1_Test1_Question8 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question8(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question8);
+                   }
+                   break;
+               case R.id.checkBox_BEHAV:
+                   if (ch9.isChecked()) {
+                       HIA1_Test1_Question9 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question9(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question9);
+                   } else {
+                       HIA1_Test1_Question9 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question9(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question9);
+                   }
+                   break;
+               case R.id.checkBox_IDENT:
+                   if (ch10.isChecked()) {
+                       HIA1_Test1_Question10 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question10(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question10);
+                   } else {
+                       HIA1_Test1_Question10 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question10(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question10);
+                   }
+                   break;
+               case R.id.checkBox_OCU:
+                   if (ch11.isChecked()) {
+                       HIA1_Test1_Question11 = true;
+                       hia1test.objHIA1.setHIA1_Test1_Question11(1);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question11);
+                   } else {
+                       HIA1_Test1_Question11 = false;
+                       hia1test.objHIA1.setHIA1_Test1_Question11(0);
+                       Log.v(TAG, "Test: " + HIA1_Test1_Question11);
+                   }
+                   break;
+           }
+
+       }
     }
 
 }
