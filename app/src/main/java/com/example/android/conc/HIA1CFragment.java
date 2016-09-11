@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -21,6 +22,9 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
     int HIA1_Test3_Question4=0;
     int HIA1_Test3_Question5=0;
     int madTot=0;
+    //database
+    public HIA1AActivity hia1test;
+
     public static HIA1CFragment newInstance() {
         HIA1CFragment fragment = new HIA1CFragment();
         return fragment;
@@ -63,108 +67,108 @@ public class HIA1CFragment extends Fragment implements CheckBox.OnCheckedChangeL
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
         boolean checked2 = ((RadioButton) buttonView).isChecked();
-        switch (buttonView.getId())
-        {
-            case R.id.checkBox_MADD1_COR:
-                if (checked2)
-                {
-                    HIA1_Test3_Question1=1;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score+1;
-                   // Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
-                else
-                {
-                    HIA1_Test3_Question1=0;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score-1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
+        Activity a = getActivity();
 
-            case R.id.checkBox_MADD2_COR:
-                if (checked2)
-                {
-                    HIA1_Test3_Question2=1;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score+1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
-                else
-                {
-                    HIA1_Test3_Question2=0;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score-1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
+        if(a instanceof HIA1AActivity) {
+            hia1test = (HIA1AActivity) getActivity();
 
-            case R.id.checkBox_MADD3_COR:
-                if (checked2)
-                {
-                    HIA1_Test3_Question3=1;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score+1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
-                else
-                {
-                    HIA1_Test3_Question3=0;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score-1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
+            switch (buttonView.getId()) {
+                case R.id.checkBox_MADD1_COR:
+                    if (checked2) {
+                        HIA1_Test3_Question1 = 1;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question1(1);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score+1;
+                        // Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    } else {
+                        HIA1_Test3_Question1 = 0;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question1(0);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score-1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    }
 
-            case R.id.checkBox_MADD4_COR:
-                if (checked2)
-                {
-                    HIA1_Test3_Question4=1;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score+1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
-                else
-                {
-                    HIA1_Test3_Question4=0;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score-1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
+                case R.id.checkBox_MADD2_COR:
+                    if (checked2) {
+                        HIA1_Test3_Question2 = 1;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question2(1);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score+1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    } else {
+                        HIA1_Test3_Question2 = 0;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question2(0);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score-1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    }
 
-            case R.id.checkBox_MADD5_COR:
-                if (checked2)
-                {
-                    HIA1_Test3_Question5=1;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score+1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
-                else
-                {
-                    HIA1_Test3_Question5=0;
-                    madTot = HIA1_Test3_Question1+HIA1_Test3_Question4+HIA1_Test3_Question2 +HIA1_Test3_Question3 +HIA1_Test3_Question5;
-                    Log.v(TAG, "Purple Monkeys " + madTot);
-                    //mad_score=mad_score-1;
-                    //Log.v(TAG, "Purple Monkeys " + mad_score);
-                    break;
-                }
+                case R.id.checkBox_MADD3_COR:
+                    if (checked2) {
+                        HIA1_Test3_Question3 = 1;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question3(1);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score+1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    } else {
+                        HIA1_Test3_Question3 = 0;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question3(0);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score-1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    }
 
+                case R.id.checkBox_MADD4_COR:
+                    if (checked2) {
+                        HIA1_Test3_Question4 = 1;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question4(1);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score+1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    } else {
+                        HIA1_Test3_Question4 = 0;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question4(0);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score-1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    }
+
+                case R.id.checkBox_MADD5_COR:
+                    if (checked2) {
+                        HIA1_Test3_Question5 = 1;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question5(1);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score+1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    } else {
+                        HIA1_Test3_Question5 = 0;
+                        madTot = HIA1_Test3_Question1 + HIA1_Test3_Question4 + HIA1_Test3_Question2 + HIA1_Test3_Question3 + HIA1_Test3_Question5;
+                        hia1test.objHIA1.setHIA1_Test3_Question5(0);
+                        Log.v(TAG, "Purple Monkeys " + madTot);
+                        //mad_score=mad_score-1;
+                        //Log.v(TAG, "Purple Monkeys " + mad_score);
+                        break;
+                    }
+
+            }
         }
 
     }
