@@ -89,6 +89,9 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
     int HIA2_Test2_Question44 =0;
     public HIA2AActivity attempt2;
 
+    //database
+    public HIA2AActivity hia2test;
+
     public void setFlag(){
         Log.v(TAG, "Flag attempt 1 ");
         if((HIA2_Test2_Question1||HIA2_Test2_Question2||HIA2_Test2_Question3 || HIA2_Test2_Question4
@@ -279,318 +282,344 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        switch(parent.getId()) {
-            case R.id.spinner5:
-                HIA2_Test2_Question23=position;
-                if(position>0){
-                    HIA2_Test2_Question1=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev1;
-                    prev1=position;
+        Activity b = getActivity();
+        if(b instanceof HIA2AActivity) {
+            hia2test = (HIA2AActivity) getActivity();
 
+            switch (parent.getId()) {
+                case R.id.spinner5:
+                    HIA2_Test2_Question23 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question1 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question1(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev1;
+                        prev1 = position;
+                    } else {
+                        HIA2_Test2_Question1 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question1(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev1;
 
-                }
-                else{
-                    HIA2_Test2_Question1=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev1;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question1 + "symp value: " + HIA2_Test2_Question23);
+                    setFlag();
+                    return;
+                case R.id.spinner6:
+                    HIA2_Test2_Question24 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question2 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question2(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev2;
+                        prev2 = position;
+                    } else {
+                        HIA2_Test2_Question2 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question2(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev2;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question2);
+                    setFlag();
+                    return;
+                case R.id.spinner7:
+                    HIA2_Test2_Question25 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question3 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question3(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev3;
+                        prev3 = position;
+                    } else {
+                        HIA2_Test2_Question3 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question3(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev3;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner8:
+                    HIA2_Test2_Question26 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question4 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question4(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev4;
+                        prev4 = position;
+                    } else {
+                        HIA2_Test2_Question4 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question4(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev4;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner9:
+                    HIA2_Test2_Question27 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question5 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question5(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev5;
+                        prev5 = position;
+                    } else {
+                        HIA2_Test2_Question5 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question5(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev5;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner10:
+                    HIA2_Test2_Question28 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question6 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question6(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev6;
+                        prev6 = position;
+                    } else {
+                        HIA2_Test2_Question6 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question6(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev6;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner11:
+                    HIA2_Test2_Question29 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question7 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question7(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev7;
+                        prev7 = position;
+                    } else {
+                        HIA2_Test2_Question7 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question7(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev7;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner12:
+                    HIA2_Test2_Question30 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question8 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question8(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev8;
+                        prev8 = position;
+                    } else {
+                        HIA2_Test2_Question8 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question8(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev8;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner13:
+                    HIA2_Test2_Question31 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question9 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question9(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev9;
+                        prev9 = position;
+                    } else {
+                        HIA2_Test2_Question9 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question9(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev9;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner14:
+                    HIA2_Test2_Question32 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question10 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question10(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev10;
+                        prev10 = position;
+                    } else {
+                        HIA2_Test2_Question10 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question10(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev10;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner15:
+                    HIA2_Test2_Question33 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question11 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question11(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev11;
+                        prev11 = position;
+                    } else {
+                        HIA2_Test2_Question11 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question11(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev11;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner16:
+                    HIA2_Test2_Question34 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question12 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question12(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev12;
+                        prev12 = position;
+                    } else {
+                        HIA2_Test2_Question12 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question12(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev12;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner17:
+                    HIA2_Test2_Question35 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question13 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question13(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev13;
+                        prev13 = position;
+                    } else {
+                        HIA2_Test2_Question13 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question13(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev13;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner18:
+                    HIA2_Test2_Question36 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question14 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question14(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev14;
+                        prev14 = position;
+                    } else {
+                        HIA2_Test2_Question14 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question14(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev14;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner19:
+                    HIA2_Test2_Question37 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question15 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question15(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev15;
+                        prev15 = position;
+                    } else {
+                        HIA2_Test2_Question15 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question15(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev15;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner20:
+                    HIA2_Test2_Question38 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question16 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question16(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev16;
+                        prev16 = position;
+                    } else {
+                        HIA2_Test2_Question16 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question16(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev16;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner21:
+                    HIA2_Test2_Question39 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question17 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question17(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev17;
+                        prev17 = position;
+                    } else {
+                        HIA2_Test2_Question17 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question17(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev17;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner22:
+                    HIA2_Test2_Question40 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question18 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question18(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev18;
+                        prev18 = position;
+                    } else {
+                        HIA2_Test2_Question18 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question18(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev18;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner23:
+                    HIA2_Test2_Question41 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question19 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question19(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev19;
+                        prev19 = position;
+                    } else {
+                        HIA2_Test2_Question19 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question19(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev19;
+                    }
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner24:
+                    HIA2_Test2_Question42 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question20 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question20(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev20;
+                        prev20 = position;
+                    } else {
+                        HIA2_Test2_Question20 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question20(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev20;
+                    }
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner25:
+                    HIA2_Test2_Question43 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question21 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question21(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev21;
+                        prev21 = position;
+                    } else {
+                        HIA2_Test2_Question21 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question21(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev21;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
+                case R.id.spinner26:
+                    HIA2_Test2_Question44 = position;
+                    if (position > 0) {
+                        HIA2_Test2_Question22 = true;
+                        hia2test.objHIA2.setHIA2_Test2_Question22(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 + position - prev22;
+                        prev22 = position;
+                    } else {
+                        HIA2_Test2_Question22 = false;
+                        hia2test.objHIA2.setHIA2_Test2_Question22(position);
+                        HIA2_Test2_Question45 = HIA2_Test2_Question45 - prev22;
+                    }
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    setFlag();
+                    return;
 
-                }
-                Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question1 + "symp value: " + HIA2_Test2_Question23);
-                setFlag();
-                return;
-            case R.id.spinner6:
-                HIA2_Test2_Question24=position;
-                if(position>0){
-                    HIA2_Test2_Question2=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev2;
-                    prev2=position;
-                }
-                else{
-                    HIA2_Test2_Question2=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev2;
-                }
-                Log.v(TAG, "Video Checkbox0: " + HIA2_Test2_Question45 + "state: " + HIA2_Test2_Question2);
-                setFlag();
-                return;
-            case R.id.spinner7:
-                HIA2_Test2_Question25=position;
-                if(position>0){
-                    HIA2_Test2_Question3=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev3;
-                    prev3=position;
-                }
-                else{
-                    HIA2_Test2_Question3=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev3;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner8:
-                HIA2_Test2_Question26=position;
-                if(position>0){
-                    HIA2_Test2_Question4=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev4;
-                    prev4=position;
-                }
-                else{
-                    HIA2_Test2_Question4=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev4;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner9:
-                HIA2_Test2_Question27=position;
-                if(position>0){
-                    HIA2_Test2_Question5=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev5;
-                    prev5=position;
-                }
-                else{
-                    HIA2_Test2_Question5=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev5;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner10:
-                HIA2_Test2_Question28=position;
-                if(position>0){
-                    HIA2_Test2_Question6=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev6;
-                    prev6=position;
-                }
-                else{
-                    HIA2_Test2_Question6=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev6;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner11:
-                HIA2_Test2_Question29=position;
-                if(position>0){
-                    HIA2_Test2_Question7=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev7;
-                    prev7=position;
-                }
-                else{
-                    HIA2_Test2_Question7=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev7;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner12:
-                HIA2_Test2_Question30=position;
-                if(position>0){
-                    HIA2_Test2_Question8=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev8;
-                    prev8=position;
-                }
-                else{
-                    HIA2_Test2_Question8=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev8;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner13:
-                HIA2_Test2_Question31=position;
-                if(position>0){
-                    HIA2_Test2_Question9=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev9;
-                    prev9=position;
-                }
-                else{
-                    HIA2_Test2_Question9=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev9;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner14:
-                HIA2_Test2_Question32=position;
-                if(position>0){
-                    HIA2_Test2_Question10=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev10;
-                    prev10=position;
-                }
-                else{
-                    HIA2_Test2_Question10=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev10;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner15:
-                HIA2_Test2_Question33=position;
-                if(position>0){
-                    HIA2_Test2_Question11=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev11;
-                    prev11=position;
-                }
-                else{
-                    HIA2_Test2_Question11=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev11;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner16:
-                HIA2_Test2_Question34=position;
-                if(position>0){
-                    HIA2_Test2_Question12=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev12;
-                    prev12=position;
-                }
-                else{
-                    HIA2_Test2_Question12=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev12;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner17:
-                HIA2_Test2_Question35=position;
-                if(position>0){
-                    HIA2_Test2_Question13=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev13;
-                    prev13=position;
-                }
-                else{
-                    HIA2_Test2_Question13=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev13;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner18:
-                HIA2_Test2_Question36=position;
-                if(position>0){
-                    HIA2_Test2_Question14=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev14;
-                    prev14=position;
-                }
-                else{
-                    HIA2_Test2_Question14=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev14;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner19:
-                HIA2_Test2_Question37=position;
-                if(position>0){
-                    HIA2_Test2_Question15=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev15;
-                    prev15=position;
-                }
-                else{
-                    HIA2_Test2_Question15=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev15;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner20:
-                HIA2_Test2_Question38=position;
-                if(position>0){
-                    HIA2_Test2_Question16=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev16;
-                    prev16=position;
-                }
-                else{
-                    HIA2_Test2_Question16=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev16;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner21:
-                HIA2_Test2_Question39=position;
-                if(position>0){
-                    HIA2_Test2_Question17=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev17;
-                    prev17=position;
-                }
-                else{
-                    HIA2_Test2_Question17=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev17;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner22:
-                HIA2_Test2_Question40=position;
-                if(position>0){
-                    HIA2_Test2_Question18=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev18;
-                    prev18=position;
-                }
-                else{
-                    HIA2_Test2_Question18=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev18;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner23:
-                HIA2_Test2_Question41=position;
-                if(position>0){
-                    HIA2_Test2_Question19=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev19;
-                    prev19=position;
-                }
-                else{
-                    HIA2_Test2_Question19=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev19;
-                }
-                Log.v(TAG, "Video Checkbox0: " + position);
-                setFlag();
-                return;
-            case R.id.spinner24:
-                HIA2_Test2_Question42=position;
-                if(position>0){
-                    HIA2_Test2_Question20=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev20;
-                    prev20=position;
-                }
-                else{
-                    HIA2_Test2_Question20=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev20;
-                }
-                Log.v(TAG, "Video Checkbox1: " + position);
-                setFlag();
-                return;
-            case R.id.spinner25:
-                HIA2_Test2_Question43=position;
-                if(position>0){
-                    HIA2_Test2_Question21=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev21;
-                    prev21=position;
-                }
-                else{
-                    HIA2_Test2_Question21=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev21;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
-            case R.id.spinner26:
-                HIA2_Test2_Question44=position;
-                if(position>0){
-                    HIA2_Test2_Question22=true;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45+position - prev22;
-                    prev22=position;
-                }
-                else{
-                    HIA2_Test2_Question22=false;
-                    HIA2_Test2_Question45=HIA2_Test2_Question45 - prev22;
-                }
-                Log.v(TAG, "Video Checkbox2: " + position);
-                setFlag();
-                return;
+            }
 
         }
 

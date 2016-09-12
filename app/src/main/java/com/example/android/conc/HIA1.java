@@ -179,9 +179,7 @@ public class HIA1 extends FragmentActivity {
     public int getHIA1_Test7_Question4() {
         return HIA1_Test7_Question4;
     }
-    public int getHIA1_Test7_Question5() {
-        return HIA1_Test7_Question5;
-    }
+    public int getHIA1_Test7_Question5() { return HIA1_Test7_Question5; }
     public int getHIA1_Test7_Question6() {
         return HIA1_Test7_Question6;
     }
