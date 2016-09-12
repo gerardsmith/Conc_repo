@@ -17,6 +17,8 @@ import java.util.Random;
 public class HIA2GFragment extends Fragment {
 
     OnConcSelectedListener concCallback;
+    //database
+    public HIA2AActivity hia2test;
 
     private EditText other;
     private EditText other2;
@@ -118,23 +120,32 @@ public class HIA2GFragment extends Fragment {
                 concat("-").concat(String.valueOf(number218));
         numero24.setText(n24);
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String dig_back_score =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + dig_back_score);
-                HIA2_Test5_Question1=Integer.parseInt(other.getText().toString());
-                concCallback.onDigitBackSelected(HIA2_Test5_Question1);
-            }
-        });
+        Activity b = getActivity();
+        if(b instanceof HIA2AActivity) {
+            hia2test = (HIA2AActivity) getActivity();
 
-        other2.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String conc_score =other2.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + conc_score);
-                HIA2_Test5_Question2=Integer.parseInt(other2.getText().toString());
-                concCallback.onMonthBackSelected(HIA2_Test5_Question2);
-            }
-        });
+
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String dig_back_score = other.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + dig_back_score);
+                    HIA2_Test5_Question1 = Integer.parseInt(other.getText().toString());
+                    hia2test.objHIA2.setHIA2_Test5_Question1(HIA2_Test5_Question1);
+                    concCallback.onDigitBackSelected(HIA2_Test5_Question1);
+                }
+            });
+
+            other2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String conc_score = other2.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + conc_score);
+                    HIA2_Test5_Question2 = Integer.parseInt(other2.getText().toString());
+                    hia2test.objHIA2.setHIA2_Test5_Question2(HIA2_Test5_Question2);
+                    concCallback.onMonthBackSelected(HIA2_Test5_Question2);
+                }
+            });
+
+        }
 
         return rootView;
     }
