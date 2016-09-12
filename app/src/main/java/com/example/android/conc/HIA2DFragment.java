@@ -21,6 +21,8 @@ import java.util.Random;
 
 public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
+    //database
+    public HIA2AActivity hia2test;
     OnOrienSelectedListener orienCallback;
 
     String[] wordArray,wordArray1,wordArray2,wordArray3,wordArray4;
@@ -137,15 +139,21 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
         mButton8.setOnCheckedChangeListener(this);
         mButton9.setOnCheckedChangeListener(this);
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String mem_score =other.getText().toString();
-                HIA2_Test4_Question7 =Integer.parseInt(other.getText().toString());
-                Log.v(TAG, "Video Checkbox: " + mem_score);
-                orienCallback.onImedMemSelected(HIA2_Test4_Question7);
-            }
-        });
+        Activity b = getActivity();
+        if(b instanceof HIA2AActivity) {
+            hia2test = (HIA2AActivity) getActivity();
 
+
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    String mem_score = other.getText().toString();
+                    HIA2_Test4_Question7 = Integer.parseInt(other.getText().toString());
+                    hia2test.objHIA2.setHIA2_Test4_Question7(HIA2_Test4_Question7);
+                    Log.v(TAG, "Video Checkbox: " + mem_score);
+                    orienCallback.onImedMemSelected(HIA2_Test4_Question7);
+                }
+            });
+        }
 
        return rootView;
     }
@@ -162,100 +170,111 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
             boolean checked2 = ((RadioButton) buttonView).isChecked();
-            switch (buttonView.getId())
-            {
+
+        Activity b = getActivity();
+        if(b instanceof HIA2AActivity) {
+            hia2test = (HIA2AActivity) getActivity();
+
+            switch (buttonView.getId()) {
                 case R.id.checkBox_ORIEN_1:
-                    if (checked2)
-                    {
-                        HIA2_Test4_Question1=1;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    if (checked2) {
+                        HIA2_Test4_Question1 = 1;
+                        hia2test.objHIA2.setHIA2_Test4_Question1(1);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
 
-                    }
-                    else
-                    {
-                        HIA2_Test4_Question1=0;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    } else {
+                        HIA2_Test4_Question1 = 0;
+                        hia2test.objHIA2.setHIA2_Test4_Question1(0);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_3:
-                    if (checked2)
-                    {
-                        HIA2_Test4_Question2=1;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    if (checked2) {
+                        HIA2_Test4_Question2 = 1;
+                        hia2test.objHIA2.setHIA2_Test4_Question2(1);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
-                    }
-                    else
-                    {
-                        HIA2_Test4_Question2=0;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    } else {
+                        HIA2_Test4_Question2 = 0;
+                        hia2test.objHIA2.setHIA2_Test4_Question2(0);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_5:
-                    if (checked2)
-                    {
-                        HIA2_Test4_Question3=1;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    if (checked2) {
+                        HIA2_Test4_Question3 = 1;
+                        hia2test.objHIA2.setHIA2_Test4_Question3(1);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
-                    }
-                    else
-                    {
-                        HIA2_Test4_Question3=0;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    } else {
+                        HIA2_Test4_Question3 = 0;
+                        hia2test.objHIA2.setHIA2_Test4_Question3(0);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_7:
-                    if (checked2)
-                    {
-                        HIA2_Test4_Question4=1;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    if (checked2) {
+                        HIA2_Test4_Question4 = 1;
+                        hia2test.objHIA2.setHIA2_Test4_Question4(1);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
-                    }
-                    else
-                    {
-                        HIA2_Test4_Question4=0;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    } else {
+                        HIA2_Test4_Question4 = 0;
+                        hia2test.objHIA2.setHIA2_Test4_Question4(0);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
 
                 case R.id.checkBox_ORIEN_9:
-                    if (checked2)
-                    {
-                        HIA2_Test4_Question5=1;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
+                    if (checked2) {
+                        HIA2_Test4_Question5 = 1;
+                        hia2test.objHIA2.setHIA2_Test4_Question5(1);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
+                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
+                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
+                        break;
+                    } else {
+                        HIA2_Test4_Question5 = 0;
+                        hia2test.objHIA2.setHIA2_Test4_Question5(0);
+                        HIA2_Test4_Question6 = HIA2_Test4_Question1 + HIA2_Test4_Question2 + HIA2_Test4_Question3 + HIA2_Test4_Question4 + HIA2_Test4_Question5;
+                        hia2test.objHIA2.setHIA2_Test4_Question6(HIA2_Test4_Question6);
                         Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
                         orienCallback.onOrienSelected(HIA2_Test4_Question6);
                         break;
                     }
-                    else
-                    {
-                        HIA2_Test4_Question5=0;
-                        HIA2_Test4_Question6=HIA2_Test4_Question1+HIA2_Test4_Question2+HIA2_Test4_Question3+HIA2_Test4_Question4+HIA2_Test4_Question5;
-                        Log.v(TAG, "Purple Monkeys " + HIA2_Test4_Question6);
-                        orienCallback.onOrienSelected(HIA2_Test4_Question6);
-                        break;
-                    }
-                }
             }
+        }
+
+    }
 
 
     @Override
