@@ -131,40 +131,28 @@ public class HIA3 extends FragmentActivity {
     public int getHIA3_Test2_Question1() {
         return HIA3_Test2_Question1;
     }
-    public String getHIA3_Test2_Question2() {
-        return HIA3_Test2_Question2;
-    }
+   // public String getHIA3_Test2_Question2() {return HIA3_Test2_Question2;}
     public int getHIA3_Test2_Question3() {
         return HIA3_Test2_Question3;
     }
-    public String getHIA3_Test2_Question4() {
-        return HIA3_Test2_Question4;
-    }
+   // public String getHIA3_Test2_Question4() {return HIA3_Test2_Question4;}
     public int getHIA3_Test2_Question5() {
         return HIA3_Test2_Question5;
     }
-    public String getHIA3_Test2_Question6() {
-        return HIA3_Test2_Question6;
-    }
+    //public String getHIA3_Test2_Question6() {return HIA3_Test2_Question6;}
     public int getHIA3_Test2_Question7() {
         return HIA3_Test2_Question7;
     }
-    public String getHIA3_Test2_Question8() {
-        return HIA3_Test2_Question8;
-    }
+    //public String getHIA3_Test2_Question8() {return HIA3_Test2_Question8;}
 
     public int getHIA3_Test3_Question1() {
         return HIA3_Test3_Question1;
     }
-    public String getHIA3_Test3_Question2() {
-        return HIA3_Test3_Question2;
-    }
+   // public String getHIA3_Test3_Question2() {return HIA3_Test3_Question2;}
     public int getHIA3_Test3_Question3() {
         return HIA3_Test3_Question3;
     }
-    public String getHIA3_Test3_Question4() {
-        return HIA3_Test3_Question4;
-    }
+   // public String getHIA3_Test3_Question4() {return HIA3_Test3_Question4;}
     public int getHIA3_Test3_Question5() {
         return HIA3_Test3_Question5;
     }

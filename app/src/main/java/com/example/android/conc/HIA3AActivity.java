@@ -438,7 +438,7 @@ public class HIA3AActivity extends AppCompatActivity {
             }
             return null;
             */
-            return "HIA3 TEST " + (position + 1);
+            return "HIA3 (" + (position + 1) + "/5)";
         }
 
     }

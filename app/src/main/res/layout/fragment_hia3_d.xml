@@ -75,16 +75,18 @@
 
 
         <CheckBox
-            android:text="@string/dom3"
-            android:layout_width="176dp"
-            android:layout_height="match_parent"
-            android:id="@+id/checkBox3_DOM3" />
+        android:text="@string/dom3"
+        android:layout_width="176dp"
+        android:layout_height="match_parent"
+        android:id="@+id/checkBox3_DOM3" />
 
         <CheckBox
-            android:text="@string/dom4"
-            android:layout_width="208dp"
-            android:layout_height="40dp"
-            android:id="@+id/checkBox_DOM4" />
+            android:text="@string/dom5"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:id="@+id/checkBox3_DOM4" />
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -95,14 +97,46 @@
         android:id="@+id/linearLayout012"
         android:layout_below="@+id/linearLayout011">
 
-
-        <CheckBox
-            android:text="@string/dom5"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox3_DOM5"
-            android:layout_weight="1" />
+            android:id="@+id/textView008"
+            android:text="@string/clinsusp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="14sp"/>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:id="@+id/linearLayout0xxx"
+        android:layout_below="@+id/linearLayout012">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3_CSY"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_CSN"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
     </LinearLayout>
 
     <LinearLayout
@@ -111,7 +145,7 @@
         android:orientation="horizontal"
         android:paddingTop="15dp"
         android:id="@+id/linearLayout013"
-        android:layout_below="@+id/linearLayout012">
+        android:layout_below="@+id/linearLayout0xxx">
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,20 +165,29 @@
         android:id="@+id/linearLayout014"
         android:layout_below="@+id/linearLayout013">
 
-
-        <CheckBox
-            android:text="@string/yes"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox3_diag_concY"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox__diag_concN"
-            android:layout_weight="1" />
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3_diag_concY"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox__diag_concN"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
+
+        </RadioGroup>
+
     </LinearLayout>
 
     <LinearLayout

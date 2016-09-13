@@ -458,7 +458,7 @@ public class HIA2AActivity extends AppCompatActivity
             }
             return null;
             */
-            return "HIA2 TEST " + (position + 1);
+            return "HIA2 (" + (position + 1) + "/7)";
         }
 
         @Override

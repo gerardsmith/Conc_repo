@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -29,6 +30,9 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
     String HIA3_Test2_Question6;
     int HIA3_Test2_Question7;
     String HIA3_Test2_Question8;
+
+    //database
+    public HIA3AActivity hia3test;
 
     public static HIA3BFragment newInstance() {
         HIA3BFragment fragment = new HIA3BFragment();
@@ -109,58 +113,78 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
         other2 = (EditText) rootView.findViewById(R.id.editText4);
         other3 = (EditText) rootView.findViewById(R.id.editText5);
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test2_Question2 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question2);
-            }
-        });
+        Activity c = getActivity();
+        if(c instanceof HIA3AActivity) {
+            hia3test = (HIA3AActivity) getActivity();
 
-        other1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test2_Question4 =other1.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question4);
-            }
-        });
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test2_Question2 = other.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question2);
+                    hia3test.objHIA3.setHIA3_Test2_Question2(HIA3_Test2_Question2);
+                }
+            });
 
-        other2.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test2_Question6 =other2.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question6);
-            }
-        });
+            other1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test2_Question4 = other1.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question4);
+                    hia3test.objHIA3.setHIA3_Test2_Question4(HIA3_Test2_Question4);
+                }
+            });
 
-        other3.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test2_Question8 =other3.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question8);
-            }
-        });
+            other2.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test2_Question6 = other2.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question6);
+                    hia3test.objHIA3.setHIA3_Test2_Question6(HIA3_Test2_Question6);
+                }
+            });
 
+            other3.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test2_Question8 = other3.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question8);
+                    hia3test.objHIA3.setHIA3_Test2_Question8(HIA3_Test2_Question8);
+                }
+            });
+
+        }
         return rootView;
     }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        switch(parent.getId()) {
-            case R.id.spinner28:
-                Log.v(TAG, "Video Checkbox0: " + position);
-                HIA3_Test2_Question1 = position;
-                return;
-            case R.id.spinner29:
-                Log.v(TAG, "Video Checkbox1: " + position);
-                HIA3_Test2_Question3 = position;
-                return;
-            case R.id.spinner30:
-                Log.v(TAG, "Video Checkbox2: " + position);
-                HIA3_Test2_Question5 = position;
-                return;
-            case R.id.spinner31:
-                Log.v(TAG, "Video Checkbox2: " + position);
-                HIA3_Test2_Question7 = position;
-                return;
 
+        Activity c = getActivity();
+        if(c instanceof HIA3AActivity) {
+            hia3test = (HIA3AActivity) getActivity();
+
+            switch (parent.getId()) {
+                case R.id.spinner28:
+                    Log.v(TAG, "Video Checkbox0: " + position);
+                    HIA3_Test2_Question1 = position;
+                    hia3test.objHIA3.setHIA3_Test2_Question1(position);
+                    return;
+                case R.id.spinner29:
+                    Log.v(TAG, "Video Checkbox1: " + position);
+                    HIA3_Test2_Question3 = position;
+                    hia3test.objHIA3.setHIA3_Test2_Question3(position);
+                    return;
+                case R.id.spinner30:
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    HIA3_Test2_Question5 = position;
+                    hia3test.objHIA3.setHIA3_Test2_Question5(position);
+                    return;
+                case R.id.spinner31:
+                    Log.v(TAG, "Video Checkbox2: " + position);
+                    HIA3_Test2_Question7 = position;
+                    hia3test.objHIA3.setHIA3_Test2_Question7(position);
+                    return;
+
+            }
         }
+
     }
 
     @Override

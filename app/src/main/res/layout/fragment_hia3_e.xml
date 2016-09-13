@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="15dp"
+        android:paddingTop="25dp"
         android:id="@+id/linearLayout002"
         android:layout_below="@+id/linearLayout001">
 
@@ -45,59 +45,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
+        android:paddingTop="15dp"
         android:id="@+id/linearLayout003"
         android:layout_below="@+id/linearLayout002">
 
-
-        <CheckBox
-            android:text="@string/yes"
+        <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/checkBox3_WCCY"
-            android:layout_weight="1" />
+            android:orientation="horizontal"
+            >
 
-        <CheckBox
-            android:text="@string/no"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/checkBox_WCCN"
-            android:layout_weight="1" />
-    </LinearLayout>
+            <RadioButton
+                android:text="@string/yes"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox3_WCCY"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="15dp"
-        android:id="@+id/linearLayout004"
-        android:layout_below="@+id/linearLayout003">
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox_WCCN"
+                android:layout_weight="1"
+                style="@android:style/Widget.CompoundButton.CheckBox"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView003"
-            android:text="@string/hia3a_61_sectionheader"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="14sp"/>
+        </RadioGroup>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:id="@+id/linearLayout005"
-        android:layout_below="@+id/linearLayout004">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView004"
-            android:text="@string/hia3a_61_body"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="14sp"/>
 
     </LinearLayout>
 
@@ -106,26 +80,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="15dp"
-        android:id="@+id/linearLayout006"
-        android:layout_below="@+id/linearLayout005">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textView005"
-            android:text="@string/hia3a_62_sectionheader"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="14sp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
         android:id="@+id/linearLayout007"
-        android:layout_below="@+id/linearLayout006">
+        android:layout_below="@+id/linearLayout003">
 
         <TextView
             android:layout_width="wrap_content"
@@ -184,5 +140,14 @@
             android:layout_weight="1" />
     </LinearLayout>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:id="@+id/btn_finish"
+        android:onClick="submitHIA3"
+        android:layout_marginTop="76dp"
+        android:layout_below="@+id/linearLayout009"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

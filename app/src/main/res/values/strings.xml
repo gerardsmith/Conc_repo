@@ -266,6 +266,7 @@
     <string name="cogAss5">Other</string>
     <string name="cogAssRes">What was the result of this cognitive assessment?</string>
     <string name="domains">Identify the domain(s) that were abnormal in this HIA3:</string>
+    <string name="clinsusp">Clinical suspicion (over and above the other tests) ?</string>
     <string name="dom1">Symptom assessment</string>
     <string name="dom2">Cognitive assessment tool</string>
     <string name="dom3">Balance evaluation</string>
