@@ -116,13 +116,13 @@ public class HIA3AActivity extends AppCompatActivity {
                 args.put("HIA3_Test1_Question1", Integer.toString(this.objectHIA3.getHIA3_Test1_Question1()));
 
                 args.put("HIA3_Test2_Question1", Integer.toString(this.objectHIA3.getHIA3_Test2_Question1()));
-                args.put("HIA3_Test2_Question2", "test");
+                args.put("HIA3_Test2_Question2", this.objectHIA3.getHIA3_Test2_Question2());
                 args.put("HIA3_Test2_Question3", Integer.toString(this.objectHIA3.getHIA3_Test2_Question3()));
-                args.put("HIA3_Test2_Question4", "test");
+                args.put("HIA3_Test2_Question4", this.objectHIA3.getHIA3_Test2_Question4());
                 args.put("HIA3_Test2_Question5", Integer.toString(this.objectHIA3.getHIA3_Test2_Question5()));
-                args.put("HIA3_Test2_Question6", "test");
+                args.put("HIA3_Test2_Question6", this.objectHIA3.getHIA3_Test2_Question6());
                 args.put("HIA3_Test2_Question7", Integer.toString(this.objectHIA3.getHIA3_Test2_Question7()));
-                args.put("HIA3_Test2_Question8", "test");
+                args.put("HIA3_Test2_Question8", this.objectHIA3.getHIA3_Test2_Question8());
 
                 args.put("HIA3_Test3_Question1", Integer.toString(this.objectHIA3.getHIA3_Test3_Question1()));
                 args.put("HIA3_Test3_Question2", "test");
