@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -36,6 +38,8 @@ public class HIA3AActivity extends AppCompatActivity {
     private ViewPager mViewPager;
 
 
+    //database
+    public HIA3AActivity hia3test;
     HIA3 objHIA3=new HIA3();
 
     //This function calls AsyncTask [insertHIA1], which submit the HIA1 data to insertHIA1.php file.
@@ -62,6 +66,7 @@ public class HIA3AActivity extends AppCompatActivity {
         //objHIA1.setHIA1_Test1_Question1(param);
         new HIA3AActivity.HIA3insertAsync(objHIA3).execute(); //Call async Task
     }
+
     //---------------------------------------------
     //------------JSON ----------------------------
 
@@ -127,89 +132,90 @@ public class HIA3AActivity extends AppCompatActivity {
                 args.put("HIA3_Test3_Question6", Integer.toString(this.objectHIA3.getHIA3_Test3_Question6()));
                 args.put("HIA3_Test3_Question7", Integer.toString(this.objectHIA3.getHIA3_Test3_Question7()));
                 args.put("HIA3_Test3_Question8", Integer.toString(this.objectHIA3.getHIA3_Test3_Question8()));
-                args.put("HIA2_Test3_Question10", Integer.toString(this.objectHIA3.getHIA3_Test3_Question10()));
-                args.put("HIA2_Test3_Question11", Integer.toString(this.objectHIA3.getHIA3_Test3_Question11()));
-                args.put("HIA2_Test3_Question12", Integer.toString(this.objectHIA3.getHIA3_Test3_Question12()));
-                args.put("HIA2_Test3_Question13", Integer.toString(this.objectHIA3.getHIA3_Test3_Question13()));
-                args.put("HIA2_Test3_Question14", Integer.toString(this.objectHIA3.getHIA3_Test3_Question14()));
-                args.put("HIA2_Test3_Question15", Integer.toString(this.objectHIA3.getHIA3_Test3_Question15()));
-                args.put("HIA2_Test3_Question16", Integer.toString(this.objectHIA3.getHIA3_Test3_Question16()));
-                args.put("HIA2_Test3_Question17", Integer.toString(this.objectHIA3.getHIA3_Test3_Question17()));
-                args.put("HIA2_Test3_Question18", Integer.toString(this.objectHIA3.getHIA3_Test3_Question18()));
-                args.put("HIA2_Test3_Question19", Integer.toString(this.objectHIA3.getHIA3_Test3_Question19()));
-                args.put("HIA2_Test3_Question20", Integer.toString(this.objectHIA3.getHIA3_Test3_Question20()));
-                args.put("HIA2_Test3_Question21", Integer.toString(this.objectHIA3.getHIA3_Test3_Question21()));
-                args.put("HIA2_Test3_Question22", Integer.toString(this.objectHIA3.getHIA3_Test3_Question22()));
+                args.put("HIA3_Test3_Question9", Integer.toString(this.objectHIA3.getHIA3_Test3_Question9()));
+                args.put("HIA3_Test3_Question10", Integer.toString(this.objectHIA3.getHIA3_Test3_Question10()));
+                args.put("HIA3_Test3_Question11", Integer.toString(this.objectHIA3.getHIA3_Test3_Question11()));
+                args.put("HIA3_Test3_Question12", Integer.toString(this.objectHIA3.getHIA3_Test3_Question12()));
+                args.put("HIA3_Test3_Question13", Integer.toString(this.objectHIA3.getHIA3_Test3_Question13()));
+                args.put("HIA3_Test3_Question14", Integer.toString(this.objectHIA3.getHIA3_Test3_Question14()));
+                args.put("HIA3_Test3_Question15", Integer.toString(this.objectHIA3.getHIA3_Test3_Question15()));
+                args.put("HIA3_Test3_Question16", Integer.toString(this.objectHIA3.getHIA3_Test3_Question16()));
+                args.put("HIA3_Test3_Question17", Integer.toString(this.objectHIA3.getHIA3_Test3_Question17()));
+                args.put("HIA3_Test3_Question18", Integer.toString(this.objectHIA3.getHIA3_Test3_Question18()));
+                args.put("HIA3_Test3_Question19", Integer.toString(this.objectHIA3.getHIA3_Test3_Question19()));
+                args.put("HIA3_Test3_Question20", Integer.toString(this.objectHIA3.getHIA3_Test3_Question20()));
+                args.put("HIA3_Test3_Question21", Integer.toString(this.objectHIA3.getHIA3_Test3_Question21()));
+                args.put("HIA3_Test3_Question22", Integer.toString(this.objectHIA3.getHIA3_Test3_Question22()));
                 args.put("HIA3_Test3_Question23", Integer.toString(this.objectHIA3.getHIA3_Test3_Question23()));
                 args.put("HIA3_Test3_Question24", Integer.toString(this.objectHIA3.getHIA3_Test3_Question24()));
                 args.put("HIA3_Test3_Question25", Integer.toString(this.objectHIA3.getHIA3_Test3_Question25()));
                 args.put("HIA3_Test3_Question26", Integer.toString(this.objectHIA3.getHIA3_Test3_Question26()));
-                args.put("HIA2_Test3_Question27", Integer.toString(this.objectHIA3.getHIA3_Test3_Question27()));
-                args.put("HIA2_Test3_Question28", Integer.toString(this.objectHIA3.getHIA3_Test3_Question28()));
-                args.put("HIA2_Test3_Question29", Integer.toString(this.objectHIA3.getHIA3_Test3_Question29()));
-                args.put("HIA2_Test3_Question30", Integer.toString(this.objectHIA3.getHIA3_Test3_Question30()));
-                args.put("HIA2_Test3_Question31", Integer.toString(this.objectHIA3.getHIA3_Test3_Question31()));
-                args.put("HIA2_Test3_Question32", Integer.toString(this.objectHIA3.getHIA3_Test3_Question32()));
-                args.put("HIA2_Test3_Question33", Integer.toString(this.objectHIA3.getHIA3_Test3_Question33()));
-                args.put("HIA2_Test3_Question34", Integer.toString(this.objectHIA3.getHIA3_Test3_Question34()));
-                args.put("HIA2_Test3_Question35", Integer.toString(this.objectHIA3.getHIA3_Test3_Question35()));
-                args.put("HIA2_Test3_Question36", Integer.toString(this.objectHIA3.getHIA3_Test3_Question36()));
-                args.put("HIA2_Test3_Question37", Integer.toString(this.objectHIA3.getHIA3_Test3_Question37()));
-                args.put("HIA2_Test3_Question38", Integer.toString(this.objectHIA3.getHIA3_Test3_Question38()));
-                args.put("HIA2_Test3_Question39", Integer.toString(this.objectHIA3.getHIA3_Test3_Question39()));
+                args.put("HIA3_Test3_Question27", Integer.toString(this.objectHIA3.getHIA3_Test3_Question27()));
+                args.put("HIA3_Test3_Question28", Integer.toString(this.objectHIA3.getHIA3_Test3_Question28()));
+                args.put("HIA3_Test3_Question29", Integer.toString(this.objectHIA3.getHIA3_Test3_Question29()));
+                args.put("HIA3_Test3_Question30", Integer.toString(this.objectHIA3.getHIA3_Test3_Question30()));
+                args.put("HIA3_Test3_Question31", Integer.toString(this.objectHIA3.getHIA3_Test3_Question31()));
+                args.put("HIA3_Test3_Question32", Integer.toString(this.objectHIA3.getHIA3_Test3_Question32()));
+                args.put("HIA3_Test3_Question33", Integer.toString(this.objectHIA3.getHIA3_Test3_Question33()));
+                args.put("HIA3_Test3_Question34", Integer.toString(this.objectHIA3.getHIA3_Test3_Question34()));
+                args.put("HIA3_Test3_Question35", Integer.toString(this.objectHIA3.getHIA3_Test3_Question35()));
+                args.put("HIA3_Test3_Question36", Integer.toString(this.objectHIA3.getHIA3_Test3_Question36()));
+                args.put("HIA3_Test3_Question37", Integer.toString(this.objectHIA3.getHIA3_Test3_Question37()));
+                args.put("HIA3_Test3_Question38", Integer.toString(this.objectHIA3.getHIA3_Test3_Question38()));
+                args.put("HIA3_Test3_Question39", Integer.toString(this.objectHIA3.getHIA3_Test3_Question39()));
                 args.put("HIA3_Test3_Question40", Integer.toString(this.objectHIA3.getHIA3_Test3_Question40()));
                 args.put("HIA3_Test3_Question41", Integer.toString(this.objectHIA3.getHIA3_Test3_Question41()));
                 args.put("HIA3_Test3_Question42", Integer.toString(this.objectHIA3.getHIA3_Test3_Question42()));
                 args.put("HIA3_Test3_Question43", Integer.toString(this.objectHIA3.getHIA3_Test3_Question43()));
-                args.put("HIA2_Test3_Question44", Integer.toString(this.objectHIA3.getHIA3_Test3_Question44()));
-                args.put("HIA2_Test3_Question45", Integer.toString(this.objectHIA3.getHIA3_Test3_Question45()));
-                args.put("HIA2_Test3_Question46", Integer.toString(this.objectHIA3.getHIA3_Test3_Question46()));
-                args.put("HIA2_Test3_Question47", Integer.toString(this.objectHIA3.getHIA3_Test3_Question47()));
-                args.put("HIA2_Test3_Question48", Integer.toString(this.objectHIA3.getHIA3_Test3_Question48()));
-                args.put("HIA2_Test3_Question49", Integer.toString(this.objectHIA3.getHIA3_Test3_Question49()));
-                args.put("HIA2_Test3_Question50", Integer.toString(this.objectHIA3.getHIA3_Test3_Question50()));
-                args.put("HIA2_Test3_Question51", Integer.toString(this.objectHIA3.getHIA3_Test3_Question51()));
-                args.put("HIA2_Test3_Question52", Integer.toString(this.objectHIA3.getHIA3_Test3_Question52()));
-                args.put("HIA2_Test3_Question53", Integer.toString(this.objectHIA3.getHIA3_Test3_Question53()));
-                args.put("HIA2_Test3_Question54", Integer.toString(this.objectHIA3.getHIA3_Test3_Question54()));
-                args.put("HIA2_Test3_Question55", Integer.toString(this.objectHIA3.getHIA3_Test3_Question55()));
-                args.put("HIA2_Test3_Question56", Integer.toString(this.objectHIA3.getHIA3_Test3_Question56()));
+                args.put("HIA3_Test3_Question44", Integer.toString(this.objectHIA3.getHIA3_Test3_Question44()));
+                args.put("HIA3_Test3_Question45", Integer.toString(this.objectHIA3.getHIA3_Test3_Question45()));
+                args.put("HIA3_Test3_Question46", Integer.toString(this.objectHIA3.getHIA3_Test3_Question46()));
+                args.put("HIA3_Test3_Question47", Integer.toString(this.objectHIA3.getHIA3_Test3_Question47()));
+                args.put("HIA3_Test3_Question48", Integer.toString(this.objectHIA3.getHIA3_Test3_Question48()));
+                args.put("HIA3_Test3_Question49", Integer.toString(this.objectHIA3.getHIA3_Test3_Question49()));
+                args.put("HIA3_Test3_Question50", Integer.toString(this.objectHIA3.getHIA3_Test3_Question50()));
+                args.put("HIA3_Test3_Question51", Integer.toString(this.objectHIA3.getHIA3_Test3_Question51()));
+                args.put("HIA3_Test3_Question52", Integer.toString(this.objectHIA3.getHIA3_Test3_Question52()));
+                args.put("HIA3_Test3_Question53", Integer.toString(this.objectHIA3.getHIA3_Test3_Question53()));
+                args.put("HIA3_Test3_Question54", Integer.toString(this.objectHIA3.getHIA3_Test3_Question54()));
+                args.put("HIA3_Test3_Question55", Integer.toString(this.objectHIA3.getHIA3_Test3_Question55()));
+                args.put("HIA3_Test3_Question56", Integer.toString(this.objectHIA3.getHIA3_Test3_Question56()));
                 args.put("HIA3_Test3_Question57", Integer.toString(this.objectHIA3.getHIA3_Test3_Question57()));
                 args.put("HIA3_Test3_Question58", Integer.toString(this.objectHIA3.getHIA3_Test3_Question58()));
                 args.put("HIA3_Test3_Question59", Integer.toString(this.objectHIA3.getHIA3_Test3_Question59()));
                 args.put("HIA3_Test3_Question60", Integer.toString(this.objectHIA3.getHIA3_Test3_Question60()));
-                args.put("HIA2_Test3_Question61", Integer.toString(this.objectHIA3.getHIA3_Test3_Question61()));
-                args.put("HIA2_Test3_Question62", Integer.toString(this.objectHIA3.getHIA3_Test3_Question62()));
-                args.put("HIA2_Test3_Question63", Integer.toString(this.objectHIA3.getHIA3_Test3_Question63()));
-                args.put("HIA2_Test3_Question64", Integer.toString(this.objectHIA3.getHIA3_Test3_Question64()));
-                args.put("HIA2_Test3_Question65", Integer.toString(this.objectHIA3.getHIA3_Test3_Question65()));
-                args.put("HIA2_Test3_Question66", Integer.toString(this.objectHIA3.getHIA3_Test3_Question66()));
-                args.put("HIA2_Test3_Question67", Integer.toString(this.objectHIA3.getHIA3_Test3_Question67()));
-                args.put("HIA2_Test3_Question68", Integer.toString(this.objectHIA3.getHIA3_Test3_Question68()));
-                args.put("HIA2_Test3_Question69", Integer.toString(this.objectHIA3.getHIA3_Test3_Question69()));
-                args.put("HIA2_Test3_Question70", Integer.toString(this.objectHIA3.getHIA3_Test3_Question70()));
-                args.put("HIA2_Test3_Question71", Integer.toString(this.objectHIA3.getHIA3_Test3_Question71()));
-                args.put("HIA2_Test3_Question72", Integer.toString(this.objectHIA3.getHIA3_Test3_Question72()));
-                args.put("HIA2_Test3_Question73", Integer.toString(this.objectHIA3.getHIA3_Test3_Question73()));
+                args.put("HIA3_Test3_Question61", Integer.toString(this.objectHIA3.getHIA3_Test3_Question61()));
+                args.put("HIA3_Test3_Question62", Integer.toString(this.objectHIA3.getHIA3_Test3_Question62()));
+                args.put("HIA3_Test3_Question63", Integer.toString(this.objectHIA3.getHIA3_Test3_Question63()));
+                args.put("HIA3_Test3_Question64", Integer.toString(this.objectHIA3.getHIA3_Test3_Question64()));
+                args.put("HIA3_Test3_Question65", Integer.toString(this.objectHIA3.getHIA3_Test3_Question65()));
+                args.put("HIA3_Test3_Question66", Integer.toString(this.objectHIA3.getHIA3_Test3_Question66()));
+                args.put("HIA3_Test3_Question67", Integer.toString(this.objectHIA3.getHIA3_Test3_Question67()));
+                args.put("HIA3_Test3_Question68", Integer.toString(this.objectHIA3.getHIA3_Test3_Question68()));
+                args.put("HIA3_Test3_Question69", Integer.toString(this.objectHIA3.getHIA3_Test3_Question69()));
+                args.put("HIA3_Test3_Question70", Integer.toString(this.objectHIA3.getHIA3_Test3_Question70()));
+                args.put("HIA3_Test3_Question71", Integer.toString(this.objectHIA3.getHIA3_Test3_Question71()));
+                args.put("HIA3_Test3_Question72", Integer.toString(this.objectHIA3.getHIA3_Test3_Question72()));
+                args.put("HIA3_Test3_Question73", Integer.toString(this.objectHIA3.getHIA3_Test3_Question73()));
                 args.put("HIA3_Test3_Question74", Integer.toString(this.objectHIA3.getHIA3_Test3_Question74()));
                 args.put("HIA3_Test3_Question75", Integer.toString(this.objectHIA3.getHIA3_Test3_Question75()));
                 args.put("HIA3_Test3_Question76", Integer.toString(this.objectHIA3.getHIA3_Test3_Question76()));
                 args.put("HIA3_Test3_Question77", Integer.toString(this.objectHIA3.getHIA3_Test3_Question77()));
-                args.put("HIA2_Test3_Question78", Integer.toString(this.objectHIA3.getHIA3_Test3_Question78()));
-                args.put("HIA2_Test3_Question79", Integer.toString(this.objectHIA3.getHIA3_Test3_Question79()));
-                args.put("HIA2_Test3_Question80", Integer.toString(this.objectHIA3.getHIA3_Test3_Question80()));
-                args.put("HIA2_Test3_Question81", Integer.toString(this.objectHIA3.getHIA3_Test3_Question81()));
-                args.put("HIA2_Test3_Question82", Integer.toString(this.objectHIA3.getHIA3_Test3_Question82()));
-                args.put("HIA2_Test3_Question83", Integer.toString(this.objectHIA3.getHIA3_Test3_Question83()));
-                args.put("HIA2_Test3_Question84", Integer.toString(this.objectHIA3.getHIA3_Test3_Question84()));
-                args.put("HIA2_Test3_Question85", Integer.toString(this.objectHIA3.getHIA3_Test3_Question85()));
-                args.put("HIA2_Test3_Question86", Integer.toString(this.objectHIA3.getHIA3_Test3_Question86()));
-                args.put("HIA2_Test3_Question87", Integer.toString(this.objectHIA3.getHIA3_Test3_Question87()));
-                args.put("HIA2_Test3_Question88", Integer.toString(this.objectHIA3.getHIA3_Test3_Question88()));
-                args.put("HIA2_Test3_Question89", Integer.toString(this.objectHIA3.getHIA3_Test3_Question89()));
-                args.put("HIA2_Test3_Question90", Integer.toString(this.objectHIA3.getHIA3_Test3_Question90()));
-                args.put("HIA2_Test3_Question91", Integer.toString(this.objectHIA3.getHIA3_Test3_Question91()));
-                args.put("HIA2_Test3_Question92", Integer.toString(this.objectHIA3.getHIA3_Test3_Question92()));
+                args.put("HIA3_Test3_Question78", Integer.toString(this.objectHIA3.getHIA3_Test3_Question78()));
+                args.put("HIA3_Test3_Question79", Integer.toString(this.objectHIA3.getHIA3_Test3_Question79()));
+                args.put("HIA3_Test3_Question80", Integer.toString(this.objectHIA3.getHIA3_Test3_Question80()));
+                args.put("HIA3_Test3_Question81", Integer.toString(this.objectHIA3.getHIA3_Test3_Question81()));
+                args.put("HIA3_Test3_Question82", Integer.toString(this.objectHIA3.getHIA3_Test3_Question82()));
+                args.put("HIA3_Test3_Question83", Integer.toString(this.objectHIA3.getHIA3_Test3_Question83()));
+                args.put("HIA3_Test3_Question84", Integer.toString(this.objectHIA3.getHIA3_Test3_Question84()));
+                args.put("HIA3_Test3_Question85", Integer.toString(this.objectHIA3.getHIA3_Test3_Question85()));
+                args.put("HIA3_Test3_Question86", Integer.toString(this.objectHIA3.getHIA3_Test3_Question86()));
+                args.put("HIA3_Test3_Question87", Integer.toString(this.objectHIA3.getHIA3_Test3_Question87()));
+                args.put("HIA3_Test3_Question88", Integer.toString(this.objectHIA3.getHIA3_Test3_Question88()));
+                args.put("HIA3_Test3_Question89", Integer.toString(this.objectHIA3.getHIA3_Test3_Question89()));
+                args.put("HIA3_Test3_Question90", Integer.toString(this.objectHIA3.getHIA3_Test3_Question90()));
+                args.put("HIA3_Test3_Question91", Integer.toString(this.objectHIA3.getHIA3_Test3_Question91()));
+                args.put("HIA3_Test3_Question92", Integer.toString(this.objectHIA3.getHIA3_Test3_Question92()));
 
                 //args.put("HIA2_Test3_Question1", "test");
 
@@ -326,7 +332,7 @@ public class HIA3AActivity extends AppCompatActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public static class PlaceholderFragment extends Fragment implements AdapterView.OnItemSelectedListener {
         /**
          * The fragment argument representing the section number for this
          * fragment.
@@ -335,6 +341,9 @@ public class HIA3AActivity extends AppCompatActivity {
         private ArrayAdapter<CharSequence> adapter2;
         private ArrayAdapter<CharSequence> adapter1;
         private ArrayAdapter<CharSequence> adapter;
+
+        //database
+        public HIA3AActivity hia3test;
 
         public PlaceholderFragment() {
         }
@@ -379,7 +388,33 @@ public class HIA3AActivity extends AppCompatActivity {
             this.adapter2 = ArrayAdapter.createFromResource(this.getActivity(),R.array.hia3_1_spinner3,R.layout.multiline_spinner_dropdown_item);
             spinner2.setAdapter(adapter2);
 
+            spinner.setOnItemSelectedListener(this);
+            spinner1.setOnItemSelectedListener(this);
+            spinner2.setOnItemSelectedListener(this);
+
+
             return rootView;
+        }
+
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            Activity c = getActivity();
+            if(c instanceof HIA3AActivity) {
+                hia3test = (HIA3AActivity) getActivity();
+                switch(parent.getId()){
+                    case R.id.spinner27:
+                        hia3test.objHIA3.setHIA3_Test1_Question1(position);
+                        Log.d("1","check"+ position);
+                        return;
+                }
+
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
         }
     }
 

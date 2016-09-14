@@ -132,16 +132,17 @@ public class HIA2BFragment extends Fragment implements AdapterView.OnItemSelecte
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        String s = getResources().getString(R.string.hia2a_section22_header);
+        //pop up dialog box
+        //String s = getResources().getString(R.string.hia2a_section22_header);
         View rootView = inflater.inflate(R.layout.fragment_hia2_b, container, false);
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(s).setTitle("Read before completing the symptoms checklist");
+       // AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        //builder.setMessage(s).setTitle("Read before completing the symptoms checklist");
 
-        AlertDialog dialog = builder.create();
-        dialog.show();
+        //AlertDialog dialog = builder.create();
+        //dialog.show();
 
-        String [] symp_num =
-                {"0","1","2","3","4","5","6"};
+        //move to string values
+        String [] symp_num = {"0","1","2","3","4","5","6"};
 
         Spinner spinner = (Spinner) rootView.findViewById(R.id.spinner5);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, symp_num);

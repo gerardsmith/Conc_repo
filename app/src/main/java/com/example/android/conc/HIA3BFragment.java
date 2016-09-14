@@ -121,7 +121,7 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
                 public void onClick(View v) {
                     HIA3_Test2_Question2 = other.getText().toString();
                     Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question2);
-                    hia3test.objHIA3.setHIA3_Test2_Question2(HIA3_Test2_Question2);
+                   // hia3test.objHIA3.setHIA3_Test2_Question2(HIA3_Test2_Question2);
                 }
             });
 
@@ -129,7 +129,7 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
                 public void onClick(View v) {
                     HIA3_Test2_Question4 = other1.getText().toString();
                     Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question4);
-                    hia3test.objHIA3.setHIA3_Test2_Question4(HIA3_Test2_Question4);
+                   // hia3test.objHIA3.setHIA3_Test2_Question4(HIA3_Test2_Question4);
                 }
             });
 
@@ -137,7 +137,7 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
                 public void onClick(View v) {
                     HIA3_Test2_Question6 = other2.getText().toString();
                     Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question6);
-                    hia3test.objHIA3.setHIA3_Test2_Question6(HIA3_Test2_Question6);
+                   // hia3test.objHIA3.setHIA3_Test2_Question6(HIA3_Test2_Question6);
                 }
             });
 
@@ -145,7 +145,7 @@ public class HIA3BFragment extends Fragment implements AdapterView.OnItemSelecte
                 public void onClick(View v) {
                     HIA3_Test2_Question8 = other3.getText().toString();
                     Log.v(TAG, "Video Checkbox: " + HIA3_Test2_Question8);
-                    hia3test.objHIA3.setHIA3_Test2_Question8(HIA3_Test2_Question8);
+                   // hia3test.objHIA3.setHIA3_Test2_Question8(HIA3_Test2_Question8);
                 }
             });
 

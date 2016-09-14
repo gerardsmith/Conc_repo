@@ -242,6 +242,16 @@
         <item>No, failed to complete HIA Form 1 despite being indicated</item>
     </string-array>
 
+    <string-array name="hia2_2_spinner">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
 
     <!-- HIA3 -->
     <string name="Reas_HIA3">Reason for HIA3?</string>

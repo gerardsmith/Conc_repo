@@ -26,22 +26,35 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout001"
-        android:id="@+id/linearLayout002"
-        android:paddingTop="15dp">
+        android:id="@+id/linearLayout003"
+        android:paddingTop="20dp"
+        android:layout_below="@+id/linearLayout001">
 
         <TextView
             android:text="@string/hia2a_section12_header"
             android:layout_width="wrap_content"
-            android:layout_height="42dp"
+            android:layout_height="wrap_content"
             android:id="@+id/textView002"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="14sp"/>
+            android:textSize="16sp"
+            android:layout_weight="0.06" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout002"
+        android:layout_below="@+id/linearLayout003"
+        android:paddingTop="0dp">
 
         <Spinner
-            android:layout_width="283dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spinner4"
             android:spinnerMode="dialog"/>
+
     </LinearLayout>
+
 </RelativeLayout>

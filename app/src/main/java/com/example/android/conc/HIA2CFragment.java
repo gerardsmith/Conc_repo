@@ -1,5 +1,6 @@
 package com.example.android.conc;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -15,6 +16,9 @@ public class HIA2CFragment extends Fragment {
     private EditText other;
     private static final String TAG = "Video Check";
     String HIA2_Test3_Question1;
+    //database
+    public HIA2AActivity hia2test;
+
     public static HIA2CFragment newInstance() {
         HIA2CFragment fragment = new HIA2CFragment();
         return fragment;
@@ -29,13 +33,19 @@ public class HIA2CFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_hia2_c, container, false);
         other = (EditText) rootView.findViewById(R.id.editText);
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA2_Test3_Question1 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA2_Test3_Question1);
-            }
-        });
+        Activity b = getActivity();
+        if(b instanceof HIA2AActivity) {
+            hia2test = (HIA2AActivity) getActivity();
 
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA2_Test3_Question1 = other.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA2_Test3_Question1);
+                    hia2test.objHIA2.setHIA2_Test3_Question1(HIA2_Test3_Question1);
+                }
+            });
+
+        }
         return rootView;
 
     }

@@ -10,13 +10,13 @@ public class HIA3 extends FragmentActivity {
 
     public int HIA3_Test1_Question1;
     public int HIA3_Test2_Question1;
-    public String HIA3_Test2_Question2;
+    //public String HIA3_Test2_Question2;
     public int HIA3_Test2_Question3;
-    public String HIA3_Test2_Question4;
+    //public String HIA3_Test2_Question4;
     public int HIA3_Test2_Question5;
-    public String HIA3_Test2_Question6;
+    //public String HIA3_Test2_Question6;
     public int HIA3_Test2_Question7;
-    public String HIA3_Test2_Question8;
+    //public String HIA3_Test2_Question8;
 
     public int HIA3_Test3_Question1;
     public String HIA3_Test3_Question2;
@@ -131,11 +131,11 @@ public class HIA3 extends FragmentActivity {
     public int getHIA3_Test2_Question1() {
         return HIA3_Test2_Question1;
     }
-   // public String getHIA3_Test2_Question2() {return HIA3_Test2_Question2;}
+    //public String getHIA3_Test2_Question2() {return HIA3_Test2_Question2;}
     public int getHIA3_Test2_Question3() {
         return HIA3_Test2_Question3;
     }
-   // public String getHIA3_Test2_Question4() {return HIA3_Test2_Question4;}
+    //public String getHIA3_Test2_Question4() {return HIA3_Test2_Question4;}
     public int getHIA3_Test2_Question5() {
         return HIA3_Test2_Question5;
     }
@@ -148,11 +148,11 @@ public class HIA3 extends FragmentActivity {
     public int getHIA3_Test3_Question1() {
         return HIA3_Test3_Question1;
     }
-   // public String getHIA3_Test3_Question2() {return HIA3_Test3_Question2;}
+    public String getHIA3_Test3_Question2() {return HIA3_Test3_Question2;}
     public int getHIA3_Test3_Question3() {
         return HIA3_Test3_Question3;
     }
-   // public String getHIA3_Test3_Question4() {return HIA3_Test3_Question4;}
+    public String getHIA3_Test3_Question4() {return HIA3_Test3_Question4;}
     public int getHIA3_Test3_Question5() {
         return HIA3_Test3_Question5;
     }
@@ -455,13 +455,13 @@ public class HIA3 extends FragmentActivity {
     public void setHIA3_Test1_Question1(int HIA3_Test1_Question1) {this.HIA3_Test1_Question1 = HIA3_Test1_Question1;}
 
     public void setHIA3_Test2_Question1(int HIA3_Test2_Question1) {this.HIA3_Test2_Question1 = HIA3_Test2_Question1;}
-    public void setHIA3_Test2_Question2(String HIA3_Test2_Question2) {this.HIA3_Test2_Question2 = HIA3_Test2_Question2;}
+    //public void setHIA3_Test2_Question2(String HIA3_Test2_Question2) {this.HIA3_Test2_Question2 = HIA3_Test2_Question2;}
     public void setHIA3_Test2_Question3(int HIA3_Test2_Question3) {this.HIA3_Test2_Question3 = HIA3_Test2_Question3;}
-    public void setHIA3_Test2_Question4(String HIA3_Test2_Question4) {this.HIA3_Test2_Question4 = HIA3_Test2_Question4;}
+   // public void setHIA3_Test2_Question4(String HIA3_Test2_Question4) {this.HIA3_Test2_Question4 = HIA3_Test2_Question4;}
     public void setHIA3_Test2_Question5(int HIA3_Test2_Question5) {this.HIA3_Test2_Question5 = HIA3_Test2_Question5;}
-    public void setHIA3_Test2_Question6(String HIA3_Test2_Question6) {this.HIA3_Test2_Question6 = HIA3_Test2_Question6;}
+   // public void setHIA3_Test2_Question6(String HIA3_Test2_Question6) {this.HIA3_Test2_Question6 = HIA3_Test2_Question6;}
     public void setHIA3_Test2_Question7(int HIA3_Test2_Question7) {this.HIA3_Test2_Question7 = HIA3_Test2_Question7;}
-    public void setHIA3_Test2_Question8(String HIA3_Test2_Question8) {this.HIA3_Test2_Question8 = HIA3_Test2_Question8;}
+    //public void setHIA3_Test2_Question8(String HIA3_Test2_Question8) {this.HIA3_Test2_Question8 = HIA3_Test2_Question8;}
 
     public void setHIA3_Test3_Question1(int HIA3_Test3_Question1) {this.HIA3_Test3_Question1 = HIA3_Test3_Question1;}
     public void setHIA3_Test3_Question2(String HIA3_Test3_Question2) {this.HIA3_Test3_Question2 = HIA3_Test3_Question2;}
