@@ -35,11 +35,11 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 
-        <fragment
+        <!--<fragment
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="com.example.android.conc.HIA2EFragment"
             android:id="@+id/hia2Efrag"
-            />
+            />-->
 
 </LinearLayout>

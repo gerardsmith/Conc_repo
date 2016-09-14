@@ -184,19 +184,47 @@ public class HIA1GFragment extends Fragment {
 
             memscore.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    String memscorestring = memscore.getText().toString();
-                    Log.v(TAG, "Video Checkbox: " + memscorestring);
-                    HIA1_Test4_Question1 = Integer.parseInt(memscorestring);
-                    hia1test.objHIA1.setHIA1_Test4_Question1(HIA1_Test4_Question1);
+
+                    try {
+                        String memscorestring = memscore.getText().toString();
+                        Log.v(TAG, "Video Checkbox: " + memscorestring);
+                        if ("".equals(memscorestring)){
+                            HIA1_Test4_Question1 = Integer.parseInt("0");
+                            hia1test.objHIA1.setHIA1_Test4_Question1(HIA1_Test4_Question1);
+                        }
+                        else{
+                            HIA1_Test4_Question1 = Integer.parseInt(memscorestring);
+                            hia1test.objHIA1.setHIA1_Test4_Question1(HIA1_Test4_Question1);
+                        }
+
+                    }
+                    catch (NumberFormatException e)
+                    {
+                        //exception
+                    }
+
                 }
             });
 
             digback.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    String digbackstring = digback.getText().toString();
-                    Log.v(TAG, "Video Checkbox: " + digbackstring);
-                    HIA1_Test4_Question2 = Integer.parseInt(digbackstring);
-                    hia1test.objHIA1.setHIA1_Test4_Question2(HIA1_Test4_Question2);
+                    try{
+                        String digbackstring = digback.getText().toString();
+                        Log.v(TAG, "Video Checkbox: " + digbackstring);
+                        if ("".equals(digbackstring)){
+                            HIA1_Test4_Question2 = Integer.parseInt("0");
+                            hia1test.objHIA1.setHIA1_Test4_Question2(HIA1_Test4_Question2);
+                        }
+                        else{
+                            HIA1_Test4_Question2 = Integer.parseInt(digbackstring);
+                            hia1test.objHIA1.setHIA1_Test4_Question2(HIA1_Test4_Question2);
+                        }
+
+                    }
+                    catch (NumberFormatException e){
+                        //exception
+                    }
+
                 }
             });
 

@@ -53,14 +53,26 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
         if(a instanceof HIA1AActivity) {
             hia1test = (HIA1AActivity) getActivity();
 
-            delmem.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    String delmemstring = delmem.getText().toString();
-                    Log.v(TAG, "Video Checkbox: " + delmemstring);
-                    HIA1_Test6_Question1 = Integer.parseInt(delmemstring);
-                    hia1test.objHIA1.setHIA1_Test6_Question1(HIA1_Test6_Question1);
-                }
-            });
+            try {
+                delmem.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        String delmemstring = delmem.getText().toString();
+                        Log.v(TAG, "Video Checkbox: " + delmemstring);
+                        if ("".equals(delmemstring)){
+                            HIA1_Test6_Question1 = Integer.parseInt("0");
+                            hia1test.objHIA1.setHIA1_Test6_Question1(HIA1_Test6_Question1);
+                        }
+                        else{
+                            HIA1_Test6_Question1 = Integer.parseInt(delmemstring);
+                            hia1test.objHIA1.setHIA1_Test6_Question1(HIA1_Test6_Question1);
+                        }
+
+                    }
+                });
+            }
+            catch(NumberFormatException e){
+                //exception
+            }
 
         }
 

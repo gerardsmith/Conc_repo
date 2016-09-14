@@ -120,6 +120,9 @@ public class HIA1 extends FragmentActivity {
     public int getHIA1_Test2_Question5() {
         return HIA1_Test2_Question5;
     }
+    public String getHIA1_Test2_Question6() {
+        return HIA1_Test2_Question6;
+    }
 
     public int getHIA1_Test3_Question1() { return HIA1_Test3_Question1; }
     public int getHIA1_Test3_Question2() { return HIA1_Test3_Question2; }
@@ -203,7 +206,7 @@ public class HIA1 extends FragmentActivity {
     public void setHIA1_Test2_Question3(int HIA1_Test2_Question3) {this.HIA1_Test2_Question3 = HIA1_Test2_Question3;}
     public void setHIA1_Test2_Question4(int HIA1_Test2_Question4) {this.HIA1_Test2_Question4 = HIA1_Test2_Question4;}
     public void setHIA1_Test2_Question5(int HIA1_Test2_Question5) {this.HIA1_Test2_Question5 = HIA1_Test2_Question5;}
-    public void setHIA1_Test2_Question5(String HIA1_Test2_Question6) {this.HIA1_Test2_Question6 = HIA1_Test2_Question6;}
+    public void setHIA1_Test2_Question6(String HIA1_Test2_Question6) {this.HIA1_Test2_Question6 = HIA1_Test2_Question6;}
 
     public void setHIA1_Test3_Question1(int HIA1_Test3_Question1) {this.HIA1_Test3_Question1 = HIA1_Test3_Question1;}
     public void setHIA1_Test3_Question2(int HIA1_Test3_Question2) {this.HIA1_Test3_Question2 = HIA1_Test3_Question2;}

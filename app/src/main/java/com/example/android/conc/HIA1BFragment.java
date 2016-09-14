@@ -137,7 +137,7 @@ public class HIA1BFragment extends Fragment {
             other.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     HIA1_Test2_Question6 = other.getText().toString();
-                    //hia1test.objHIA1.setHIA1_Test2_Question6(HIA1_Test2_Question6);
+                    hia1test.objHIA1.setHIA1_Test2_Question6(HIA1_Test2_Question6);
                     Log.v(TAG, "Other textbox string: " + HIA1_Test2_Question6);
                 }
             });

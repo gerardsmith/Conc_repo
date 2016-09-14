@@ -166,7 +166,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
                 args.put("HIA1_Test2_Question3", Integer.toString(this.objectHIA1.getHIA1_Test2_Question3()));
                 args.put("HIA1_Test2_Question4", Integer.toString(this.objectHIA1.getHIA1_Test2_Question4()));
                 args.put("HIA1_Test2_Question5", Integer.toString(this.objectHIA1.getHIA1_Test2_Question5()));
-                args.put("HIA1_Test2_Question6", "test");
+                args.put("HIA1_Test2_Question6", this.objectHIA1.getHIA1_Test2_Question6());
 
                 args.put("HIA1_Test3_Question1", Integer.toString(this.objectHIA1.getHIA1_Test3_Question1()));
                 args.put("HIA1_Test3_Question2", Integer.toString(this.objectHIA1.getHIA1_Test3_Question2()));
