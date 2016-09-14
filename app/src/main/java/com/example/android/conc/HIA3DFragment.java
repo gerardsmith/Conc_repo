@@ -122,6 +122,7 @@ public class HIA3DFragment extends Fragment implements CheckBox.OnCheckedChangeL
                     HIA3_Test4_Question6 =other.getText().toString();
                     Log.v("check string", "Video Checkbox: " + HIA3_Test4_Question6);
                     //do string database
+                    hia3test.objHIA3.setHIA3_Test4_Question6(HIA3_Test4_Question6);
                 }
             });
 
