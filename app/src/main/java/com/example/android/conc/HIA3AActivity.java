@@ -125,9 +125,9 @@ public class HIA3AActivity extends AppCompatActivity {
                 args.put("HIA3_Test2_Question8", this.objectHIA3.getHIA3_Test2_Question8());
 
                 args.put("HIA3_Test3_Question1", Integer.toString(this.objectHIA3.getHIA3_Test3_Question1()));
-                args.put("HIA3_Test3_Question2", "test");
+                args.put("HIA3_Test3_Question2", this.objectHIA3.getHIA3_Test3_Question2());
                 args.put("HIA3_Test3_Question3", Integer.toString(this.objectHIA3.getHIA3_Test3_Question3()));
-                args.put("HIA3_Test3_Question4", "test");
+                args.put("HIA3_Test3_Question4", this.objectHIA3.getHIA3_Test3_Question4());
                 args.put("HIA3_Test3_Question5", Integer.toString(this.objectHIA3.getHIA3_Test3_Question5()));
                 args.put("HIA3_Test3_Question6", Integer.toString(this.objectHIA3.getHIA3_Test3_Question6()));
                 args.put("HIA3_Test3_Question7", Integer.toString(this.objectHIA3.getHIA3_Test3_Question7()));

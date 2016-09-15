@@ -40,6 +40,8 @@ import static com.example.android.conc.R.id.spinner33;
 
 public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeListener {
 
+    //database
+    public HIA3AActivity hia3test;
 
     //adding
     ExpandableListAdapter listAdapter;
@@ -107,19 +109,27 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
         mButton.setOnCheckedChangeListener(this);
         mButton1.setOnCheckedChangeListener(this);
 
-        other.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test3_Question2 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question2);
-            }
-        });
+        Activity c = getActivity();
+        if(c instanceof HIA3AActivity) {
+            hia3test = (HIA3AActivity) getActivity();
 
-        other1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                HIA3_Test3_Question4 =other.getText().toString();
-                Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question4);
-            }
-        });
+
+            other.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test3_Question2 = other.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question2);
+                    hia3test.objHIA3.setHIA3_Test3_Question2(HIA3_Test3_Question2);
+                }
+            });
+
+            other1.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    HIA3_Test3_Question4 = other1.getText().toString();
+                    Log.v(TAG, "Video Checkbox: " + HIA3_Test3_Question4);
+                    hia3test.objHIA3.setHIA3_Test3_Question4(HIA3_Test3_Question4);
+                }
+            });
+        }
 
 
         return rootView;
@@ -198,35 +208,38 @@ public class HIA3FFragment extends Fragment implements CheckBox.OnCheckedChangeL
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         boolean checked2 = ((RadioButton) buttonView).isChecked();
-        switch (buttonView.getId())
-        {
-            case R.id.checkBox_ANT_AM_Y:
-                if (checked2)
-                {
-                    HIA3_Test3_Question1 = true;
-                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
-                    break;
-                }
-                else
-                {
-                    HIA3_Test3_Question1 = false;
-                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
-                    break;
-                }
 
-            case R.id.checkBox_RET_AM_Y:
-                if (checked2)
-                {
-                    HIA3_Test3_Question3 = true;
-                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
-                    break;
-                }
-                else
-                {
-                    HIA3_Test3_Question3 = false;
-                    Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
-                    break;
-                }
+        Activity c = getActivity();
+        if(c instanceof HIA3AActivity) {
+            hia3test = (HIA3AActivity) getActivity();
+
+            switch (buttonView.getId()) {
+                case R.id.checkBox_ANT_AM_Y:
+                    if (checked2) {
+                        HIA3_Test3_Question1 = true;
+                        Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
+                        hia3test.objHIA3.setHIA3_Test3_Question1(1);
+                        break;
+                    } else {
+                        HIA3_Test3_Question1 = false;
+                        Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question1);
+                        hia3test.objHIA3.setHIA3_Test3_Question1(0);
+                        break;
+                    }
+
+                case R.id.checkBox_RET_AM_Y:
+                    if (checked2) {
+                        HIA3_Test3_Question3 = true;
+                        Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
+                        hia3test.objHIA3.setHIA3_Test3_Question3(1);
+                        break;
+                    } else {
+                        HIA3_Test3_Question3 = false;
+                        Log.v(TAG, "Purple Monkeys " + HIA3_Test3_Question3);
+                        hia3test.objHIA3.setHIA3_Test3_Question1(0);
+                        break;
+                    }
+            }
         }
     }
 
