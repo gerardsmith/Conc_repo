@@ -405,6 +405,28 @@
     <string name="symptom_exp_view_c">Identify how long the symptom lasted:</string>
     <string name="symptom_exp_view_d">Identify the intensity of the symptom:</string>
 
+    <string-array name = "hia1_f_spinner1">
+        <item>Team Doctor</item>
+        <item>Physiotherapist</item>
+        <item>Match Day Doctor</item>
+        <item>Tournament Doctor</item>
+        <item>Referee</item>
+    </string-array>
+
+    <string-array name = "hia1_f_spinner2">
+        <item>Team Doctor</item>
+        <item>Match Day Doctor</item>
+        <item>Tournament Doctor</item>
+        <item>Assistant Team Doctor</item>
+    </string-array>
+
+
+    <string-array name = "hia1_f_spinner3">
+        <item>No</item>
+        <item>Yes, pitchside HIA abnormal</item>
+        <item>Yes, player removed for another injury</item>
+    </string-array>
+
 
 
 

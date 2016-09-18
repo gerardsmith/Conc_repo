@@ -150,19 +150,7 @@ public class HIA2GFragment extends Fragment {
         return rootView;
     }
 
-    /*@Override
-    public void onPause( ){
-        super.onPause();
-        if(other.getText() != null) {
-            String dig_back_score =other.getText().toString();
-            Log.v(TAG, "Digits backwards: " + dig_back_score);
-        }
-
-        if(other2.getText() != null) {
-            String conc_score =other2.getText().toString();
-            Log.v(TAG, "Concentration: " + conc_score);
-        }
-    }*/
+  
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

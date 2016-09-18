@@ -74,33 +74,9 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
 
     private GoogleApiClient client;
 
-    //Raf
-    private RadioGroup radioGroup;
-    private RadioButton radioButton;
-
-
     //This function calls AsyncTask [insertHIA1], which submit the HIA1 data to insertHIA1.php file.
     public void submitHIA1(View view) {
-        //HIA1 objHIA1=new HIA1();
-        int param; // Used to convert YES ->1 and NO ->0. Should change the value of radio groups to integers.
-        //Find radio group
-        radioGroup = (RadioGroup) findViewById(R.id.Radio_checkBoxAA);
-        // get selected radio button from radioGroup
-        int selectedId = radioGroup.getCheckedRadioButtonId();
 
-        // find the radiobutton by returned id
-       /* radioButton = (RadioButton) findViewById(selectedId);
-        //if(radioButton.getText()=="Yes"){
-        if(radioButton.getText().equals("Yes")){
-            param=1;
-        }else{
-            param=0;
-        }
-        */
-        //objHIA1.setHIA1_Test1_Question1(databasetest.HIA1_Test1_Question1);
-        //Toast.makeText(getApplicationContext(), "You selected :"+ radioButton.getText(), Toast.LENGTH_SHORT).show();
-        //Log.v("AGAIN:", "Check Check Ckeck: " + fragObjHia1.objHIA1.HIA1_Test1_Question1);
-        //objHIA1.setHIA1_Test1_Question1(param);
         new HIA1insertAsync(objHIA1).execute(); //Call async Task
     }
 
@@ -408,16 +384,7 @@ public class HIA1AActivity extends AppCompatActivity implements AdapterView.OnIt
 
         @Override
         public CharSequence getPageTitle(int position) {
-            /*switch (position) {
-                case 0:
-                    return "SECTION 1";
-                case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
-            }
-            return null;
-            */
+
             return "HIA1 (" + (position + 1) + "/7)";
         }
 

@@ -16,11 +16,6 @@ import android.widget.TextView;
 
 public class HIA1BFragment extends Fragment {
 
-    boolean HIA1_Test2_Question1 = false;
-    boolean HIA1_Test2_Question2 = false;
-    boolean HIA1_Test2_Question3 = false;
-    boolean HIA1_Test2_Question4 = false;
-    boolean HIA1_Test2_Question5 = false;
     String HIA1_Test2_Question6;
 
     //database
@@ -59,13 +54,13 @@ public class HIA1BFragment extends Fragment {
                 public void onClick(View v) {
                     final boolean checked2 = mButton.isChecked();
                     if (checked2) {
-                        HIA1_Test2_Question1 = true;
+
                         hia1test.objHIA1.setHIA1_Test2_Question1(1);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question1);
+                        Log.v(TAG, "Test: " + 1);
                     } else {
-                        HIA1_Test2_Question1 = false;
+
                         hia1test.objHIA1.setHIA1_Test2_Question1(0);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question1);
+                        Log.v(TAG, "Test: " + 0);
                     }
                 }
             });
@@ -75,13 +70,12 @@ public class HIA1BFragment extends Fragment {
                 public void onClick(View v) {
                     final boolean checked2 = mButton1.isChecked();
                     if (checked2) {
-                        HIA1_Test2_Question2 = true;
                         hia1test.objHIA1.setHIA1_Test2_Question2(1);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question2);
+                        Log.v(TAG, "Test: " + 1);
                     } else {
-                        HIA1_Test2_Question2 = false;
+
                         hia1test.objHIA1.setHIA1_Test2_Question2(0);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question2);
+                        Log.v(TAG, "Test: " + 0);
                     }
                 }
             });
@@ -91,13 +85,11 @@ public class HIA1BFragment extends Fragment {
                 public void onClick(View v) {
                     final boolean checked2 = mButton2.isChecked();
                     if (checked2) {
-                        HIA1_Test2_Question3 = true;
                         hia1test.objHIA1.setHIA1_Test2_Question3(1);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question3);
+                        Log.v(TAG, "Test: " + 1);
                     } else {
-                        HIA1_Test2_Question3 = false;
                         hia1test.objHIA1.setHIA1_Test2_Question3(0);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question3);
+                        Log.v(TAG, "Test: " + 0);
                     }
                 }
             });
@@ -107,13 +99,11 @@ public class HIA1BFragment extends Fragment {
                 public void onClick(View v) {
                     final boolean checked2 = mButton3.isChecked();
                     if (checked2) {
-                        HIA1_Test2_Question4 = true;
                         hia1test.objHIA1.setHIA1_Test2_Question4(1);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question4);
+                        Log.v(TAG, "Test: " + 1);
                     } else {
-                        HIA1_Test2_Question4 = false;
                         hia1test.objHIA1.setHIA1_Test2_Question4(0);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question4);
+                        Log.v(TAG, "Test: " + 0);
                     }
                 }
             });
@@ -123,13 +113,11 @@ public class HIA1BFragment extends Fragment {
                 public void onClick(View v) {
                     final boolean checked2 = mButton4.isChecked();
                     if (checked2) {
-                        HIA1_Test2_Question5 = true;
                         hia1test.objHIA1.setHIA1_Test2_Question5(1);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question5);
+                        Log.v(TAG, "Test: " + 1);
                     } else {
-                        HIA1_Test2_Question5 = false;
                         hia1test.objHIA1.setHIA1_Test2_Question5(0);
-                        Log.v(TAG, "Test: " + HIA1_Test2_Question5);
+                        Log.v(TAG, "Test: " + 0);
                     }
                 }
             });

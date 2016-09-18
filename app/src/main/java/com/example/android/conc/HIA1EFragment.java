@@ -79,15 +79,6 @@ public class HIA1EFragment extends Fragment implements CheckBox.OnCheckedChangeL
         return rootView;
     }
 
-   /* @Override
-    public void onPause( ){
-        super.onPause();
-        if(delmem.getText() != null) {
-            String delmemstring =delmem.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + delmemstring);
-        }
-    }*/
-
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         boolean checked = ((RadioButton) buttonView).isChecked();
