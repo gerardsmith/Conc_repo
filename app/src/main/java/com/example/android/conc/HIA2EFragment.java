@@ -26,7 +26,7 @@ public class HIA2EFragment extends Fragment {
     int total;
     public HIA2AActivity attempt;
     TextView o_result;
-    String o_result_string, m_result_string,conc_result;
+    String o_result_string, m_result_string,conc_result,del_result;
     int conc1,conc2;
     TextView textView, textView1, textView2,textView3;
     int tempval,val1,val2,HIA2_Test6_Question1;
@@ -77,17 +77,35 @@ public class HIA2EFragment extends Fragment {
 
             delmem.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    delmemstring = delmem.getText().toString();
-                    Log.v(TAG, "Video Checkbox: " + delmemstring);
+                    try{
+                        delmemstring = delmem.getText().toString();
+                        Log.v(TAG, "Video Checkbox: " + delmemstring);
+                        if("".equals(delmemstring)){
+                            HIA2_Test6_Question1 = Integer.parseInt("0");
+                            hia2test.objHIA2.setHIA2_Test6_Question1(HIA2_Test6_Question1);
+                        }
+                        else{
+                            HIA2_Test6_Question1 = Integer.parseInt(delmemstring);
+                            hia2test.objHIA2.setHIA2_Test6_Question1(HIA2_Test6_Question1);
+                            attempt.attemp1.delayedRecall= HIA2_Test6_Question1;
+                        }
+                    }
+                    catch(NumberFormatException e){
+                        //exception
+                    }
+
                     //delmemscore = Integer.parseInt(delmemstring);
                     textView3 = (TextView) getView().findViewById(textView_delmemresult);
                     textView3.setText(delmemstring);
 
-                    HIA2_Test6_Question1 = Integer.parseInt(delmemstring);
-                    hia2test.objHIA2.setHIA2_Test6_Question1(HIA2_Test6_Question1);
-
 
                     total = conc1 + val1 + val2 + HIA2_Test6_Question1;
+                    Log.v("conc1:", ""+ conc1);
+                    Log.v("val1:", ""+ conc1);
+                    Log.v("val2:", ""+ conc1);
+                    Log.v("conc1:", ""+ HIA2_Test6_Question1);
+                    Log.v("total:", ""+ total);
+
                     String totalstring;
                     totalstring = String.valueOf(total);
                     textView2 = (TextView) getView().findViewById(textView_totalresult);
@@ -141,14 +159,17 @@ public class HIA2EFragment extends Fragment {
             textView1 = (TextView) getView().findViewById(textView_imedmemresult);
             m_result_string = String.valueOf(attempt.attemp1.imedmem);
             textView1.setText(m_result_string);
-            val2 = Integer.parseInt(o_result_string);
+            val2 = Integer.parseInt(m_result_string);
 
             textView2 = (TextView) getView().findViewById(textView_concresult);
             conc1 = attempt.attemp1.digback + attempt.attemp1.monthback;
             conc_result = String.valueOf(conc1);
             textView2.setText(conc_result);
 
+            textView3 = (TextView) getView().findViewById(textView_delmemresult);
             attempt.attemp1.delayedRecall= HIA2_Test6_Question1;
+            del_result=String.valueOf(attempt.attemp1.delayedRecall);
+            textView3.setText(del_result);
             //hia2test.objHIA2.setHIA2_Test6_Question1(HIA2_Test6_Question1);
 
             attempt.attemp1.sacTotal = total;

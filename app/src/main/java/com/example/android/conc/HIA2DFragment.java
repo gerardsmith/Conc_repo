@@ -146,11 +146,25 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
 
             other.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    String mem_score = other.getText().toString();
-                    HIA2_Test4_Question7 = Integer.parseInt(other.getText().toString());
-                    hia2test.objHIA2.setHIA2_Test4_Question7(HIA2_Test4_Question7);
-                    Log.v(TAG, "Video Checkbox: " + mem_score);
-                    orienCallback.onImedMemSelected(HIA2_Test4_Question7);
+                    try{
+                        String mem_score = other.getText().toString();
+                        HIA2_Test4_Question7 = Integer.parseInt(other.getText().toString());
+                        if("".equals(mem_score)){
+                            HIA2_Test4_Question7 = Integer.parseInt("0");
+                            hia2test.objHIA2.setHIA2_Test4_Question7(HIA2_Test4_Question7);
+                           // orienCallback.onImedMemSelected(HIA2_Test4_Question7);
+                        }
+                        else{
+                            hia2test.objHIA2.setHIA2_Test4_Question7(HIA2_Test4_Question7);
+                            Log.v(TAG, "Video Checkbox: " + mem_score);
+                            orienCallback.onImedMemSelected(HIA2_Test4_Question7);
+                        }
+                    }
+                    catch(NumberFormatException e){
+                        //exception
+                    }
+
+
                 }
             });
         }
@@ -158,14 +172,6 @@ public class HIA2DFragment extends Fragment implements CheckBox.OnCheckedChangeL
        return rootView;
     }
 
-/*    @Override
-    public void onPause( ){
-        super.onPause();
-        if(other.getText() != null) {
-            String mem_score =other.getText().toString();
-            Log.v(TAG, "Video Checkbox: " + mem_score);
-        }
-    }*/
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

@@ -246,6 +246,13 @@ public class HIA2AActivity extends AppCompatActivity
                     fragment.onResume();
                     //fragment.updateText();
                 }
+                if (position ==6 && fragment != null)
+                {
+                    Log.v("CHECK!", "On resume2");
+                    fragment.onResume();
+                    //fragment.updateText();
+                }
+
             }
 
             @Override
